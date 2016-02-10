@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>Match Form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/pouchdb/5.2.0/pouchdb.min.js"></script>
+    <script type="text/javascript" src="jquery.qrcode.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+        <h1> QR Display</h1>
+        </div>
+    </div>
+        
+<div id="qrdiv"></div>
+
+<script>
+    $(document).ready(loadQR());
+</script>
+
+</body>
+
+
+</html>
