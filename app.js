@@ -84,25 +84,39 @@ function loadQR(){
 
 }
 
+
+
 function pickRobots(){
+    
+    function addRobotsToAllianceList(alliance, divid, match){
+        var i;
+    
+        for(i=0,i<alliance.length,i++){
+            $('#'+ divid).append('<a href="matchform.html?matchnum='+ match +'&teamNum='+ alliance[i]+'" class="btn btn-large">'+alliance[i]+'</a>');
+        }
+    }   
+    
     var match = getParameterByName("matchnum");
     
     db.put(matchExample.JSON);
     
     db.find({
-        selector: {"match": 'match',fields: ['red1','red2','red3','blue1','blue2','blue3']}
+        selector: {"match": 'match',fields: ['redAlliance','blueAlliance']}
     }).then(function (result) {
-        var i;
+            var allianceList = result.docs[0];
+            
+            var redList = allianceList.redAlliance;
+            var blueList = allianceList.blueAlliance;
         
-        for(i = 0; i < result.length; i++) {
-            var BOT = result[i].;
-            var botAnchor = document.getElementById("red1");
-            botAnchor.href = BOT +"?matchnum=" + match;
-            botAnchor.text = BOT;
+            addRobotsToAllianceList(redList, "redAlliance", match);
+            addRobotsToAllianceList(blueList, "blueAlliance", match);
+            
+            $("#blueAlliance").children(".btn").each().addClass("btn-primary");
+            $("#redAlliance").children(".btn").each().addClass("btn-danger");
         }
         
         
     }).catch(function (err) {
-        // ouch, an error
+        $("#error").append('<p>'+ err.toString() +'</p>');
     });
 }
