@@ -91,14 +91,24 @@ function pickRobots(){
     function addRobotsToAllianceList(alliance, divid, match){
         var i;
     
-        for(i=0,i<alliance.length,i++){
+        for (i=0;i<alliance.length;i++){
             $('#'+ divid).append('<a href="matchform.html?matchnum='+ match +'&teamNum='+ alliance[i]+'" class="btn btn-large">'+alliance[i]+'</a>');
         }
     }   
     
-    var match = getParameterByName("matchnum");
     
-    db.put(matchExample.JSON);
+    //var match = getParameterByName("matchnum");
+
+    
+    // for when we get the pouchdb.find functionality working
+/*    var matchData = {
+        "-id":001,
+        "match":"1",
+        "redAlliance":["58","127","133"],
+        "blueAlliance":["125","166","3609"]
+    };
+    
+    db.put(matchData);
     
     db.find({
         selector: {"match": 'match',fields: ['redAlliance','blueAlliance']}
@@ -113,10 +123,29 @@ function pickRobots(){
             
             $("#blueAlliance").children(".btn").each().addClass("btn-primary");
             $("#redAlliance").children(".btn").each().addClass("btn-danger");
-        }
-        
         
     }).catch(function (err) {
         $("#error").append('<p>'+ err.toString() +'</p>');
-    });
+    });*/
+            
+        // for testing
+            var match = "001";
+            var text = '{"docs":[{"redAlliance":["58","127","133"], "blueAlliance":["215","166","3609"] } ]}';
+            var result = JSON.parse(text);
+            
+            var allianceList = result.docs[0];
+            
+            var redList = allianceList.redAlliance;
+            var blueList = allianceList.blueAlliance;
+    
+            console.log(redList.toString());
+            console.log(blueList.toString());
+        
+            addRobotsToAllianceList(redList, "redAlliance", match);
+            addRobotsToAllianceList(blueList, "blueAlliance", match);
+            
+            $("#blueAlliance").find("a").each(function (){
+                $(this).addClass("btn-primary")});
+            $("#redAlliance").find("a").each(function (){
+                $(this).addClass("btn-danger")});
 }

@@ -3,10 +3,10 @@
     <title>Robot Selection</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="http://cdn.jsdelivr.net/pouchdb/5.2.0/pouchdb.min.js"></script>
-    <script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
     <script src="app.js"></script>
 </head>
 
@@ -18,24 +18,31 @@
         </div>
     </div>
     
+    <div class="container"  id="error">
+    
+    </div>
+    
     <div class="row">
         <div class="col-sm-4">
-            <div class="btn-group-vertical">
-                <a class="btn btn-primary btn-lg" id="red1"></a>
-                <a class="btn btn-primary btn-lg" id="red2"></a>
-                <a class="btn btn-primary btn-lg" id="red3"></a>
+            <div class="btn-group-vertical" id="redAlliance">
+                <p>Red Alliance</p>
             </div>
         </div>
     
         <div class="col-sm-4">
-            <div class="btn-group-vertical">
-                <a class="btn btn-primary btn-lg" id="blue1"></a>
-                <a class="btn btn-primary btn-lg" id="blue2"></a>
-                <a class="btn btn-primary btn-lg" id="blue3"></a>
+            <div class="btn-group-vertical" id="blueAlliance">
+                <p>Blue Alliance</p>
             </div>
         </div>
     </div>
 
+    <script>
+    $(document).ready(loadDB());
+    $(document).ready(pickRobots());
+    </script>
+
+    
+    
 </body>
 
 </html>
