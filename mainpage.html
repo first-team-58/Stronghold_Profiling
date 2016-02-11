@@ -1,17 +1,48 @@
-<html>
+<html>    
 <head>
-    <title>Home</title>
+    <title>Profiling App</title>
+     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    </head>
+    <script src="http://cdn.jsdelivr.net/pouchdb/5.2.0/pouchdb.min.js"></script>
+    <script src="app.js"></script>
+    
+    </head>    
 <body>
+    
+<!-- THIS IS THE NAVIGATION BAR -->
+    <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="mainpage.html">Profiling App</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="listofbots.html">Match</a></li>
+        <li><a href="pitform.html">Pit</a></li> 
+        <li><a href="qrdisplay.html">QR Display</a></li> 
+        <li><a href="scan.html">QR Scan</a></li> 
+      </ul>
+      </div>
+        </div>
+    </nav>
+        
+<!-- THIS IS THE TITLE-->
     
     <div class="container">
         <div class="jumbotron">
-            <h1> Home Page </h1>
+            <h1> Profiling App </h1>
         </div>
     </div>
+    
+<!-- THESE ARE THE BUTTONS-->
     
     <div class="container" >    
         <a href="ListOfMatches.html" class="btn btn-info" role="button">Match</a>
@@ -33,6 +64,7 @@
         <a href="qrdisplay.html" class="btn btn-info" role="button">QR Display</a>
     </div>    
        
-</body>    
+</body>       
         
+
 </html>

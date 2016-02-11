@@ -92,11 +92,15 @@ function pickRobots(){
     db.find({
         selector: {"match": 'match',fields: ['red1','red2','red3','blue1','blue2','blue3']}
     }).then(function (result) {
+        var i;
         
-        var BOT = result.red1;
-        var botAnchor = document.getElementById("red1");
-        botAnchor.href = BOT +"?matchnum=" + match;
-        botAnchor.text = BOT;
+        for(i = 0; i < result.length; i++) {
+            var BOT = result[i].;
+            var botAnchor = document.getElementById("red1");
+            botAnchor.href = BOT +"?matchnum=" + match;
+            botAnchor.text = BOT;
+        }
+        
         
     }).catch(function (err) {
         // ouch, an error
