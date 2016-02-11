@@ -73,7 +73,7 @@ function loadQR(){
         include_docs: true,
         attachments: true
     }).then(function (result) {
-        info = result.stringify;
+        var info = result.stringify;
         console.log(info);
         $(document).ready(function() {
             $('#qrdiv').qrcode({width: 120,height: 120, text: info});
@@ -82,4 +82,23 @@ function loadQR(){
     console.log(err);
     });
 
+}
+
+function pickRobots(){
+    var match = getParameterByName("matchnum");
+    
+    db.put(matchExample.JSON);
+    
+    db.find({
+        selector: {"match": 'match',fields: ['red1','red2','red3','blue1','blue2','blue3']}
+    }).then(function (result) {
+        
+        var BOT = result.red1;
+        var botAnchor = document.getElementById("red1");
+        botAnchor.href = BOT +"?matchnum=" + match;
+        botAnchor.text = BOT;
+        
+    }).catch(function (err) {
+        // ouch, an error
+    });
 }
