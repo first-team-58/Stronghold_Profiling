@@ -1,3 +1,7 @@
+/*****************************
+    Datbase Initialization
+*****************************/
+
 var db;
 
 function loadDB() {
@@ -5,8 +9,32 @@ function loadDB() {
     return db;
 }
 
+/*************************
+    TEST DATA FUNCTIONS
+*************************/
+
+function generateTestData(dbName) {
+    /* dbName: a String object, the name of the PouchDB store to which you wish to connect. */
+
+    /* PURPOSE: Populate a database with test data. */
+
+    if (not dbName) {
+        var dbName = 'testData';
+    }
+
+    var db = new PouchDB(dbName);
+
+    TBA.event.get('2015melew', function(event) {
+        saveEventMatchesToDatabase(event, db);
+    });
+}
+
 function saveYearMatchesToDatabase(year, db) {
+    /* year: a String object referring to a specific year, e.g. `'2015'`. */
     /* db: a reference to the PouchDB database. */
+
+    /* Purpose: Given a year, iterate over every event in that year and save the matches and team lists from each event into the database. */
+    /* NOTE: This function can take several minutes to run, due to the large volume of data. */
 
     TBA.event.list(year,
         function(eventObjectList) {
@@ -18,20 +46,23 @@ function saveYearMatchesToDatabase(year, db) {
 }
 
 function saveEventMatchesToDatabase(event, db) {
-    /* TODO: Given an event, extract the list of matches and teams, and save them to the database. */
-    var eventKey = event.key;
-    var listMatches = [];
-    TBA.event.matches(eventKey, function(matches_list) {
+    /* event: An event object from The Blue Alliance API. */
+    /* db: a reference ot the PouchDB database. */
+
+    /* Purpose: Given an event, extract the list of matches and teams, and save them to the database. */
+    TBA.event.matches(event.key, function(matches_list) {
         for (i = 0; i < matches_list.length; i++) {
-            var match = new Object;
-            match['_id'] = matches_list[i].match_number;
+            var match = new Object();
+            match._id = matches_list[i].key;
+            match.zz_constant = 1;
             match.redTeam = matches_list[i].alliances.red.teams;
             match.blueTeam = matches_list[i].alliances.blue.teams;
-            console.log(match);
             db.put(match);
         }
     });
 }
+
+
 
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;
@@ -123,7 +154,6 @@ function pickRobots() {
 
     function addRobotsToAllianceList(alliance, divid, match) {
         var i;
-
         for (i = 0; i < alliance.length; i++) {
             $('#' + divid).append('<a href="matchform.html?matchnum=' + match + '&teamNum=' + alliance[i] + '" class="btn btn-large">' + alliance[i] + '</a>');
         }
@@ -134,104 +164,36 @@ function pickRobots() {
 
 
     // for when we get the pouchdb.find functionality working
-    /*    var matchData = {
-            "-id":001,
-            "match":"1",
-            "redAlliance":["58","127","133"],
-            "blueAlliance":["125","166","3609"]
-        };
-        
-        db.put(matchData);
-        
-        db.find({
-            selector: {"match": 'match',fields: ['redAlliance','blueAlliance']}
-        }).then(function (result) {
-                var allianceList = result.docs[0];
-                
-                var redList = allianceList.redAlliance;
-                var blueList = allianceList.blueAlliance;
-            
-                addRobotsToAllianceList(redList, "redAlliance", match);
-                addRobotsToAllianceList(blueList, "blueAlliance", match);
-                
-                $("#blueAlliance").children(".btn").each().addClass("btn-primary");
-                $("#redAlliance").children(".btn").each().addClass("btn-danger");
-            
-<<<<<<< HEAD
-            var allianceList = result.docs[0];
-            
-            var redList = allianceList.redAlliance;
-            var blueList = allianceList.blueAlliance;
-    
-            console.log(redList.toString());
-            console.log(blueList.toString());
-        
-            addRobotsToAllianceList(redList, "redAlliance", match);
-            addRobotsToAllianceList(blueList, "blueAlliance", match);
-            
-            $("#blueAlliance").find("a").each(function (){
-                $(this).addClass("btn-primary")});
-            $("#redAlliance").find("a").each(function (){
-                $(this).addClass("btn-danger")});
-}
+    /*
+    var matchData = {
+        "-id": 001,
+        "match": "1",
+        "redAlliance": ["58", "127", "133"],
+        "blueAlliance": ["125", "166", "3609"]
+    };
 
-function addAlliance(allianceColor){
-    $('#'+allianceColor+'Alliance').find('h3').text(allianceColor + ' Alliance');
-}
+    db.put(matchData);
 
-function preMatch() {
-    function addBotLists(color, listOfBots) {
-        
-        for (var j=1;j<4;j++){
-            
-            $('#'+color+'Alliance').find('form').append('<select name='+color+'bot'+j.toString()+' ><option value=null>  </option></select>');
-            
+    db.find({
+        selector: {
+            "match": 'match',
+            fields: ['redAlliance', 'blueAlliance']
         }
-            
-        console.log(listOfBots.length);
-        
-        for (var i=0; i<listOfBots.length; i++) {
-            $('#'+color+'Alliance').find('select').each( function() {
-                $(this).append('<option value="'+listOfBots[i]+'">'+listOfBots[i]+'</option>');
-            });
-        }
-        
-    }
-    
-    var listOfBots = ["58","127","133","125","3906","3467"];
-    
-    addAlliance('red');
-    addAlliance('blue');
-    
-    addBotLists('red', listOfBots);
-    addBotLists('blue', listOfBots);
-    
-}
+    }).then(function(result) {
+        var allianceList = result.docs[0];
 
-function scores() {
-    function addFormElements(color){
-        
-        var targetForm = $('#'+color+'Alliance').find('form');
-        
-        targetForm.append('<label class="control-label col-sm-2">Score</label>');
-        targetForm.append('<input type="range" name="'+color+'points" value="0" min="0" max="400" data-show-value="true" data-highlight="true"><br>');
-        targetForm.append('<div class="checkbox"><label><input type="checkbox" name="'+color+'Breach">Breach</label></div>');
-        targetForm.append('<div class="checkbox"><label><input type="checkbox" name="'+color+'Capture">Capture</label></div>');
+        var redList = allianceList.redAlliance;
+        var blueList = allianceList.blueAlliance;
 
-    }
-    
-    
-    addAlliance('red');
-    addAlliance('blue');
-    
-    addFormElements('red');
-    addFormElements('blue');
-    
-}
-=======
-        }).catch(function (err) {
-            $("#error").append('<p>'+ err.toString() +'</p>');
-        });*/
+        addRobotsToAllianceList(redList, "redAlliance", match);
+        addRobotsToAllianceList(blueList, "blueAlliance", match);
+
+        $("#blueAlliance").children(".btn").each().addClass("btn-primary");
+        $("#redAlliance").children(".btn").each().addClass("btn-danger");
+    }).catch(function(err) {
+        $("#error").append('<p>' + err.toString() + '</p>');
+    });
+    */
 
     // for testing
     var match = "001";
@@ -256,4 +218,57 @@ function scores() {
         $(this).addClass("btn-danger")
     });
 }
->>>>>>> 71bb2b4a5a1b6158b826fc393e89d9b56656a9d2
+
+function addAlliance(allianceColor) {
+    $('#' + allianceColor + 'Alliance').find('h3').text(allianceColor + ' Alliance');
+}
+
+function preMatch() {
+    function addBotLists(color, listOfBots) {
+
+        for (var j = 1; j < 4; j++) {
+
+            $('#' + color + 'Alliance').find('form').append('<select name=' + color + 'bot' + j.toString() + ' ><option value=null>  </option></select>');
+
+        }
+
+        console.log(listOfBots.length);
+
+        for (var i = 0; i < listOfBots.length; i++) {
+            $('#' + color + 'Alliance').find('select').each(function() {
+                $(this).append('<option value="' + listOfBots[i] + '">' + listOfBots[i] + '</option>');
+            });
+        }
+
+    }
+
+    var listOfBots = ["58", "127", "133", "125", "3906", "3467"];
+
+    addAlliance('red');
+    addAlliance('blue');
+
+    addBotLists('red', listOfBots);
+    addBotLists('blue', listOfBots);
+
+}
+
+function scores() {
+    function addFormElements(color) {
+
+        var targetForm = $('#' + color + 'Alliance').find('form');
+
+        targetForm.append('<label class="control-label col-sm-2">Score</label>');
+        targetForm.append('<input type="range" name="' + color + 'points" value="0" min="0" max="400" data-show-value="true" data-highlight="true"><br>');
+        targetForm.append('<div class="checkbox"><label><input type="checkbox" name="' + color + 'Breach">Breach</label></div>');
+        targetForm.append('<div class="checkbox"><label><input type="checkbox" name="' + color + 'Capture">Capture</label></div>');
+
+    }
+
+
+    addAlliance('red');
+    addAlliance('blue');
+
+    addFormElements('red');
+    addFormElements('blue');
+
+}
