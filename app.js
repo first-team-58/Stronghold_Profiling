@@ -18,10 +18,6 @@ function generateTestData(dbName) {
 
     /* PURPOSE: Populate a database with test data. */
 
-    if (not dbName) {
-        var dbName = 'testData';
-    }
-
     var db = new PouchDB(dbName);
 
     TBA.event.get('2015melew', function(event) {
@@ -51,13 +47,33 @@ function saveEventMatchesToDatabase(event, db) {
 
     /* Purpose: Given an event, extract the list of matches and teams, and save them to the database. */
     TBA.event.matches(event.key, function(matches_list) {
+        var i = 0;
         for (i = 0; i < matches_list.length; i++) {
             var match = new Object();
-            match._id = matches_list[i].key;
-            match.zz_constant = 1;
+            var docrec = new Object();
+
+            match._id = 'matches/' + matches_list[i].key;
             match.redTeam = matches_list[i].alliances.red.teams;
             match.blueTeam = matches_list[i].alliances.blue.teams;
-            db.put(match);
+
+            /* If the doc already exists, we need to add the _rev to update the existing doc. */
+            db.get(match._id).then(function(doc) {
+                match._rev = doc._rev;
+                docrec = doc;
+            }).catch(function(err) {
+                if ( err.status != 404 ) {
+                    /* Ignore 404 errors: we expect them, if the doc is new. */
+                    console.log(err);
+                }
+            });
+
+            db.put(match).then(function() {
+                // Success!
+            }).catch(function(err) {
+                console.log('\ndoc._rev: ' + docrec._rev);
+                console.log('match._rev: ' + match._rev);
+                console.log(err);
+            });
         }
     });
 }
