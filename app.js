@@ -2,12 +2,13 @@ var db;
 
 function loadDB() {
     db = new PouchDB('scouting');
+    return db;
 }
 
-function saveMatchesToDatabase(db) {
+function saveYearMatchesToDatabase(year, db) {
     /* db: a reference to the PouchDB database. */
 
-    TBA.event.list('2015',
+    TBA.event.list(year,
         function(eventObjectList) {
             for (i = 0; i < eventObjectList.length; i++) {
                 saveEventMatchesToDatabase(eventObjectList[i], db);
@@ -17,7 +18,19 @@ function saveMatchesToDatabase(db) {
 }
 
 function saveEventMatchesToDatabase(event, db) {
-    /* TODO: Given an event, extract the list of matches and save them to the database. */
+    /* TODO: Given an event, extract the list of matches and teams, and save them to the database. */
+    var eventKey = event.key;
+    var listMatches = [];
+    TBA.event.matches(eventKey, function(matches_list) {
+        for (i = 0; i < matches_list.length; i++) {
+            var match = new Object;
+            match['_id'] = matches_list[i].match_number;
+            match.redTeam = matches_list[i].alliances.red.teams;
+            match.blueTeam = matches_list[i].alliances.blue.teams;
+            console.log(match);
+            db.put(match);
+        }
+    });
 }
 
 function getParameterByName(name, url) {
