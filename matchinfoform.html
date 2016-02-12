@@ -1,0 +1,56 @@
+<html>
+<head>
+    <title>Match Form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/pouchdb/5.2.0/pouchdb.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="jumbotron">
+            <h1> Match Info Form </h1>
+        </div>
+    </div>
+
+<div class="container" id="form">
+    <h2>What are you entering?</h2>
+    <button class="btn btn-lg btn-primary" onclick="preMatch()">Match Assignments</button> 
+    <button class="btn btn-lg btn-success" onclick="scores()">Match Scores</button>
+    <h2></h2>
+    <div class="row">
+        <div class="col-sm-4" id="redAlliance">
+        <h3 class="text-danger"></h3>
+        <form class="form-horizontal" role="form">
+            <div class="form-group">
+                <!-- red inputs go here -->
+            </div>
+        </form>
+        </div>
+        <div class="col-sm-4" id="blueAlliance">
+        <h3 class="text-primary"></h3>
+        <form class="form-horizontal" role="form">
+            <div class="form-group">
+                <!-- blue inputs go here -->
+            </div>    
+        </form>
+        </div>
+        <div id="submit">
+            <!-- submit button goes here -->
+        </div>
+    </div>
+</div>
+
+
+</body>
+
+
+</html>
+
+
+
+
