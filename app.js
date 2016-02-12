@@ -157,6 +157,78 @@ function pickRobots() {
                 $("#blueAlliance").children(".btn").each().addClass("btn-primary");
                 $("#redAlliance").children(".btn").each().addClass("btn-danger");
             
+<<<<<<< HEAD
+            var allianceList = result.docs[0];
+            
+            var redList = allianceList.redAlliance;
+            var blueList = allianceList.blueAlliance;
+    
+            console.log(redList.toString());
+            console.log(blueList.toString());
+        
+            addRobotsToAllianceList(redList, "redAlliance", match);
+            addRobotsToAllianceList(blueList, "blueAlliance", match);
+            
+            $("#blueAlliance").find("a").each(function (){
+                $(this).addClass("btn-primary")});
+            $("#redAlliance").find("a").each(function (){
+                $(this).addClass("btn-danger")});
+}
+
+function addAlliance(allianceColor){
+    $('#'+allianceColor+'Alliance').find('h3').text(allianceColor + ' Alliance');
+}
+
+function preMatch() {
+    function addBotLists(color, listOfBots) {
+        
+        for (var j=1;j<4;j++){
+            
+            $('#'+color+'Alliance').find('form').append('<select name='+color+'bot'+j.toString()+' ><option value=null>  </option></select>');
+            
+        }
+            
+        console.log(listOfBots.length);
+        
+        for (var i=0; i<listOfBots.length; i++) {
+            $('#'+color+'Alliance').find('select').each( function() {
+                $(this).append('<option value="'+listOfBots[i]+'">'+listOfBots[i]+'</option>');
+            });
+        }
+        
+    }
+    
+    var listOfBots = ["58","127","133","125","3906","3467"];
+    
+    addAlliance('red');
+    addAlliance('blue');
+    
+    addBotLists('red', listOfBots);
+    addBotLists('blue', listOfBots);
+    
+}
+
+function scores() {
+    function addFormElements(color){
+        
+        var targetForm = $('#'+color+'Alliance').find('form');
+        
+        targetForm.append('<label class="control-label col-sm-2">Score</label>');
+        targetForm.append('<input type="range" name="'+color+'points" value="0" min="0" max="400" data-show-value="true" data-highlight="true"><br>');
+        targetForm.append('<div class="checkbox"><label><input type="checkbox" name="'+color+'Breach">Breach</label></div>');
+        targetForm.append('<div class="checkbox"><label><input type="checkbox" name="'+color+'Capture">Capture</label></div>');
+
+    }
+    
+    
+    addAlliance('red');
+    addAlliance('blue');
+    
+    addFormElements('red');
+    addFormElements('blue');
+    
+}
+=======
         }).catch(function (err) {
             $("#error").append('<p>'+ err.toString() +'</p>');
         });*/
@@ -184,3 +256,4 @@ function pickRobots() {
         $(this).addClass("btn-danger")
     });
 }
+>>>>>>> 71bb2b4a5a1b6158b826fc393e89d9b56656a9d2
