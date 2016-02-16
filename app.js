@@ -81,6 +81,11 @@ function saveEventMatchesToDatabase(event, db) {
 
 
 function getParameterByName(name, url) {
+    /* name: string representing parameter in query string desired */
+    /* url: url object to parse for query string */
+    
+    /* purpose: return string value from query string based on name parameter */
+    
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, "\\$&");
     var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
@@ -91,6 +96,8 @@ function getParameterByName(name, url) {
 }
 
 function guid() {
+    /* purpose: create a uuid for each database id */
+    
     function s4() {
         return Math.floor((1 + Math.random()) * 0x10000)
             .toString(16)
@@ -101,6 +108,9 @@ function guid() {
 }
 
 function save(formData) {
+    /* formData: JSON object to put in pouchDB */
+    /* purpose: saves JSON object in pouchDB, and logs JSON object to console */
+    
     db.put(formData);
     db.get('001').then(function(result) {
         var info = result.stringify;
@@ -111,10 +121,17 @@ function save(formData) {
 }
 
 function appendData(dataset, name, value) {
+    /* dataset: JSON object to be appended */
+    /* name: queryable string, e.g. 'matchnum' */
+    /* value: string, e.g. '34'
+    /* purpose: appends information to JSON object */
     dataset[name] = value;
 }
 
 function scanForData(elementType, dataset) {
+    /* elementType: a form element name, e.g. 'select' */
+    /* dataset: a JSON object where names and values from elements of elementType are coalated */
+    /* purpose: scans html doc for inputs of a known type and adds name/value pairs to a JSON object */
     $(elementType).each(function() {
         var name = $(this).attr("name");
         var value = $(this).val();
@@ -123,6 +140,7 @@ function scanForData(elementType, dataset) {
 }
 
 function cleanData() {
+    /* purpose: builds and returns JSON dataset to submit to pouchdb */
     var dataset;
 
     dataset["_id"] = guid();
@@ -140,14 +158,16 @@ function cleanData() {
 }
 
 function saveMatchForm() {
+    /* purpose: collects information from html form and saves it to pouchdb */
     var formData = cleanData();
     save(formData);
 }
 
 function loadQR() {
-    db.allDocs({
-        include_docs: true,
-        attachments: true
+    db.find({
+        selector: {
+            "matchnum"
+        }
     }).then(function(result) {
         var info = result.stringify;
         console.log(info);
@@ -167,6 +187,7 @@ function loadQR() {
 
 
 function pickRobots() {
+    /* purpose: for use with robotPick.html. Creates list of team numbers for match sent in query string by collecting that match from pouchdb database */
 
     function addRobotsToAllianceList(alliance, divid, match) {
         var i;
@@ -240,6 +261,7 @@ function addAlliance(allianceColor) {
 }
 
 function preMatch() {
+    /* purpose: for use with matchinfoform.html, creates dropdowns for chosing red and blue alliance for given match number */
     function addBotLists(color, listOfBots) {
 
         for (var j = 1; j < 4; j++) {
@@ -269,6 +291,7 @@ function preMatch() {
 }
 
 function scores() {
+    /* purpose: for use with matchinfoform.html, displays inputs for inputing score for each team */
     function addFormElements(color) {
 
         var targetForm = $('#' + color + 'Alliance').find('form');
