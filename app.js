@@ -176,6 +176,31 @@ function saveMatchForm(formType) {
     save(formData);
 }
 
+function ConvertToCSV(objArray) {
+    var array = typeof objArray != 'object' ? JSON.parse(objArray) : objArray;
+    var str = '';
+    
+    var firstLine = '';
+    for (var index in array[0]) {
+        firstLine += index.toString() + ',';
+    }
+    str = str.slice(0,-1);
+    str += firstLine + '\r\n';
+ 
+    for (var i = 0; i < array.length; i++) {
+        var line = '';
+        for (var index in array[i]) {
+            if (line != '') line += ','
+
+            line += array[i][index];
+        }
+
+        str += line + '\r\n';
+     }
+
+    return str;
+}
+
 function loadQR() {
     
     /*db.createIndex({
@@ -201,11 +226,14 @@ function loadQR() {
         var info = JSON.stringify(result.docs);
         console.log(info);
         console.log(info.length);
+        var CSV = ConvertToCSV(info);
+        console.log(CSV);
+        console.log(CSV.length);
         $(document).ready(function() {
             $('#qrdiv').qrcode({
                 width: 1280,
                 height: 1280,
-                text: info
+                text: CSV
             });
         });
     }).catch(function(err) {
