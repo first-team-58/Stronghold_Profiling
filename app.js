@@ -110,11 +110,15 @@ function guid() {
 function save(formData) {
     /* formData: JSON object to put in pouchDB */
     /* purpose: saves JSON object in pouchDB, and logs JSON object to console */
-    
     db.put(formData);
-    db.get('001').then(function(result) {
-        var info = result.stringify;
-        console.log(info);
+    db.createIndex({
+        index: {fields:['formType']}
+    }).then(function () {
+        return db.find({
+            selector: {formType: {$eq:'match'}}
+        });
+    }).then(function(result) {
+        console.log(result);
     }).catch(function(err) {
         console.log(err);
     });
@@ -139,35 +143,59 @@ function scanForData(elementType, dataset) {
     });
 }
 
-function cleanData() {
+function cleanData(formType) {
     /* purpose: builds and returns JSON dataset to submit to pouchdb */
-    var dataset;
+    var dataset = new Object();
 
     dataset["_id"] = guid();
+    
+    dataset['formType'] = formType;
 
     dataset["teamNum"] = getParameterByName('teamNum');
-    dataset["matchNum"] = getParameterByName('matchnum');
-
+    
+    try {
+      dataset["matchNum"] = getParameterByName('matchnum');  
+    } catch (err) {
+        //do nothing
+    }
+    
     var types = ["input", "select", "textarea"];
 
     for (i = 0; i < types.length; i++) {
         scanForData(types[i], dataset);
     }
 
+    console.log(dataset);
+    
     return dataset;
 }
 
-function saveMatchForm() {
+function saveMatchForm(formType) {
     /* purpose: collects information from html form and saves it to pouchdb */
-    var formData = cleanData();
+    var formData = cleanData(formType);
     save(formData);
 }
 
 function loadQR() {
-    db.find({
-        selector: {
-            "matchnum"
-        }
+    
+    /*db.createIndex({
+        index: {fields:['formType']}
+    }).then(function () {
+        return db.find({
+            selector: {formType: {$eq:'match'}}
+        });
+    }).then(function(result) {
+        console.log(result);
+    }).catch(function(err) {
+        console.log(err);
+    });*/
+    
+    db.createIndex({
+        index:{fields:['formType']}
+    }).then (function () {
+        return db.find({
+            selector: {formType: {$eq:'match'}}
+        });
     }).then(function(result) {
         var info = result.stringify;
         console.log(info);
@@ -310,4 +338,13 @@ function scores() {
     addFormElements('red');
     addFormElements('blue');
 
+}
+
+function getRobotData(teamNum) {
+    /* teamNum: a team number as a string, e.g. '58' */
+    
+    /* purpose: pulls all match data for a particular robot and displays it as a webpage */
+    
+    
+    
 }
