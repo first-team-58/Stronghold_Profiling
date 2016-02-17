@@ -191,18 +191,20 @@ function loadQR() {
     });*/
     
     db.createIndex({
-        index:{fields:['formType']}
+        index: {fields:['formType']}
     }).then (function () {
         return db.find({
             selector: {formType: {$eq:'match'}}
         });
     }).then(function(result) {
-        var info = result.stringify;
+        console.log(result);
+        var info = JSON.stringify(result.docs);
         console.log(info);
+        console.log(info.length);
         $(document).ready(function() {
             $('#qrdiv').qrcode({
-                width: 120,
-                height: 120,
+                width: 1280,
+                height: 1280,
                 text: info
             });
         });
