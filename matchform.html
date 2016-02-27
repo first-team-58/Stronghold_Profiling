@@ -6,11 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="gavinssheetofstyle.css">
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="http://cdn.jsdelivr.net/pouchdb/5.2.0/pouchdb.min.js"></script>
     <script src='pouchdb.find.js'></script>
     <script src="app.js"></script>    
-</head>
+
+    
+    </head>
     
 <body>
 <!-- THIS IS THE NAVIGATION BAR -->
@@ -32,18 +35,19 @@
         <li><a href="scan.html">QR Scan</a></li> 
       </ul>
       </div>
+        </div>
       </nav>
 
     <div class="container">
         <div class="jumbotron">
-            <h1> Match Form </h1>
+            <h1><b>Match Form!</b></h1>
         </div>
     </div>
 
 <div class="container">
-<h2>Autonomous</h2>
+<h2><ins>Autonomous</ins></h2>
   <form class="form-horizontal" role="form">
-    <h3>Defense</h3>
+    <h3><i>Defense</i></h3>
     <div class="form-group">
       <label class="control-label col-sm-2">Reached Defense</label>
       <div class="col-sm-10">
@@ -67,7 +71,7 @@
             </select>
         </div>
     </div>  
-    <h3>Auto Shots</h3>
+      <h3><i>Auto Shots</i></h3>
     <div class="form-group">
       <label class="control-label col-sm-2">Attempt Type</label>
       <div class="col-sm-4">          
@@ -90,9 +94,9 @@
 
     
 <div class="container">
-<h2>Teleop</h2>
+<h2><ins>Teleop</ins></h2>
 <form class="form-horizontal" role="form">
-<h3>High Goals</h3>
+<h3><i>High Goals</i></h3>
     <div class="form-group">
       <label class="control-label col-sm-2">Attempted</label>
       <div class="col-sm-10">
@@ -105,7 +109,7 @@
           <input type="number" name="HiGAttain" min="0" max="100" step="1" value="0">
       </div>
     </div>
-    <h3>Low Goals</h3>
+    <h3><i>Low Goals</i></h3>
     <div class="form-group">
       <label class="control-label col-sm-2">Attempted</label>
       <div class="col-sm-10">
@@ -118,7 +122,7 @@
           <input type="number" name="LoGAttain" min="0" max="100" step="1" value="0">
       </div>
     </div>
-    <h3>Number of Times Crossed</h3>
+    <h3><i>Number of Times Crossed</i></h3>
     <div class="form-group">
       <label class="control-label col-sm-2">Portcullis</label>
       <div class="col-sm-4">          
@@ -168,13 +172,13 @@
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-2">What's Broken</label>
+      <label class="control-label col-sm-2"><i>What's Broken</i> </label>
       <div class="col-sm-4">          
           <input type="text" name="broken">
       </div>
     </div>
   </form>
-</div>
+
     
         
 <div class="container">
@@ -187,7 +191,8 @@
     $(document).ready(loadDB());
 </script>
 
-</body>
+    </div>
+    </body>
 
 
 </html>
