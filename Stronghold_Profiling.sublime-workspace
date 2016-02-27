@@ -1,0 +1,674 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ge",
+				"get"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"get_events",
+				"get_events_for_site"
+			],
+			[
+				"raw_events_add",
+				"raw_events_additional_findall_class"
+			],
+			[
+				"title",
+				"title_additional_find_element"
+			],
+			[
+				"try",
+				"try	Try/Except/Finally"
+			],
+			[
+				"title_add",
+				"title_additional_find_element"
+			],
+			[
+				"tit",
+				"title_additional_find_element"
+			],
+			[
+				"venu",
+				"venue_element"
+			],
+			[
+				"month",
+				"month_element"
+			],
+			[
+				"descr",
+				"description_element"
+			],
+			[
+				"number",
+				"number_of_events"
+			],
+			[
+				"title_ad",
+				"title_additional_find_element"
+			],
+			[
+				"title_",
+				"title_additional_find_element"
+			],
+			[
+				"day",
+				"day_of_month"
+			],
+			[
+				"venue",
+				"venue_class"
+			],
+			[
+				"get_raw",
+				"get_raw_events_container"
+			],
+			[
+				"clas",
+				"class_"
+			],
+			[
+				"ve",
+				"event_venue"
+			],
+			[
+				"list",
+				"listWhereValues"
+			],
+			[
+				"fieldnam",
+				"fieldNameLength"
+			],
+			[
+				"fieldname",
+				"fieldNamePos0"
+			],
+			[
+				"field",
+				"fieldNamePos1"
+			],
+			[
+				"fieldn",
+				"fieldNamePos0"
+			],
+			[
+				"isLast",
+				"isLastExceptionHasScriptStack"
+			],
+			[
+				"searcho",
+				"search_orders_afterTimestamp"
+			],
+			[
+				"search",
+				"search_orders_beforeTimestamp"
+			],
+			[
+				"apach",
+				"Apache"
+			],
+			[
+				"all",
+				"allowedAction"
+			],
+			[
+				"elementInst",
+				"elementInstanceLength"
+			],
+			[
+				"elemen",
+				"elementOpenTagEnd"
+			],
+			[
+				"text",
+				"textToSend"
+			],
+			[
+				"te",
+				"textToSend"
+			],
+			[
+				"sg",
+				"segmentLength"
+			],
+			[
+				"pro",
+				"progressBarBorderColor"
+			],
+			[
+				"progressBarDef",
+				"progressBarDefaultTitle"
+			],
+			[
+				"bod",
+				"bodyBackgroundColor"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 187.0,
+		"last_filter": "prettif",
+		"selected_items":
+		[
+			[
+				"prettif",
+				"HTMLPrettify"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"sblmsrvst",
+				"SublimeServer: Start SublimeServer"
+			],
+			[
+				"view in b",
+				"View In Browser"
+			],
+			[
+				"wrap",
+				"Word Wrap: Toggle"
+			],
+			[
+				"pouchdb",
+				"Snippet: PouchDB plugins"
+			],
+			[
+				"packag inst",
+				"Package Control: Install Package"
+			],
+			[
+				"view",
+				"View In Browser"
+			],
+			[
+				"package inst",
+				"Package Control: Install Package"
+			],
+			[
+				"browser",
+				"Browser Integration: Interactive Selection"
+			],
+			[
+				"prett",
+				"HTMLPrettify"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"filemak",
+				"Set Syntax: FileMaker"
+			],
+			[
+				"filem",
+				"Set Syntax: FileMaker"
+			],
+			[
+				"escape",
+				"Package Control: Discover Packages"
+			],
+			[
+				"javasci",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"javasc",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"packag",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"python3",
+				"Build With: Python3"
+			],
+			[
+				"python",
+				"Set Syntax: Python"
+			],
+			[
+				"build",
+				"Build With: Python3"
+			],
+			[
+				"flask",
+				"Snippet: Flask"
+			],
+			[
+				"lint",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"lint repor",
+				"SublimeLinter: Report (Open Files)"
+			],
+			[
+				"linter",
+				"Preferences: SublimeLinter Settings – Default"
+			],
+			[
+				"linter rep",
+				"SublimeLinter: Report (Open Files)"
+			],
+			[
+				"xml",
+				"Set Syntax: XML"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"sql",
+				"Set Syntax: SQL"
+			],
+			[
+				"filemaker",
+				"Set Syntax: FileMaker"
+			],
+			[
+				"less",
+				"Set Syntax: LESS"
+			],
+			[
+				"package ins",
+				"Package Control: Install Package"
+			],
+			[
+				"docker",
+				"Set Syntax: Dockerfile"
+			],
+			[
+				"filema",
+				"Set Syntax: FileMaker"
+			],
+			[
+				"markdo",
+				"Set Syntax: MultiMarkdown"
+			],
+			[
+				"view ",
+				"View In Browser"
+			],
+			[
+				"package ",
+				"Preferences: Package Control Settings – Default"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"instlal",
+				"Package Control: Install Package"
+			],
+			[
+				"browse",
+				"Preferences: Browse Packages"
+			],
+			[
+				"filemake",
+				"Set Syntax: FileMaker"
+			],
+			[
+				"file",
+				"Set Syntax: FileMaker"
+			]
+		],
+		"width": 593.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"ls",
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/cristos/Documents/code/Stronghold_Profiling"
+	],
+	"file_history":
+	[
+		"/Users/cristos/Documents/code/Stronghold_Profiling/app.js",
+		"/Users/cristos/Documents/code/Stronghold_Profiling/csvDownload.html",
+		"/Users/cristos/.ssh/id_rsa.pub",
+		"/Users/cristos/Documents/code/Stronghold_Profiling/mainpage.html",
+		"/Users/cristos/Downloads/offline-example/offline.manifest",
+		"/Users/cristos/Documents/code/html5qrcodereader/index.html",
+		"/Users/cristos/Documents/code/html5qrcodereader/js/effects.js",
+		"/Users/cristos/Documents/code/html5qrcodereader/js/effects_saycheese.js",
+		"/Users/cristos/Documents/code/html5qrcodereader/index_saycheese.html",
+		"/Users/cristos/Documents/code/Stronghold_Profiling/qrDisplay.html",
+		"/Users/cristos/Documents/code/html5qrcodereader/js/say-cheese.js",
+		"/Users/cristos/Documents/code/Stronghold_Profiling/matchform.html",
+		"/Users/cristos/Documents/code/Stronghold_Profiling/qrdisplay.html",
+		"/Users/cristos/Documents/code/Stronghold_Profiling/jquery.qrcode.min.js",
+		"/Users/cristos/Documents/code/Stronghold_Profiling/robotPick.html",
+		"/Users/cristos/Documents/code/Stronghold_Profiling/boilerplate.html",
+		"/Users/cristos/Documents/code/Stronghold_Profiling/pouchdb.find.js",
+		"/Users/cristos/Documents/code/Stronghold_Profiling/api-thebluealliance.js",
+		"/Users/cristos/Library/Application Support/Sublime Text 3/Packages/View In Browser/View In Browser.sublime-settings",
+		"/Users/cristos/Library/Application Support/Sublime Text 3/Packages/User/View In Browser.sublime-settings",
+		"/Users/cristos/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/cristos/Downloads/bootstrap-3.3.6/dist/js/bootstrap.js",
+		"/Users/cristos/Downloads/jquery-1.12.0.js",
+		"/Users/cristos/Documents/code/FMAjax/fmajax.js",
+		"/Users/cristos/Desktop/untitled.html",
+		"/Users/cristos/Library/Application Support/Sublime Text 3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc",
+		"/Users/cristos/Downloads/ISO/Windows 7 keys.txt",
+		"/Users/cristos/Downloads/FIRST Robotics voiceover script.txt",
+		"/Users/cristos/Downloads/FIRST Robotics voiceover script",
+		"/Users/cristos/Downloads/[DownSub.com] FIRST STRONGHOLD Game Reveal.srt",
+		"/Users/cristos/Documents/code/nerd-watch/event-fetcher/app.py",
+		"/Users/cristos/Documents/code/nerd-watch/html_munger/app.py",
+		"/Users/cristos/Documents/code/nerd-watch/nerdwatch-public-api/app.py",
+		"/Users/cristos/Documents/code/nerd-watch/nerdwatch-public-api/requirements.txt",
+		"/Users/cristos/Documents/code/nerd-watch/event-fetcher/Procfile",
+		"/Users/cristos/Documents/code/nerdwatch/scraper/scraper.py",
+		"/Users/cristos/Library/Application Support/Sublime Text 3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/Users/cristos/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/cristos/Documents/code/python_scraper/scraper.py",
+		"/Users/cristos/Downloads/4953.html",
+		"/Users/cristos/Downloads/Office for Mac 2011 keys.txt",
+		"/Users/cristos/Desktop/diskutilcslist.txt",
+		"/Users/cristos/Documents/code/fmp_tam-2.0.0/_autocommit/log.txt",
+		"/Users/cristos/Desktop/index.html",
+		"/Users/cristos/Documents/code/fmp_tam-2.0.0/iRDataShuttle/PT_KS_GN_DEMO/iRLogCentral.fmp12",
+		"/Users/cristos/Documents/code/_scrap/poll.html",
+		"/Users/cristos/Documents/code/go-cart/.git/hooks/post-commit",
+		"/Users/cristos/Documents/code/scrap/.git/hooks/pre-commit",
+		"/Users/cristos/Documents/code/go-cart/.git/hooks/pre-commit",
+		"/Users/cristos/Documents/code/go-cart/.git/hooks/pre-commit.sample",
+		"/Users/cristos/Documents/code/go-cart/.git/hooks/commit-msg.sample",
+		"/Users/cristos/Library/Application Support/Sublime Text 3/Packages/DashDoc/DashDoc.sublime-settings",
+		"/Users/cristos/Downloads/elusive-icons-2.0.0/fonts/elusiveicons-webfont.svg",
+		"/Users/cristos/Downloads/elusive-icons-2.0.0/less/elusive-icons.less",
+		"/Users/cristos/Downloads/elusive-icons-2.0.0/scss/_icons.scss",
+		"/Users/cristos/Desktop/fmvis/fmg_paypalHere_NEW.xml",
+		"/Users/cristos/Documents/code/go-cart/Artifacts/testCallbackUrl.html",
+		"/Users/cristos/Documents/code/docker-irmongo_api/Dockerfile",
+		"/Users/cristos/Documents/code/docker-irmongo_api/id_rsa.pub",
+		"/Users/cristos/Documents/code/tabletopEngine/Sample Gameboxes/Checkers/Checkers.bgml",
+		"/Users/cristos/Desktop/scrap.html",
+		"/Users/cristos/Library/Application Support/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
+		"/Users/cristos/Downloads/Go/buildFile",
+		"/Users/cristos/Documents/code/fmpstandards/Functions/WebviewerURL.fmfn",
+		"/Users/cristos/Documents/code/fmpstandards/Functions/WebviewerTimezone.fmfn",
+		"/Users/cristos/Documents/code/fmpstandards/Functions/WebviewerHTMLData.fmfn",
+		"/Users/cristos/Documents/code/fmpstandards/Functions/VariableToggle.fmfn",
+		"/Users/cristos/Documents/code/fmpstandards/Functions/VariableList.fmfn",
+		"/Users/cristos/Documents/code/fmpstandards/Functions/ListWrap.fmfn",
+		"/Users/cristos/Documents/code/fmpstandards/Functions/LayoutVariables.fmfn",
+		"/Users/cristos/Documents/code/fmpstandards/Functions/MergeVariables.fmfn",
+		"/Users/cristos/Documents/code/fmpstandards/Functions/HTMLWrapTag.fmfn",
+		"/Users/cristos/Documents/code/fmpstandards/Functions/HTMLDocument.fmfn",
+		"/Users/cristos/Documents/code/fmpstandards/Functions/UUID/UUID.fmfn",
+		"/Users/cristos/Documents/code/fmpstandards/Functions/HTMLCSS.fmfn",
+		"/Users/cristos/Documents/code/fmpstandards-dsmith/Functions/Log/LogWriteEnabled.fmfn",
+		"/Users/cristos/Documents/code/fmpstandards-dsmith/Functions/Log/LogData.fmfn",
+		"/Users/cristos/Documents/code/fmpstandards/Functions/Errors/LogData.fmfn",
+		"/Users/cristos/Downloads/FMSnippets 1.8/FMSnippets.textexpander",
+		"/Users/cristos/Downloads/FMSnippets 1.8/Untitled.csv",
+		"/Users/cristos/Downloads/FMSnippets 1.8/Untitled.atext",
+		"/Users/cristos/Downloads/PlugInSDK/Headers/FMWrapper/FMXCalcEngine.h",
+		"/Users/cristos/Downloads/PlugInSDK/Headers/FMWrapper/FMXData.h",
+		"/Users/cristos/Downloads/PlugInSDK/Headers/FMWrapper/FMXText.h",
+		"/Users/cristos/Downloads/PlugInSDK/Headers/FMWrapper/FMXExtern.h",
+		"/Users/cristos/Downloads/PlugInSDK/Headers/FMWrapper/FMXClient.h",
+		"/Users/cristos/Downloads/PlugInSDK/Headers/FMWrapper/FMXTypes.h",
+		"/Users/cristos/Downloads/PlugInSDK/Headers/FMWrapper/FMXFixPt.h",
+		"/Users/cristos/Downloads/PlugInSDK/Headers/FMWrapper/FMXBinaryData.h",
+		"/Users/cristos/Documents/code/CodeCombatSnippets/python/makeEnemies.py",
+		"/Users/cristos/Documents/code/CodeCombatSnippets/python/findWorstEnemy.py",
+		"/Users/cristos/Documents/code/fmp_markdownEditor/README.md",
+		"/Users/cristos/Documents/code/CodeCombatSnippets/python/obeyUserFlags.py",
+		"/private/var/folders/dg/jmhbwt7j0xj8t3sf6_zck0tw0000gn/T/873d76cf-1720-4e1d-84c3-9dab797c1196/home/cristoslc/www/vijilent.sites.cristoslc.com/public_html/index.html",
+		"/Users/cristos/Documents/code/FileMaker/README.rst"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"<current file>",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"    ",
+			"or ",
+			",",
+			"\"",
+			"<input ",
+			"</p>",
+			"<p>",
+			"\"",
+			"Title",
+			"\"",
+			"\n@app.route(\"/events/www.modernmyths.com\")\ndef route_events_modernmyths():\n    site = get_site_by_domain(\"www.modernmyths.com\")\n    listEvents = get_events_for_site(site)\n    return jsonify(events=[event.__dict__ for event in listEvents])\n",
+			" )",
+			"( ",
+			"	",
+			"find_divByClass",
+			",",
+			":",
+			"\\\"",
+			"    \\\"",
+			"\"",
+			"#",
+			"&",
+			"&& \\\n	",
+			"curl",
+			"<Gamepiece type=\"normal\"",
+			"isOwnersTurn",
+			"opponent",
+			"owner.",
+			"rule",
+			"self.position",
+			"1\"",
+			"=\"R",
+			"progressBarDefaultTitle",
+			"progressBarDefaultMessage",
+			"\"",
+			"%\\",
+			"%|number%\\",
+			"%\\",
+			"field:name",
+			"%|field%\\",
+			"BDG-Logo",
+			".png",
+			"Vijilent-Logo"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"\n",
+			"and ",
+			") \nor IsEmpty ( ",
+			"",
+			"\\\"",
+			"'",
+			"<input class='form-control' ",
+			"'",
+			"<input class='form-control' ",
+			"</div>",
+			"    <div class='form-group'>",
+			"'",
+			"Author",
+			"'",
+			")",
+			"(",
+			"    ",
+			"find_div_by_class",
+			") & ",
+			" ;",
+			"\"",
+			"    jsonOp ( \"",
+			"\\\"",
+			"jsonOp",
+			"&\n",
+			"\nRUN ",
+			"<Gamepiece type=\"normal\"\n						gameboard=\"Gameboard\"",
+			"owner.isActivePlayer",
+			"self.startPosition",
+			"8\"",
+			"=\"B",
+			"<Gamepiece type=\"normal\"\n						name=\"R3\"\n						position=\"C1\"\n						/>\n					<Gamepiece type=\"normal\"\n						name=\"R4\"\n						position=\"D1\"\n						/>\n					<Gamepiece type=\"normal\"\n						name=\"R5\"\n						position=\"E1\"\n						/>\n					<Gamepiece type=\"normal\"\n						name=\"R6\"\n						position=\"F1\"\n						/>\n					<Gamepiece type=\"normal\"\n						name=\"R7\"\n						position=\"G1\"\n						/>\n					<Gamepiece type=\"normal\"\n						name=\"R8\"\n						position=\"H1\"\n						/>",
+			"=\"B",
+			"progressBarSampleTitle",
+			"progressBarSampleMessage",
+			"'",
+			"【field:number】",
+			"【field:name】",
+			"field:name",
+			"Vijilent-Logo_box"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "Stronghold_Profiling.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 219.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
