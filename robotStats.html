@@ -11,15 +11,7 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="http://cdn.jsdelivr.net/pouchdb/5.2.0/pouchdb.min.js"></script>
     <script src="pouchdb.find.js"></script>
-    <style type="text/css">
-        body { background: #252525 !important;}
-        h1 {
-            color: #252525;    
-        } 
-        h2 {
-            color: white;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="gavinssheetofstyle.css">
     <script src="api-thebluealliance.js"></script>
     <script src="app.js"></script>
 </head>
@@ -35,19 +27,30 @@
         <!-- picture goes here -->
     </div>
     
-    
     <div class="container" id="auto">
         <!--low M/A %
             high M/A %
             each defense type with # times crossed under-->
     </div>
-    
-    
-    
+     
     
     <div class="container" id="teleop">
         <!-- stuff goes here-->
     </div>
+    
+    <div class="container" id="pit">
+    
+    </div>
+    
+    <div class="container" id="opinion">
+    
+    </div>
+    
+    <script>
+        loadDB();
+        $(document).ready(displayRobotData());
+    </script>
+    
 </body>
 
 </html>

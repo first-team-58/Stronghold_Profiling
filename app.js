@@ -370,46 +370,44 @@ function scores() {
 
 }
 
-function getRobotData(teamNumber) {
+function getRobotData(teamNumber, type) {
     /* teamNum: a team number as a string, e.g. '58' */
+    /* type: a type of data stored, e.g. 'pit' 'match' */
     
     /* purpose: pulls all match data for a particular robot */
     
-    var allData;
-    var types = ['match','pit','opinion']
-    
-    for (var i=0;i<types.length; i++){
-        db.createIndex({
+        
+        return db.createIndex({
             index: {fields:['teamNum','formType']}
         }).then (function () {
-            return db.find({
-                selector: {teamNum: {$eq:teamNumber}, formType: {$eq:types[i]}}
+            var result = db.find({
+                selector: {teamNum: {$eq:teamNumber}, formType: {$eq:type}}
             });
-        }).then(function(result) {
-            var info = result.docs;
-            allData[type] = info;
+            console.log('1');
+            console.log(result);
+            return result;
         }).catch(function(err) {
             console.log(err);
         });
-    };
-    
-    return allData;
 }
 
 function displayRobotData() {
     
-    var teamNumber = getParameterByName('teamNum');
+    //var teamNumber = getParameterByName('teamNum');
+    var teamNumber = '58';
     
-    $('#header').append('<h1>Team '+teamNumber+'</h1>');
+    $('#PageTop').append('<h1>Team '+teamNumber+'</h1>');
     
-    var allData = getRobotData(teamNumber);
-    
-    
+    var allData = getRobotData(teamNumber, 'match').then(function(result)
+        {   console.log('2'); 
+            console.log(result);
+            var allData = result.docs;
+            $('#auto').append(JSON.stringify(allData));
+        });
     
 }
 
 function displaybotlist (){
-    
     
     var botlist=['58','97','125','133','151','166','172','246','319','501','663','716','1058','1073','1289','1474','1519', '1699','1761','1922','1965','2084','2423','2523','2646','2713','2876','3451','3525','3566','3585','3597','3609','3930','4034','4041','4042','4151','4169','4176','4311','4473','4474','4546','4905','4906'];
     
@@ -420,6 +418,18 @@ function displaybotlist (){
        
     }
     
-    
-    
 }
+
+function matchlist (){
+    
+   for (var i=1; i<128;i++) {
+        var match = i.toString();
+        $('#lofm').append('<a href="robotPick.html?matchnum='+match+'" class="btn btn-danger btn-lg" role=button>'+match+'</a>');
+   }
+       
+}
+
+
+
+
+
