@@ -414,7 +414,7 @@ function displaybotlist (){
     
     for (var i=0;i<botlist.length;i++){
         var bot = botlist[i];
-        $('#botlist').append('<a href="robotStats.html?botnum='+bot+'" class="btn btn-danger btn-lg" role=button>'+bot+'</a>');    
+        $('#botlist').append('<a href="robotStats.html?botnum='+bot+'" class="btn btn-default btn-lg" role=button>'+bot+'</a>');    
        
     }
     
