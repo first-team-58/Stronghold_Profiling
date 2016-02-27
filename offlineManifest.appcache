@@ -1,0 +1,22 @@
+CACHE MANIFEST
+#version 2016-02-27 11:23:00 AM EST
+
+#local files
+ListOfMatches.html
+mainpage.html
+opinionform.html
+robotPick.html
+boilerplate.html
+matchform.html
+pitform.html
+robotStats.html
+listofbots.html
+matchinfoform.html
+qrdisplay.html
+scan.html
+
+#remote files to cache
+http://code.jquery.com/jquery-2.2.0.min.js
+http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css
+http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js
+http://cdn.jsdelivr.net/pouchdb/5.2.0/pouchdb.min.js
