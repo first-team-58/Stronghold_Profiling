@@ -370,10 +370,39 @@ function scores() {
 
 }
 
-function getRobotData(teamNum) {
+function getRobotData(teamNumber) {
     /* teamNum: a team number as a string, e.g. '58' */
     
-    /* purpose: pulls all match data for a particular robot and displays it as a webpage */
+    /* purpose: pulls all match data for a particular robot */
+    
+    var allData;
+    var types = ['match','pit','opinion']
+    
+    for (var i=0;i<types.length; i++){}
+        db.createIndex({
+            index: {fields:['teamNum','formType']}
+        }).then (function () {
+            return db.find({
+                selector: {teamNum: {$eq:teamNumber}, formType {$eq:types[i]}}
+            });
+        }).then(function(result) {
+            var info = result.docs;
+            allData[type] = info;
+        }).catch(function(err) {
+            console.log(err);
+        });
+    };
+    
+    return allData;
+}
+
+function displayRobotData() {
+    
+    var teamNumber = getParameterByName('teamNum');
+    
+    $('#header').append('<h1>Team '+teamNumber+'</h1>');
+    
+    var allData = getRobotData(teamNumber);
     
     
     
