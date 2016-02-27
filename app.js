@@ -423,3 +423,21 @@ function displaybotlist (){
     
     
 }
+
+function matchlist (){
+    
+   for (var i=1; i<128;i++) {
+       var match = i.toString();
+        $('#lofm').append('<a href="robotPick.html?matchnum='+match+'" class="btn btn-danger btn-lg" role=button>'+match+'</a>');
+   }
+       
+}
+
+
+
+
+
+
+
+
+
