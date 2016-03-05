@@ -480,6 +480,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"\"",
 			"    ",
 			"or ",
 			",",
@@ -530,6 +531,8 @@
 		"regex": false,
 		"replace_history":
 		[
+			"\\\"",
+			"\n\\\"",
 			"\n",
 			"and ",
 			") \nor IsEmpty ( ",
