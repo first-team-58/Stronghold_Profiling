@@ -124,6 +124,10 @@ function save(formData) {
     });
 }
 
+function saveCsvStringToDisk(csvString) {
+    window.open('data:text/csv;charset=utf-8,' + escape(csvString));
+}
+
 function appendData(dataset, name, value) {
     /* dataset: JSON object to be appended */
     /* name: queryable string, e.g. 'matchnum' */
