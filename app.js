@@ -440,7 +440,7 @@ function saveAndRefresh () {
     
     saveMatchForm('match');
     
-    location.reload();
+//    location.reload();
     
 }
 
