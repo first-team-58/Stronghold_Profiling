@@ -124,10 +124,6 @@ function save(formData) {
     });
 }
 
-function saveCsvStringToDisk(csvString) {
-    window.open('data:text/csv;charset=utf-8,' + escape(csvString));
-}
-
 function appendData(dataset, name, value) {
     /* dataset: JSON object to be appended */
     /* name: queryable string, e.g. 'matchnum' */
@@ -155,13 +151,13 @@ function cleanData(formType) {
     
     dataset['formType'] = formType;
 
-/*    dataset["teamNum"] = getParameterByName('teamNum');
+    dataset["teamNum"] = getParameterByName('teamNum');
     
     try {
       dataset["matchNum"] = getParameterByName('matchnum');  
     } catch (err) {
         //do nothing
-    }*/
+    }
     
     var types = ["input", "select", "textarea"];
 
@@ -263,21 +259,18 @@ function pickRobots() {
 
 
     // for when we get the pouchdb.find functionality working
-    
-/*    var matchData = {
+    /*
+    var matchData = {
         "-id": 001,
         "match": "1",
         "redAlliance": ["58", "127", "133"],
         "blueAlliance": ["125", "166", "3609"]
     };
 
-    db.put(matchData);*/
+    db.put(matchData);
 
-/*    db.createIndex({
-        index: {fields:['formType','matchnum']}
-    }).then(db.find({
+    db.find({
         selector: {
-            'matchnum': 
             "match": 'match',
             fields: ['redAlliance', 'blueAlliance']
         }
@@ -294,8 +287,8 @@ function pickRobots() {
         $("#redAlliance").children(".btn").each().addClass("btn-danger");
     }).catch(function(err) {
         $("#error").append('<p>' + err.toString() + '</p>');
-    });*/
-    
+    });
+    */
 
     // for testing
     var match = "001";
@@ -430,18 +423,15 @@ function displaybotlist (){
 function matchlist (){
     
    for (var i=1; i<128;i++) {
+<<<<<<< HEAD
         var match = i.toString();
         $('#lofm').append('<a href="robotPick.html?matchnum='+match+'" class="btn btn-danger btn-lg" role=button>'+match+'</a>');
+=======
+       var match = i.toString();
+        $('#lofm').append('<a href="robotPick.html?matchnum='+match+'" class="btn btn-default btn-lg" role=button>'+match+'</a>');
+>>>>>>> 1c838f8000dcf4a51a9d21fa25929c4f20a49484
    }
        
-}
-
-function saveAndRefresh () {
-    
-    saveMatchForm('match');
-    
-    location.reload();
-    
 }
 
 
