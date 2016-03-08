@@ -20,7 +20,7 @@ function generateTestData(dbName) {
 
     var db = new PouchDB(dbName);
 
-    TBA.event.get('2015melew', function(event) {
+    TBA.event.get('2015melew', function (event) {
         saveEventMatchesToDatabase(event, db);
     });
 }
@@ -110,8 +110,10 @@ function guid() {
 function save(formData) {
     /* formData: JSON object to put in pouchDB */
     /* purpose: saves JSON object in pouchDB, and logs JSON object to console */
+    
     db.put(formData);
-    db.createIndex({
+    
+/*    db.createIndex({
         index: {fields:['formType']}
     }).then(function () {
         return db.find({
@@ -121,7 +123,7 @@ function save(formData) {
         console.log(result);
     }).catch(function(err) {
         console.log(err);
-    });
+    });*/
 }
 
 function saveCsvStringToDisk(csvString) {
@@ -327,6 +329,7 @@ function addAlliance(allianceColor) {
 
 function preMatch() {
     /* purpose: for use with matchinfoform.html, creates dropdowns for chosing red and blue alliance for given match number */
+/*
     function addBotLists(color, listOfBots) {
 
         for (var j = 1; j < 4; j++) {
@@ -345,19 +348,26 @@ function preMatch() {
 
     }
 
-    var listOfBots = ["58", "127", "133", "125", "3906", "3467"];
+    var listOfBots =['58','97','125','133','151','166','172','246','319','501','663','716','1058','1073','1289','1474','1519', '1699','1761','1922','1965','2084','2423','2523','2646','2713','2876','3451','3525','3566','3585','3597','3609','3930','4034','4041','4042','4151','4169','4176','4311','4473','4474','4546','4905','4906'];
 
     addAlliance('red');
     addAlliance('blue');
 
     addBotLists('red', listOfBots);
     addBotLists('blue', listOfBots);
+*/
+    $('#redScores').hide();
+    $('#blueScores').hide();
+    $('#redBots').show();
+    $('#blueBots').show();
 
 }
 
+
+
 function scores() {
     /* purpose: for use with matchinfoform.html, displays inputs for inputing score for each team */
-    function addFormElements(color) {
+/*    function addFormElements(color) {
 
         var targetForm = $('#' + color + 'Alliance').find('form');
 
@@ -373,7 +383,13 @@ function scores() {
     addAlliance('blue');
 
     addFormElements('red');
-    addFormElements('blue');
+    addFormElements('blue');*/
+    
+    $('#redScores').show();
+    $('#blueScores').show();
+    $('#redBots').hide();
+    $('#blueBots').hide();
+    
 
 }
 
@@ -436,11 +452,67 @@ function matchlist (){
        
 }
 
-function saveAndRefresh () {
+function saveAndRefresh (formType) {
     
-    saveMatchForm('match');
+    saveMatchForm(formType).then( location.reload());
     
-//    location.reload();
+}
+
+function saveAlliances () {
+
+    var redAlliance = [];
+        $('#redBots').find('select').each(function(){
+            redAlliance.push($(this).val());    
+        });
+    
+    var blueAlliance = [];
+        $('#blueBots').find('select').each(function(){
+            blueAlliance.push($(this).val());    
+        });
+        
+    var dataset = new Object();
+
+    var matchnum = getParameterByName('matchnum');
+    
+    dataset["_id"] = 'reading'+matchnum;
+    
+    dataset['formType'] = 'matchInfo';
+    
+    dataset['matchnum'] = matchnum;
+    
+    dataset['redAlliance'] = redAlliance;
+    dataset['blueAlliance'] = blueAlliance;
+    
+    save(dataset);
+    
+}
+
+function saveScores () {
+    
+    function addScoresToDoc(doc) {
+        
+        $('#redAlliance').find('input').each(function(){
+            var name = $(this).attr("name");
+            var value = $(this).val();
+            appendData(dataset, name, value);
+        });
+        
+        $('#blueAlliance').find('input').each(function(){
+            var name = $(this).attr("name");
+            var value = $(this).val();
+            appendData(dataset, name, value);
+        });
+  
+    }
+    
+
+    var matchnum = getParameterByName('matchnum');
+    
+    db.get('reading'+matchnum).then(function (doc) {
+        // do something here update the doc and re-put it? Not 100% sure Brain not working
+    });
+    
+    
     
 }
 

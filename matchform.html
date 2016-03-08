@@ -31,8 +31,6 @@
       <ul class="nav navbar-nav">
         <li><a href="listofbots.html">Match</a></li>
         <li><a href="pitform.html">Pit</a></li> 
-        <li><a href="qrdisplay.html">QR Display</a></li> 
-        <li><a href="scan.html">QR Scan</a></li> 
       </ul>
       </div>
         </div>
@@ -185,6 +183,12 @@
       </div>
     </div>
     <div class="form-group">
+      <label class="control-label col-sm-2">Ramparts</label>
+      <div class="col-sm-4">          
+          <input type="number" name="RPCross" min="0" max="50" step="1" value="0">
+      </div>
+    </div>
+    <div class="form-group">
       <label class="control-label col-sm-2">Scale Attempt</label>
       <div class="col-sm-4">          
         <input type="checkbox" name="scaleAttempt">
@@ -207,7 +211,7 @@
     
         
 <div class="container">
-    <button type="button" onclick="saveAndRefresh();">Sumbit!</button>
+    <button type="button" onclick="saveAndRefresh('match');">Sumbit!</button>
 </div>
             
 
