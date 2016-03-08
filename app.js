@@ -476,9 +476,9 @@ function saveAlliances () {
     
     dataset["_id"] = 'reading'+matchnum;
     
-    dataset['formType'] = 'matchInfo';
+    //dataset['formType'] = 'matchInfo';
     
-    dataset['matchnum'] = matchnum;
+    //dataset['matchnum'] = matchnum;
     
     dataset['redAlliance'] = redAlliance;
     dataset['blueAlliance'] = blueAlliance;
@@ -494,25 +494,39 @@ function saveScores () {
         $('#redAlliance').find('input').each(function(){
             var name = $(this).attr("name");
             var value = $(this).val();
-            appendData(dataset, name, value);
+            console.log(name, value);
+            doc[name] = value;
+            //appendData(doc, name, value);
         });
         
         $('#blueAlliance').find('input').each(function(){
             var name = $(this).attr("name");
             var value = $(this).val();
-            appendData(dataset, name, value);
+            appendData(doc, name, value);
         });
+        
+        console.log(doc);
+        
+        return doc;
   
     }
     
-
+    // creates id to get
     var matchnum = getParameterByName('matchnum');
+    var idToGet = 'reading' + matchnum;
     
-    db.get('reading'+matchnum).then(function (doc) {
+    console.log(idToGet);
+    
+    db.get(idToGet).then(function (doc) {
         // do something here update the doc and re-put it? Not 100% sure Brain not working
+        var docNew = addScoresToDoc(doc);
+        console.log(docNew);
+        return db.put(docNew, idToGet, doc.rev);
+    }).then(function(response) {
+        console.log(response);
+    }).catch(function(err){
+       console.log(err); 
     });
-    
-    
     
 }
 
