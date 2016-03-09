@@ -143,6 +143,12 @@ function scanForData(elementType, dataset) {
     /* dataset: a JSON object where names and values from elements of elementType are coalated */
     /* purpose: scans html doc for inputs of a known type and adds name/value pairs to a JSON object */
     $(elementType).each(function() {
+        if ($(this).prop('checked')) {
+            $(this).value = "YES";
+            console.log('checked');
+        } else {
+            //do nothing
+        }
         var name = $(this).attr("name");
         var value = $(this).val();
         appendData(dataset, name, value);
@@ -398,13 +404,13 @@ function getRobotData(teamNumber, type) {
     /* type: a type of data stored, e.g. 'pit' 'match' */
     
     /* purpose: pulls all match data for a particular robot */
-    
         
         return db.createIndex({
-            index: {fields:['teamNum','formType']}
+            index: {fields:['teamnum','formType']}
         }).then (function () {
             var result = db.find({
-                selector: {teamNum: {$eq:teamNumber}, formType: {$eq:type}}
+                selector: {teamnum: {$eq:teamNumber}, formType: {$eq:type}},
+                //sort: ['matchnum']
             });
             console.log('1');
             console.log(result);
@@ -414,6 +420,40 @@ function getRobotData(teamNumber, type) {
         });
 }
 
+function addCountableDataToPage (teamNumber, type) {
+    
+    return db.createIndex({
+        index: {fields:['teamnum', 'formType', 'autoReachD', 'scaleAttempt', 'scaleSuccess', 'autoShotAtp', 'autoShotSS','autoCrossD']}
+    }).then (function () {
+        var result = db.find({
+            selector: {teamnum: {$eq:teamNumber}, formType: {$eq:type}, autoReachD: {$eq:'off'}}
+        });
+        console.log('3');
+        console.log(result);
+    })
+    
+}
+
+function iterateOverAddables (allData) {
+   
+    
+    var addables = ['HiGAttempt','HiGAttain', 'LoGAttain', 'LBCross','RPCross','RWCross','RTCross','DBCross','PCCross','CDFCross','MoatCross','SPCross'];
+    
+    for (var j=0;j<addables.length;j++){
+        var property = addables[j];
+        var sum = 0;
+    
+        for (var i=0;i<allData.length;i++) {
+            var n = allData[i][property];
+        
+            sum += parseInt(allData[i][property]);
+        }
+    
+        $('#'+property).append('<p>'+sum+'</p>');
+    }
+    
+}
+
 function displayRobotData() {
     
     //var teamNumber = getParameterByName('teamNum');
@@ -421,11 +461,16 @@ function displayRobotData() {
     
     $('#PageTop').append('<h1>Team '+teamNumber+'</h1>');
     
+    // addCountableDataToPage(teamNumber, 'match');
+    
+    
+    
     var allData = getRobotData(teamNumber, 'match').then(function(result)
         {   console.log('2'); 
             console.log(result);
             var allData = result.docs;
             $('#auto').append(JSON.stringify(allData));
+            iterateOverAddables(allData);
         });
     
 }
@@ -454,7 +499,7 @@ function matchlist (){
 
 function saveAndRefresh (formType) {
     
-    saveMatchForm(formType).then( location.reload());
+    saveMatchForm(formType);
     
 }
 
