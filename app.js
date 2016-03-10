@@ -422,15 +422,59 @@ function getRobotData(teamNumber, type) {
 
 function addCountableDataToPage (teamNumber, type) {
     
+    function queryAndAppend (query, divid) {
+        
+        var result = db.find(query).then (function (result) {
+                console.log(result);
+                if (result.docs != null){
+                    $(divid).append('<p>'+result.docs.length+'</p>');
+                } else {
+                    $(divid).append('<p>0</p>');
+                }
+                console.log('3');
+        });
+    }
+    
     return db.createIndex({
         index: {fields:['teamnum', 'formType', 'autoReachD', 'scaleAttempt', 'scaleSuccess', 'autoShotAtp', 'autoShotSS','autoCrossD']}
     }).then (function () {
+        
+        var queryables = ['autoReachD', 'scaleAttempt', 'scaleSuccess','autoCrossD']
+        
+        for (var i=0; i<queryables.length; i++) {
+            var query;
+            
+            var queryType = queryables[i];
+        
+            query['teamnum'] = "{$eq:"+teamNumber+"}";
+            query['formType'] = "{$eq:"+type+"}";
+            query[queryType] = "{$eq:"+on+"}";
+            
+            queryAndAppend (query, queryables);
+            
+        }
+        
+        
+        
         var result = db.find({
-            selector: {teamnum: {$eq:teamNumber}, formType: {$eq:type}, autoReachD: {$eq:'off'}}
-        });
+            selector: {teamnum: {$eq:teamNumber}, formType: {$eq:type}, autoReachD: {$eq:'on'}}
+        }).then (function (result) {
+        console.log(result);
+        if (result.docs != null){
+            $('#autoReachDYES').append('<p>'+result.docs.length+'</p>');
+        } else {
+            $('#autoReachDYES').append('<p>0</p>');
+        }
         console.log('3');
         console.log(result);
-    })
+        });
+    }).then (function () {
+        var result = db.find({
+            selector: {teamnum: {$eq:teamNumber}, formType: {$eq:type}, scaleAttempt: {$eq:'on'}}
+        }).then (function (result){
+            
+        }); 
+    });
     
 }
 
@@ -461,15 +505,13 @@ function displayRobotData() {
     
     $('#PageTop').append('<h1>Team '+teamNumber+'</h1>');
     
-    // addCountableDataToPage(teamNumber, 'match');
-    
-    
+    addCountableDataToPage(teamNumber, 'match');
     
     var allData = getRobotData(teamNumber, 'match').then(function(result)
         {   console.log('2'); 
             console.log(result);
             var allData = result.docs;
-            $('#auto').append(JSON.stringify(allData));
+            //$('#auto').append(JSON.stringify(allData));
             iterateOverAddables(allData);
         });
     
