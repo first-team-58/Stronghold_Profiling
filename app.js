@@ -150,6 +150,8 @@ function scanForData(elementType, dataset) {
         var name = o.attr("name");
         var value = o.val();
         
+        console.log(name, value);
+        
         
         if (o.is(':checked')) {
             value = "YES";
@@ -415,13 +417,12 @@ function getRobotData(teamNumber, type) {
         return db.createIndex({
             index: {fields:['teamnum','formType']}
         }).then (function () {
-            var result = db.find({
+            return result = db.find({
                 selector: {teamnum: {$eq:teamNumber}, formType: {$eq:type}},
                 //sort: ['matchnum']
             });
-            console.log('1');
-            console.log(result);
-            return result;
+            //console.log('1');
+            //console.log(result);
         }).catch(function(err) {
             console.log(err);
         });
@@ -429,19 +430,22 @@ function getRobotData(teamNumber, type) {
 
 function addCountableDataToPage (teamNumber, type) {
     
+    
     function queryAndAppend (query, divid) {
         
         var result = db.find(query).then (function (result) {
-                console.log(result);
+                //console.log(result);
                 $(divid).append('<p>'+result.docs.length+'</p>')
                 
-                console.log(divid, result.docs.length);
+                //console.log(divid, result.docs.length);
         });
     }
     
     return db.createIndex({
         index: {fields:['teamnum', 'formType', 'autoReachD', 'scaleAttempt', 'scaleSuccess', 'autoShotAtp', 'autoShotSS','autoCrossD']}
     }).then (function () {
+        
+        console.log('58');
         
         var queryables = ['autoReachD', 'scaleAttempt', 'scaleSuccess','autoCrossD','autoCrossD','autoCrossD','autoCrossD','autoCrossD','autoCrossD','autoCrossD','autoCrossD','autoCrossD','autoShotAtp','autoShotAtp'];
         var querytocount = ['YES','YES','YES','CDF', 'RP', 'RW', 'RT','DB','SP','PC','LB', 'M','Hi','Lo'];
@@ -458,7 +462,7 @@ function addCountableDataToPage (teamNumber, type) {
             var queryString = new Object();
             queryString['selector'] = query;
             
-            console.log(queryString);
+            //console.log(queryString);
             var divid = '#' +queryType + querytocount[i];
             
             queryAndAppend (queryString, divid);
@@ -482,7 +486,7 @@ function addCountableDataToPage (teamNumber, type) {
             var queryString = new Object();
             queryString['selector'] = query;
             
-            console.log(queryString);
+            //console.log(queryString);
             var divid = '#' +queryType + querytocount[i];
             
             queryAndAppend (queryString, divid);
@@ -534,6 +538,16 @@ function iterateOverAddables (allData) {
     
 }
 
+function addEachField(allData, fields) {
+    for(var i=0;i<allData.length;i++) {
+        var form = allData[i];
+        for(var j=0;j<fields.length;j++){
+            var field = fields[j];
+            $(field).append('<p>"'+form[field]+'"</p>');
+        }
+    }
+}
+
 function displayRobotData() {
     
     //var teamNumber = getParameterByName('teamNum');
@@ -543,13 +557,19 @@ function displayRobotData() {
     
     addCountableDataToPage(teamNumber, 'match');
     
-    var allData = getRobotData(teamNumber, 'match').then(function(result)
-        {   console.log('2'); 
-            console.log(result);
-            var allData = result.docs;
-            //$('#auto').append(JSON.stringify(allData));
-            iterateOverAddables(allData);
-        });
+    getRobotData(teamNumber, 'match').then(function(result){   
+        //console.log('2'); 
+        //console.log(result);
+        var allData = result.docs;
+        //$('#auto').append(JSON.stringify(allData));
+        iterateOverAddables(allData);
+    });
+    
+    getRobotData(teamNumber,'pit').then(function(result) {
+        var allData = result.docs;
+        var fields = ['aim','shooter'];
+        addEachField(allData, fields);
+    });
     
 }
 
