@@ -143,14 +143,21 @@ function scanForData(elementType, dataset) {
     /* dataset: a JSON object where names and values from elements of elementType are coalated */
     /* purpose: scans html doc for inputs of a known type and adds name/value pairs to a JSON object */
     $(elementType).each(function() {
-        if ($(this).prop('checked')) {
-            $(this).value = "YES";
+        var o = $(this);
+        console.log(o);
+        
+
+        var name = o.attr("name");
+        var value = o.val();
+        
+        
+        if (o.is(':checked')) {
+            value = "YES";
             console.log('checked');
         } else {
             //do nothing
         }
-        var name = $(this).attr("name");
-        var value = $(this).val();
+        
         appendData(dataset, name, value);
     });
 }
@@ -426,12 +433,9 @@ function addCountableDataToPage (teamNumber, type) {
         
         var result = db.find(query).then (function (result) {
                 console.log(result);
-                if (result.docs != null){
-                    $(divid).append('<p>'+result.docs.length+'</p>');
-                } else {
-                    $(divid).append('<p>0</p>');
-                }
-                console.log('3');
+                $(divid).append('<p>'+result.docs.length+'</p>')
+                
+                console.log(divid, result.docs.length);
         });
     }
     
@@ -439,24 +443,56 @@ function addCountableDataToPage (teamNumber, type) {
         index: {fields:['teamnum', 'formType', 'autoReachD', 'scaleAttempt', 'scaleSuccess', 'autoShotAtp', 'autoShotSS','autoCrossD']}
     }).then (function () {
         
-        var queryables = ['autoReachD', 'scaleAttempt', 'scaleSuccess','autoCrossD']
+        var queryables = ['autoReachD', 'scaleAttempt', 'scaleSuccess','autoCrossD','autoCrossD','autoCrossD','autoCrossD','autoCrossD','autoCrossD','autoCrossD','autoCrossD','autoCrossD','autoShotAtp','autoShotAtp'];
+        var querytocount = ['YES','YES','YES','CDF', 'RP', 'RW', 'RT','DB','SP','PC','LB', 'M','Hi','Lo'];
         
         for (var i=0; i<queryables.length; i++) {
-            var query;
+            var query = new Object();
             
             var queryType = queryables[i];
         
-            query['teamnum'] = "{$eq:"+teamNumber+"}";
-            query['formType'] = "{$eq:"+type+"}";
-            query[queryType] = "{$eq:"+on+"}";
+            query['teamnum'] = {$eq:teamNumber};
+            query['formType'] = {$eq:type};
+            query[queryType] = {$eq:querytocount[i]};
             
-            queryAndAppend (query, queryables);
+            var queryString = new Object();
+            queryString['selector'] = query;
+            
+            console.log(queryString);
+            var divid = '#' +queryType + querytocount[i];
+            
+            queryAndAppend (queryString, divid);
             
         }
         
+    }).then (function() {
+        
+        var querytocount = ['Hi','Lo'];
+        
+        for (var i=0; i<querytocount.length; i++) {
+            var query = new Object();
+            
+            var queryType = 'autoShotSS';
+        
+            query['teamnum'] = {$eq:teamNumber};
+            query['formType'] = {$eq:type};
+            query[queryType] = {$eq:'YES'};
+            query['autoShotAtp'] = {$eq:querytocount[i]} 
+            
+            var queryString = new Object();
+            queryString['selector'] = query;
+            
+            console.log(queryString);
+            var divid = '#' +queryType + querytocount[i];
+            
+            queryAndAppend (queryString, divid);
+            
+        }
+    });
         
         
-        var result = db.find({
+        
+/*        var result = db.find({
             selector: {teamnum: {$eq:teamNumber}, formType: {$eq:type}, autoReachD: {$eq:'on'}}
         }).then (function (result) {
         console.log(result);
@@ -475,7 +511,7 @@ function addCountableDataToPage (teamNumber, type) {
             
         }); 
     });
-    
+    */
 }
 
 function iterateOverAddables (allData) {
