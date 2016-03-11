@@ -543,7 +543,7 @@ function addEachField(allData, fields) {
         var form = allData[i];
         for(var j=0;j<fields.length;j++){
             var field = fields[j];
-            $(field).append('<p>"'+form[field]+'"</p>');
+            $('#'+field).append('<p>"'+form[field]+'"</p>');
         }
     }
 }
