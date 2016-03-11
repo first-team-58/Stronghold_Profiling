@@ -26,9 +26,23 @@
         <a href="javascript:testCsvDownload()">Test Download</a>
     </div>
     <script>
-    function testCsvDownload(){
-        var myCsv = 'Col1,Col2,Col3\nval1,val2,val3';
-        saveCsvStringToDisk(myCsv);
+    function testCsvDownload() {
+        var db = new PouchDB('scouting');
+        var allDocs = db.allDocs({
+            include_docs: true
+        }).then(function(result) {
+            //console.log(result.rows);
+            var collection = new Array();
+            $.each(result.rows, function(key, value) {
+               collection.push(value.doc);
+            });
+            //console.log(collection);
+            var myCsv = $.csv.fromObjects(collection);
+            //console.log(myCsv);
+            saveCsvStringToDisk(myCsv);
+        }).catch(function(err) {
+            console.log(err);
+        });
     }
     </script>
 </body>
