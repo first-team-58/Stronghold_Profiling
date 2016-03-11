@@ -75,10 +75,44 @@
         output += ' - LastModified: ' + (file.lastModifiedDate ? file.lastModifiedDate.toLocaleDateString() : 'n/a') + '<br />\n';
 
         // read the file contents
-        printTable(file);
+        //printTable(file);
+        saveObjectsFromFile(file);
 
         // post the results
         $('#list').append(output);
+    }
+
+    function saveObjectsFromFile(file) {
+        console.log('getObjectsFromFile');
+        var reader = new FileReader();
+        reader.readAsText(file);
+
+        reader.onload = function(event) {
+            var csv = event.target.result;
+            var allDocs = $.csv.toObjects(csv);
+            //console.log(allDocs);
+            $.each(allDocs, function(index, doc) {
+                //console.log(doc);
+                var db = new PouchDB('scouting');
+                db.put(doc).then(function(response) {
+                    //console.log(response);
+                }).catch(function(err) {
+                    if (err.status == 409) {
+                        /* If the document doesn't exist, add it as a new document. */
+                        doc._rev = '';
+                        db.put(doc).then(function(response) {
+                            //console.log(response);
+                        }).catch(function(err) {
+                            /* If the document already exists, log an error. */
+                            console.log(err);
+                        });
+                    } else {
+                        /* Log all other errors. */
+                        console.log(err);
+                    }
+                });
+            });
+        }
     }
 
     function printTable(file) {
