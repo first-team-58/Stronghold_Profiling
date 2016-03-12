@@ -1,4 +1,5 @@
 <html>
+
 <head>
     <title>Match Form</title>
     <meta charset="utf-8">
@@ -13,370 +14,366 @@
     <script src="api-thebluealliance.js"></script>
     <script src="app.js"></script>
 </head>
+
 <body>
-    
     <div class="container">
         <div class="jumbotron">
             <h1> Match Info Form </h1>
         </div>
     </div>
-
-<div class="container" id="form">
-    <h2>What are you entering?</h2>
-    <button class="btn btn-lg btn-primary" onclick="preMatch()">Match Assignments</button> 
-    <button class="btn btn-lg btn-success" onclick="scores()">Match Scores</button>
-    <h2></h2>
-    <div class="row">
-        <div class="col-sm-4" id="redAlliance">
-        <h3 class="text-danger">Red Alliance</h3>
-        <form class="form-horizontal" role="form">
-        <div class="form-group" id="redBots">
-            <select name="redbot1">
-                <option value="null">  </option>
-                <option value="58">58</option>
-                <option value="97">97</option>
-                <option value="125">125</option>
-                <option value="133">133</option>
-                <option value="151">151</option>
-                <option value="166">166</option>
-                <option value="172">172</option>
-                <option value="246">246</option>
-                <option value="319">319</option>
-                <option value="501">501</option>
-                <option value="663">663</option>
-                <option value="716">716</option>
-                <option value="1058">1058</option>
-                <option value="1073">1073</option>
-                <option value="1289">1289</option>
-                <option value="1474">1474</option>
-                <option value="1519">1519</option>
-                <option value="1699">1699</option>
-                <option value="1761">1761</option>
-                <option value="1922">1922</option>
-                <option value="1965">1965</option>
-                <option value="2084">2084</option>
-                <option value="2423">2423</option>
-                <option value="2523">2523</option>
-                <option value="2646">2646</option>
-                <option value="2713">2713</option>
-                <option value="2876">2876</option>
-                <option value="3451">3451</option>
-                <option value="3525">3525</option>
-                <option value="3566">3566</option>
-                <option value="3585">3585</option>
-                <option value="3597">3597</option>
-                <option value="3609">3609</option>
-                <option value="3930">3930</option>
-                <option value="4034">4034</option>
-                <option value="4041">4041</option>
-                <option value="4042">4042</option>
-                <option value="4151">4151</option>
-                <option value="4169">4169</option>
-                <option value="4176">4176</option>
-                <option value="4311">4311</option>
-                <option value="4473">4473</option>
-                <option value="4474">4474</option>
-                <option value="4546">4546</option>
-                <option value="4905">4905</option>
-                <option value="4906">4906</option>
-            </select>            
-            <select name="redbot2">
-                <option value="null">  </option>
-                <option value="58">58</option>
-                <option value="97">97</option>
-                <option value="125">125</option>
-                <option value="133">133</option>
-                <option value="151">151</option>
-                <option value="166">166</option>
-                <option value="172">172</option>
-                <option value="246">246</option>
-                <option value="319">319</option>
-                <option value="501">501</option>
-                <option value="663">663</option>
-                <option value="716">716</option>
-                <option value="1058">1058</option>
-                <option value="1073">1073</option>
-                <option value="1289">1289</option>
-                <option value="1474">1474</option>
-                <option value="1519">1519</option>
-                <option value="1699">1699</option>
-                <option value="1761">1761</option>
-                <option value="1922">1922</option>
-                <option value="1965">1965</option>
-                <option value="2084">2084</option>
-                <option value="2423">2423</option>
-                <option value="2523">2523</option>
-                <option value="2646">2646</option>
-                <option value="2713">2713</option>
-                <option value="2876">2876</option>
-                <option value="3451">3451</option>
-                <option value="3525">3525</option>
-                <option value="3566">3566</option>
-                <option value="3585">3585</option>
-                <option value="3597">3597</option>
-                <option value="3609">3609</option>
-                <option value="3930">3930</option>
-                <option value="4034">4034</option>
-                <option value="4041">4041</option>
-                <option value="4042">4042</option>
-                <option value="4151">4151</option>
-                <option value="4169">4169</option>
-                <option value="4176">4176</option>
-                <option value="4311">4311</option>
-                <option value="4473">4473</option>
-                <option value="4474">4474</option>
-                <option value="4546">4546</option>
-                <option value="4905">4905</option>
-                <option value="4906">4906</option>
-            </select>
-            <select name="redbot3">
-                <option value="null">  </option>
-                <option value="58">58</option>
-                <option value="97">97</option>
-                <option value="125">125</option>
-                <option value="133">133</option>
-                <option value="151">151</option>
-                <option value="166">166</option>
-                <option value="172">172</option>
-                <option value="246">246</option>
-                <option value="319">319</option>
-                <option value="501">501</option>
-                <option value="663">663</option>
-                <option value="716">716</option>
-                <option value="1058">1058</option>
-                <option value="1073">1073</option>
-                <option value="1289">1289</option>
-                <option value="1474">1474</option>
-                <option value="1519">1519</option>
-                <option value="1699">1699</option>
-                <option value="1761">1761</option>
-                <option value="1922">1922</option>
-                <option value="1965">1965</option>
-                <option value="2084">2084</option>
-                <option value="2423">2423</option>
-                <option value="2523">2523</option>
-                <option value="2646">2646</option>
-                <option value="2713">2713</option>
-                <option value="2876">2876</option>
-                <option value="3451">3451</option>
-                <option value="3525">3525</option>
-                <option value="3566">3566</option>
-                <option value="3585">3585</option>
-                <option value="3597">3597</option>
-                <option value="3609">3609</option>
-                <option value="3930">3930</option>
-                <option value="4034">4034</option>
-                <option value="4041">4041</option>
-                <option value="4042">4042</option>
-                <option value="4151">4151</option>
-                <option value="4169">4169</option>
-                <option value="4176">4176</option>
-                <option value="4311">4311</option>
-                <option value="4473">4473</option>
-                <option value="4474">4474</option>
-                <option value="4546">4546</option>
-                <option value="4905">4905</option>
-                <option value="4906">4906</option>
-            </select>
-            <br>
-            <button onclick="saveAlliances();">Submit Alliances!</button>
-        </div>
-        <div class="form-group" id="redScores">
-            <label class="control-label col-sm-2">Score</label><input type="range" name="redpoints" value="0" min="0" max="400" data-show-value="true" data-highlight="true">
-            
-            <div class="checkbox">
-                <label><input type="checkbox" name="redBreach">Breach</label>
+    <div class="container" id="feedbackContainer">
+    </div>
+    <div class="container" id="form">
+        <h2>What are you entering?</h2>
+        <button class="btn btn-lg btn-primary" onclick="preMatch()">Match Assignments</button>
+        <button class="btn btn-lg btn-success" onclick="scores()">Match Scores</button>
+        <h2></h2>
+        <div class="row">
+            <div class="col-sm-4" id="redAlliance">
+                <h3 class="text-danger">Red Alliance</h3>
+                <form class="form-horizontal" role="form">
+                    <div class="form-group" id="redBots">
+                        <select name="redbot1">
+                            <option value="null"> </option>
+                            <option value="58">58</option>
+                            <option value="97">97</option>
+                            <option value="125">125</option>
+                            <option value="133">133</option>
+                            <option value="151">151</option>
+                            <option value="166">166</option>
+                            <option value="172">172</option>
+                            <option value="246">246</option>
+                            <option value="319">319</option>
+                            <option value="501">501</option>
+                            <option value="663">663</option>
+                            <option value="716">716</option>
+                            <option value="1058">1058</option>
+                            <option value="1073">1073</option>
+                            <option value="1289">1289</option>
+                            <option value="1474">1474</option>
+                            <option value="1519">1519</option>
+                            <option value="1699">1699</option>
+                            <option value="1761">1761</option>
+                            <option value="1922">1922</option>
+                            <option value="1965">1965</option>
+                            <option value="2084">2084</option>
+                            <option value="2423">2423</option>
+                            <option value="2523">2523</option>
+                            <option value="2646">2646</option>
+                            <option value="2713">2713</option>
+                            <option value="2876">2876</option>
+                            <option value="3451">3451</option>
+                            <option value="3525">3525</option>
+                            <option value="3566">3566</option>
+                            <option value="3585">3585</option>
+                            <option value="3597">3597</option>
+                            <option value="3609">3609</option>
+                            <option value="3930">3930</option>
+                            <option value="4034">4034</option>
+                            <option value="4041">4041</option>
+                            <option value="4042">4042</option>
+                            <option value="4151">4151</option>
+                            <option value="4169">4169</option>
+                            <option value="4176">4176</option>
+                            <option value="4311">4311</option>
+                            <option value="4473">4473</option>
+                            <option value="4474">4474</option>
+                            <option value="4546">4546</option>
+                            <option value="4905">4905</option>
+                            <option value="4906">4906</option>
+                        </select>
+                        <select name="redbot2">
+                            <option value="null"> </option>
+                            <option value="58">58</option>
+                            <option value="97">97</option>
+                            <option value="125">125</option>
+                            <option value="133">133</option>
+                            <option value="151">151</option>
+                            <option value="166">166</option>
+                            <option value="172">172</option>
+                            <option value="246">246</option>
+                            <option value="319">319</option>
+                            <option value="501">501</option>
+                            <option value="663">663</option>
+                            <option value="716">716</option>
+                            <option value="1058">1058</option>
+                            <option value="1073">1073</option>
+                            <option value="1289">1289</option>
+                            <option value="1474">1474</option>
+                            <option value="1519">1519</option>
+                            <option value="1699">1699</option>
+                            <option value="1761">1761</option>
+                            <option value="1922">1922</option>
+                            <option value="1965">1965</option>
+                            <option value="2084">2084</option>
+                            <option value="2423">2423</option>
+                            <option value="2523">2523</option>
+                            <option value="2646">2646</option>
+                            <option value="2713">2713</option>
+                            <option value="2876">2876</option>
+                            <option value="3451">3451</option>
+                            <option value="3525">3525</option>
+                            <option value="3566">3566</option>
+                            <option value="3585">3585</option>
+                            <option value="3597">3597</option>
+                            <option value="3609">3609</option>
+                            <option value="3930">3930</option>
+                            <option value="4034">4034</option>
+                            <option value="4041">4041</option>
+                            <option value="4042">4042</option>
+                            <option value="4151">4151</option>
+                            <option value="4169">4169</option>
+                            <option value="4176">4176</option>
+                            <option value="4311">4311</option>
+                            <option value="4473">4473</option>
+                            <option value="4474">4474</option>
+                            <option value="4546">4546</option>
+                            <option value="4905">4905</option>
+                            <option value="4906">4906</option>
+                        </select>
+                        <select name="redbot3">
+                            <option value="null"> </option>
+                            <option value="58">58</option>
+                            <option value="97">97</option>
+                            <option value="125">125</option>
+                            <option value="133">133</option>
+                            <option value="151">151</option>
+                            <option value="166">166</option>
+                            <option value="172">172</option>
+                            <option value="246">246</option>
+                            <option value="319">319</option>
+                            <option value="501">501</option>
+                            <option value="663">663</option>
+                            <option value="716">716</option>
+                            <option value="1058">1058</option>
+                            <option value="1073">1073</option>
+                            <option value="1289">1289</option>
+                            <option value="1474">1474</option>
+                            <option value="1519">1519</option>
+                            <option value="1699">1699</option>
+                            <option value="1761">1761</option>
+                            <option value="1922">1922</option>
+                            <option value="1965">1965</option>
+                            <option value="2084">2084</option>
+                            <option value="2423">2423</option>
+                            <option value="2523">2523</option>
+                            <option value="2646">2646</option>
+                            <option value="2713">2713</option>
+                            <option value="2876">2876</option>
+                            <option value="3451">3451</option>
+                            <option value="3525">3525</option>
+                            <option value="3566">3566</option>
+                            <option value="3585">3585</option>
+                            <option value="3597">3597</option>
+                            <option value="3609">3609</option>
+                            <option value="3930">3930</option>
+                            <option value="4034">4034</option>
+                            <option value="4041">4041</option>
+                            <option value="4042">4042</option>
+                            <option value="4151">4151</option>
+                            <option value="4169">4169</option>
+                            <option value="4176">4176</option>
+                            <option value="4311">4311</option>
+                            <option value="4473">4473</option>
+                            <option value="4474">4474</option>
+                            <option value="4546">4546</option>
+                            <option value="4905">4905</option>
+                            <option value="4906">4906</option>
+                        </select>
+                        <br>
+                        <button onclick="saveAlliances();">Submit Alliances!</button>
+                    </div>
+                    <div class="form-group" id="redScores">
+                        <label class="control-label col-sm-2">Score</label>
+                        <input type="range" name="redpoints" value="0" min="0" max="400" data-show-value="true" data-highlight="true">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="redBreach">Breach</label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="redCapture">Capture</label>
+                        </div>
+                        <br>
+                        <button onclick="saveScores();">Submit Scores!</button>
+                    </div>
+                </form>
             </div>
-            <div class="checkbox">
-                <label><input type="checkbox" name="redCapture">Capture</label>
+            <div class="col-sm-4" id="blueAlliance">
+                <h3 class="text-primary">Blue Alliance</h3>
+                <form class="form-horizontal" role="form">
+                    <div class="form-group" id="blueBots">
+                        <select name="bluebot1">
+                            <option value="null"> </option>
+                            <option value="58">58</option>
+                            <option value="97">97</option>
+                            <option value="125">125</option>
+                            <option value="133">133</option>
+                            <option value="151">151</option>
+                            <option value="166">166</option>
+                            <option value="172">172</option>
+                            <option value="246">246</option>
+                            <option value="319">319</option>
+                            <option value="501">501</option>
+                            <option value="663">663</option>
+                            <option value="716">716</option>
+                            <option value="1058">1058</option>
+                            <option value="1073">1073</option>
+                            <option value="1289">1289</option>
+                            <option value="1474">1474</option>
+                            <option value="1519">1519</option>
+                            <option value="1699">1699</option>
+                            <option value="1761">1761</option>
+                            <option value="1922">1922</option>
+                            <option value="1965">1965</option>
+                            <option value="2084">2084</option>
+                            <option value="2423">2423</option>
+                            <option value="2523">2523</option>
+                            <option value="2646">2646</option>
+                            <option value="2713">2713</option>
+                            <option value="2876">2876</option>
+                            <option value="3451">3451</option>
+                            <option value="3525">3525</option>
+                            <option value="3566">3566</option>
+                            <option value="3585">3585</option>
+                            <option value="3597">3597</option>
+                            <option value="3609">3609</option>
+                            <option value="3930">3930</option>
+                            <option value="4034">4034</option>
+                            <option value="4041">4041</option>
+                            <option value="4042">4042</option>
+                            <option value="4151">4151</option>
+                            <option value="4169">4169</option>
+                            <option value="4176">4176</option>
+                            <option value="4311">4311</option>
+                            <option value="4473">4473</option>
+                            <option value="4474">4474</option>
+                            <option value="4546">4546</option>
+                            <option value="4905">4905</option>
+                            <option value="4906">4906</option>
+                        </select>
+                        <select name="bluebot2">
+                            <option value="null"> </option>
+                            <option value="58">58</option>
+                            <option value="97">97</option>
+                            <option value="125">125</option>
+                            <option value="133">133</option>
+                            <option value="151">151</option>
+                            <option value="166">166</option>
+                            <option value="172">172</option>
+                            <option value="246">246</option>
+                            <option value="319">319</option>
+                            <option value="501">501</option>
+                            <option value="663">663</option>
+                            <option value="716">716</option>
+                            <option value="1058">1058</option>
+                            <option value="1073">1073</option>
+                            <option value="1289">1289</option>
+                            <option value="1474">1474</option>
+                            <option value="1519">1519</option>
+                            <option value="1699">1699</option>
+                            <option value="1761">1761</option>
+                            <option value="1922">1922</option>
+                            <option value="1965">1965</option>
+                            <option value="2084">2084</option>
+                            <option value="2423">2423</option>
+                            <option value="2523">2523</option>
+                            <option value="2646">2646</option>
+                            <option value="2713">2713</option>
+                            <option value="2876">2876</option>
+                            <option value="3451">3451</option>
+                            <option value="3525">3525</option>
+                            <option value="3566">3566</option>
+                            <option value="3585">3585</option>
+                            <option value="3597">3597</option>
+                            <option value="3609">3609</option>
+                            <option value="3930">3930</option>
+                            <option value="4034">4034</option>
+                            <option value="4041">4041</option>
+                            <option value="4042">4042</option>
+                            <option value="4151">4151</option>
+                            <option value="4169">4169</option>
+                            <option value="4176">4176</option>
+                            <option value="4311">4311</option>
+                            <option value="4473">4473</option>
+                            <option value="4474">4474</option>
+                            <option value="4546">4546</option>
+                            <option value="4905">4905</option>
+                            <option value="4906">4906</option>
+                        </select>
+                        <select name="bluebot3">
+                            <option value="null"> </option>
+                            <option value="58">58</option>
+                            <option value="97">97</option>
+                            <option value="125">125</option>
+                            <option value="133">133</option>
+                            <option value="151">151</option>
+                            <option value="166">166</option>
+                            <option value="172">172</option>
+                            <option value="246">246</option>
+                            <option value="319">319</option>
+                            <option value="501">501</option>
+                            <option value="663">663</option>
+                            <option value="716">716</option>
+                            <option value="1058">1058</option>
+                            <option value="1073">1073</option>
+                            <option value="1289">1289</option>
+                            <option value="1474">1474</option>
+                            <option value="1519">1519</option>
+                            <option value="1699">1699</option>
+                            <option value="1761">1761</option>
+                            <option value="1922">1922</option>
+                            <option value="1965">1965</option>
+                            <option value="2084">2084</option>
+                            <option value="2423">2423</option>
+                            <option value="2523">2523</option>
+                            <option value="2646">2646</option>
+                            <option value="2713">2713</option>
+                            <option value="2876">2876</option>
+                            <option value="3451">3451</option>
+                            <option value="3525">3525</option>
+                            <option value="3566">3566</option>
+                            <option value="3585">3585</option>
+                            <option value="3597">3597</option>
+                            <option value="3609">3609</option>
+                            <option value="3930">3930</option>
+                            <option value="4034">4034</option>
+                            <option value="4041">4041</option>
+                            <option value="4042">4042</option>
+                            <option value="4151">4151</option>
+                            <option value="4169">4169</option>
+                            <option value="4176">4176</option>
+                            <option value="4311">4311</option>
+                            <option value="4473">4473</option>
+                            <option value="4474">4474</option>
+                            <option value="4546">4546</option>
+                            <option value="4905">4905</option>
+                            <option value="4906">4906</option>
+                        </select>
+                    </div>
+                    <div class="form-group" id="blueScores">
+                        <label class="control-label col-sm-2">Score</label>
+                        <input type="range" name="bluepoints" value="0" min="0" max="400" data-show-value="true" data-highlight="true">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="blueBreach">Breach</label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="blueCapture">Capture</label>
+                        </div>
+                    </div>
+                </form>
             </div>
-            <br>
-            <button onclick="saveScores();">Submit Scores!</button>
-        </div>
-        </form>
-        </div>
-        <div class="col-sm-4" id="blueAlliance">
-        <h3 class="text-primary">Blue Alliance</h3>
-        <form class="form-horizontal" role="form">
-            <div class="form-group" id="blueBots">
-            <select name="bluebot1">
-                <option value="null">  </option>
-                <option value="58">58</option>
-                <option value="97">97</option>
-                <option value="125">125</option>
-                <option value="133">133</option>
-                <option value="151">151</option>
-                <option value="166">166</option>
-                <option value="172">172</option>
-                <option value="246">246</option>
-                <option value="319">319</option>
-                <option value="501">501</option>
-                <option value="663">663</option>
-                <option value="716">716</option>
-                <option value="1058">1058</option>
-                <option value="1073">1073</option>
-                <option value="1289">1289</option>
-                <option value="1474">1474</option>
-                <option value="1519">1519</option>
-                <option value="1699">1699</option>
-                <option value="1761">1761</option>
-                <option value="1922">1922</option>
-                <option value="1965">1965</option>
-                <option value="2084">2084</option>
-                <option value="2423">2423</option>
-                <option value="2523">2523</option>
-                <option value="2646">2646</option>
-                <option value="2713">2713</option>
-                <option value="2876">2876</option>
-                <option value="3451">3451</option>
-                <option value="3525">3525</option>
-                <option value="3566">3566</option>
-                <option value="3585">3585</option>
-                <option value="3597">3597</option>
-                <option value="3609">3609</option>
-                <option value="3930">3930</option>
-                <option value="4034">4034</option>
-                <option value="4041">4041</option>
-                <option value="4042">4042</option>
-                <option value="4151">4151</option>
-                <option value="4169">4169</option>
-                <option value="4176">4176</option>
-                <option value="4311">4311</option>
-                <option value="4473">4473</option>
-                <option value="4474">4474</option>
-                <option value="4546">4546</option>
-                <option value="4905">4905</option>
-                <option value="4906">4906</option>
-            </select>            
-            <select name="bluebot2">
-                <option value="null">  </option>
-                <option value="58">58</option>
-                <option value="97">97</option>
-                <option value="125">125</option>
-                <option value="133">133</option>
-                <option value="151">151</option>
-                <option value="166">166</option>
-                <option value="172">172</option>
-                <option value="246">246</option>
-                <option value="319">319</option>
-                <option value="501">501</option>
-                <option value="663">663</option>
-                <option value="716">716</option>
-                <option value="1058">1058</option>
-                <option value="1073">1073</option>
-                <option value="1289">1289</option>
-                <option value="1474">1474</option>
-                <option value="1519">1519</option>
-                <option value="1699">1699</option>
-                <option value="1761">1761</option>
-                <option value="1922">1922</option>
-                <option value="1965">1965</option>
-                <option value="2084">2084</option>
-                <option value="2423">2423</option>
-                <option value="2523">2523</option>
-                <option value="2646">2646</option>
-                <option value="2713">2713</option>
-                <option value="2876">2876</option>
-                <option value="3451">3451</option>
-                <option value="3525">3525</option>
-                <option value="3566">3566</option>
-                <option value="3585">3585</option>
-                <option value="3597">3597</option>
-                <option value="3609">3609</option>
-                <option value="3930">3930</option>
-                <option value="4034">4034</option>
-                <option value="4041">4041</option>
-                <option value="4042">4042</option>
-                <option value="4151">4151</option>
-                <option value="4169">4169</option>
-                <option value="4176">4176</option>
-                <option value="4311">4311</option>
-                <option value="4473">4473</option>
-                <option value="4474">4474</option>
-                <option value="4546">4546</option>
-                <option value="4905">4905</option>
-                <option value="4906">4906</option>
-            </select>
-            <select name="bluebot3">
-                <option value="null">  </option>
-                <option value="58">58</option>
-                <option value="97">97</option>
-                <option value="125">125</option>
-                <option value="133">133</option>
-                <option value="151">151</option>
-                <option value="166">166</option>
-                <option value="172">172</option>
-                <option value="246">246</option>
-                <option value="319">319</option>
-                <option value="501">501</option>
-                <option value="663">663</option>
-                <option value="716">716</option>
-                <option value="1058">1058</option>
-                <option value="1073">1073</option>
-                <option value="1289">1289</option>
-                <option value="1474">1474</option>
-                <option value="1519">1519</option>
-                <option value="1699">1699</option>
-                <option value="1761">1761</option>
-                <option value="1922">1922</option>
-                <option value="1965">1965</option>
-                <option value="2084">2084</option>
-                <option value="2423">2423</option>
-                <option value="2523">2523</option>
-                <option value="2646">2646</option>
-                <option value="2713">2713</option>
-                <option value="2876">2876</option>
-                <option value="3451">3451</option>
-                <option value="3525">3525</option>
-                <option value="3566">3566</option>
-                <option value="3585">3585</option>
-                <option value="3597">3597</option>
-                <option value="3609">3609</option>
-                <option value="3930">3930</option>
-                <option value="4034">4034</option>
-                <option value="4041">4041</option>
-                <option value="4042">4042</option>
-                <option value="4151">4151</option>
-                <option value="4169">4169</option>
-                <option value="4176">4176</option>
-                <option value="4311">4311</option>
-                <option value="4473">4473</option>
-                <option value="4474">4474</option>
-                <option value="4546">4546</option>
-                <option value="4905">4905</option>
-                <option value="4906">4906</option>
-            </select>
-        </div>
-        <div class="form-group" id="blueScores">
-            <label class="control-label col-sm-2">Score</label><input type="range" name="bluepoints" value="0" min="0" max="400" data-show-value="true" data-highlight="true">
-            
-            <div class="checkbox">
-                <label><input type="checkbox" name="blueBreach">Breach</label>
-            </div>
-            <div class="checkbox">
-                <label><input type="checkbox" name="blueCapture">Capture</label>
-            </div>
-            
-        </div>
-        </form>
         </div>
     </div>
-</div>
-    
-<script>
+    <script>
     $(document).ready(loadDB());
     $('#redScores').hide();
     $('#redBots').hide();
     $('#blueScores').hide();
     $('#blueBots').hide();
-</script>
-
-
+    </script>
 </body>
 
-
 </html>
-
-
-
-

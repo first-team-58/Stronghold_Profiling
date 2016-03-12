@@ -130,7 +130,9 @@ function save(formData) {
 }
 
 function saveCsvStringToDisk(csvString) {
-    window.open('data:text/csv;charset=utf-8,' + escape(csvString));
+    var newDoc = 'data:text/csv;charset=utf-8,' + escape(csvString);
+    //console.log(newDoc);
+    window.open(newDoc);
 }
 
 function appendData(dataset, name, value) {
