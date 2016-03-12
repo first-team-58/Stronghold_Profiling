@@ -446,7 +446,7 @@ function addCountableDataToPage (teamNumber, type) {
         
         var result = db.find(query).then (function (result) {
                 //console.log(result);
-                $(divid).append('<p>'+result.docs.length+'</p>')
+                $(divid).append('<label>'+result.docs.length+'</label>')
                 
                 //console.log(divid, result.docs.length);
         });
@@ -544,7 +544,7 @@ function iterateOverAddables (allData) {
             sum += parseInt(allData[i][property]);
         }
     
-        $('#'+property).append('<p>'+sum+'</p>');
+        $('#'+property).append('<label>'+sum+'</label>');
     }
     
 }
@@ -554,7 +554,7 @@ function addEachField(allData, fields) {
         var form = allData[i];
         for(var j=0;j<fields.length;j++){
             var field = fields[j];
-            $('#'+field).append('<p>"'+form[field]+'"</p>');
+            $('#'+field).append('<label>"'+form[field]+'"</label><br>');
         }
     }
 }
@@ -577,15 +577,19 @@ function displayRobotData() {
     
     getRobotData(teamNumber,'pit').then(function(result) {
         var allData = result.docs;
-        var fields = ['aim','shooter'];
+        var fields = ['drivetrain', 'aim','shooter','ballpick'];
         addEachField(allData, fields);
     });
     
+    try {
     getRobotData(teamNumber, 'opinion').then(function(result) {
        var allData = result.docs;
-        var fields = [];
+        var fields = ['stRate','stCoop','stInfo','hpRate','hpInfo','fcRate','fcInfo'];
         addEachField(allData, fields);
     });
+    } catch (err) {
+        // its okay if this errors out
+    }
     
 }
 
