@@ -171,14 +171,13 @@ function cleanData(formType) {
     dataset["_id"] = guid();
     
     dataset['formType'] = formType;
-
-/*    dataset["teamNum"] = getParameterByName('teamNum');
     
     try {
+      dataset["teamnum"] = getParameterByName('teamNum');
       dataset["matchNum"] = getParameterByName('matchnum');  
     } catch (err) {
         //do nothing
-    }*/
+    }
     
     var types = ["input", "select", "textarea"];
 
@@ -261,6 +260,18 @@ function loadQR() {
         console.log(err);
     });
 
+}
+
+function addBotsToSelect() {
+        var listOfBots =['58','97','125','133','151','166','172','246','319','501','663','716','1058','1073','1289','1474','1519', '1699','1761','1922','1965','2084','2423','2523','2646','2713','2876','3451','3525','3566','3585','3597','3609','3930','4034','4041','4042','4151','4169','4176','4311','4473','4474','4546','4905','4906'];
+    
+    var selectToAdd = $('#teamnums');
+    
+    for(var i=0;i<listOfBots.length; i++) {
+        selectToAdd.append('<option value="'+listOfBots[i]+'">'+listOfBots[i]+'</option>');
+        
+    }
+    
 }
 
 
@@ -550,8 +561,7 @@ function addEachField(allData, fields) {
 
 function displayRobotData() {
     
-    //var teamNumber = getParameterByName('teamNum');
-    var teamNumber = '58';
+    var teamNumber = $('#teamnums').val();
     
     $('#PageTop').append('<h1>Team '+teamNumber+'</h1>');
     
@@ -568,6 +578,12 @@ function displayRobotData() {
     getRobotData(teamNumber,'pit').then(function(result) {
         var allData = result.docs;
         var fields = ['aim','shooter'];
+        addEachField(allData, fields);
+    });
+    
+    getRobotData(teamNumber, 'opinion').then(function(result) {
+       var allData = result.docs;
+        var fields = [];
         addEachField(allData, fields);
     });
     

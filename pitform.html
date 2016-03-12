@@ -40,6 +40,18 @@
         <h1> Pit Form </h1>
         </div>
     </div>
+    
+        <div class="container">
+    <form role='form' class="form-horizontal">
+    <div class = 'form-group'>
+        <label class="control-label col-sm-2">Team Number</label>
+        <div class = 'col-sm-10'>
+            <select name="teamnum" id="teamnum">
+            </select>
+        </div>
+    </div>   
+    </form>
+    </div>
         
 <div class="container">
   <form class="form-horizontal" role="form">
@@ -98,6 +110,7 @@
     
 <script>
     $(document).ready(loadDB());
+    $(document).read(addBotsToSelect());
 </script>
  
 
