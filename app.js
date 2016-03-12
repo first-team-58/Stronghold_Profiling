@@ -615,7 +615,7 @@ function matchlist() {
 
     for (var i = 1; i < 128; i++) {
         var match = i.toString();
-        $('#lofm').append('<a href="matchform.html?matchnum=' + match + '" class="btn btn-danger btn-lg" role=button>' + match + '</a>');
+        $('#lofm').append('<a href="matchform.html?matchnum=' + match + '" role="button" class="col-xs-1 btn btn-danger btn-lg " style="height: 50px; margin: 3px;">' + match + '</a>');
     }
 
 }
