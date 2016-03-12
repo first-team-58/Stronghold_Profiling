@@ -3633,8 +3633,8 @@ var handlers = _dereq_(26);
 module.exports = reject;
 
 function reject(reason) {
-    var promise = new Promise(INTERNAL);
-    return handlers.reject(promise, reason);
+  var promise = new Promise(INTERNAL);
+  return handlers.reject(promise, reason);
 }
 },{"24":24,"26":26,"28":28}],32:[function(_dereq_,module,exports){
 'use strict';

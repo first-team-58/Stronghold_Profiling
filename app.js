@@ -310,7 +310,7 @@ function pickRobots() {
         index: { fields: ['formType', 'matchnum'] }
     }).then(function() {
         return db.find({
-            selector: { _id: {$eq:'reading'+match} },
+            selector: { _id: { $eq: 'reading' + match } },
             fields: ['redAlliance', 'blueAlliance']
         });
     }).then(function(result) {
@@ -432,12 +432,13 @@ function getRobotData(teamNumber, type) {
     return db.createIndex({
         index: { fields: ['teamnum', 'formType'] }
     }).then(function() {
-        return result = db.find({
+        var result = db.find({
             selector: { teamnum: { $eq: teamNumber }, formType: { $eq: type } },
             //sort: ['matchnum']
         });
         //console.log('1');
         //console.log(result);
+        return result;
     }).catch(function(err) {
         console.log(err);
     });
@@ -460,7 +461,7 @@ function addCountableDataToPage(teamNumber, type) {
         index: { fields: ['teamnum', 'formType', 'autoReachD', 'scaleAttempt', 'scaleSuccess', 'autoShotAtp', 'autoShotSS', 'autoCrossD'] }
     }).then(function() {
 
-        console.log('58');
+        //console.log('58');
 
         var queryables = ['autoReachD', 'scaleAttempt', 'scaleSuccess', 'autoCrossD', 'autoCrossD', 'autoCrossD', 'autoCrossD', 'autoCrossD', 'autoCrossD', 'autoCrossD', 'autoCrossD', 'autoCrossD', 'autoShotAtp', 'autoShotAtp'];
         var querytocount = ['YES', 'YES', 'YES', 'CDF', 'RP', 'RW', 'RT', 'DB', 'SP', 'PC', 'LB', 'M', 'Hi', 'Lo'];
