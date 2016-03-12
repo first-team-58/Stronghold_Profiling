@@ -568,7 +568,7 @@ function displayRobotData() {
 
     var teamNumber = $('#teamnums').val();
 
-    $('#PageTop').append('<h1>Team ' + teamNumber + '</h1>');
+    $('#PageTop > h1').text('Team ' + teamNumber );
 
     addCountableDataToPage(teamNumber, 'match');
 
