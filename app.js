@@ -310,7 +310,7 @@ function pickRobots() {
         index: { fields: ['formType', 'matchnum'] }
     }).then(function() {
         return db.find({
-            selector: { matchnum: match },
+            selector: { _id: {$eq:'reading'+match} },
             fields: ['redAlliance', 'blueAlliance']
         });
     }).then(function(result) {
@@ -614,7 +614,7 @@ function matchlist() {
 
     for (var i = 1; i < 128; i++) {
         var match = i.toString();
-        $('#lofm').append('<a href="robotPick.html?matchnum=' + match + '" class="btn btn-danger btn-lg" role=button>' + match + '</a>');
+        $('#lofm').append('<a href="matchform.html?matchnum=' + match + '" class="btn btn-danger btn-lg" role=button>' + match + '</a>');
     }
 
 }
