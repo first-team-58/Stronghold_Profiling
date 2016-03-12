@@ -12,197 +12,186 @@
     <link rel="stylesheet" type="text/css" href="gavinssheetofstyle.css">
     <script src="api-thebluealliance.js"></script>
     <script src="app.js"></script>
-    
-    </head>
-    
-<body>
-<!-- THIS IS THE NAVIGATION BAR -->
-    <nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span> 
-      </button>
-      <a class="navbar-brand" href="mainpage.html">Profiling App</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li><a href="listofbots.html">Match</a></li>
-        <li><a href="pitform.html">Pit</a></li> 
-      </ul>
-      </div>
-        </div>
-      </nav>
+</head>
 
+<body>
+    <!-- THIS IS THE NAVIGATION BAR -->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="mainpage.html">Profiling App</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="listofbots.html">Match</a></li>
+                    <li><a href="pitform.html">Pit</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <div class="container">
         <div class="jumbotron">
             <h1><b>Match Form!</b></h1>
         </div>
     </div>
-
-    
-<div class="container">
-<h2><ins>Autonomous</ins></h2>
-  <form class="form-horizontal" role="form">
-    <h3><i>Defense</i></h3>
-    <div class="form-group">
-      <label class="control-label col-sm-2">Reached Defense</label>
-      <div class="col-sm-10">
-          <input type="checkbox" name="autoReachD">
-      </div>
+    <div class="container">
+        <h2><ins>Autonomous</ins></h2>
+        <form class="form-horizontal" role="form">
+            <h3><i>Defense</i></h3>
+            <div class="form-group">
+                <label class="control-label col-sm-2">Reached Defense</label>
+                <div class="col-sm-10">
+                    <input type="checkbox" name="autoReachD">
+                </div>
+            </div>
+            <div class='form-group'>
+                <label class="control-label col-sm-2">Type Crossed</label>
+                <div class='col-sm-10'>
+                    <select name="autoCrossD">
+                        <option value="N">None</option>
+                        <option value="PC">Portcullis</option>
+                        <option value="LB">Low Bar</option>
+                        <option value="CDF">CDF</option>
+                        <option value="M">Moat</option>
+                        <option value="SP">Sally Port</option>
+                        <option value="DB">Draw Bridge</option>
+                        <option value="RT">Rough Terrain</option>
+                        <option value="RW">Rock Wall</option>
+                        <option value="RP">Ramparts</option>
+                    </select>
+                </div>
+            </div>
+            <h3><i>Auto Shots</i></h3>
+            <div class="form-group">
+                <label class="control-label col-sm-2">Attempt Type</label>
+                <div class="col-sm-4">
+                    <select name="autoShotAtp">
+                        <option value="none">None</option>
+                        <option value="Lo">Low</option>
+                        <option value="Hi">High</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2">Success?</label>
+                <div class="col-sm-4">
+                    <input type="checkbox" name="autoShotSS">
+                </div>
+            </div>
+        </form>
     </div>
-    <div class = 'form-group'>
-        <label class="control-label col-sm-2">Type Crossed</label>
-        <div class = 'col-sm-10'>
-            <select name="autoCrossD">
-                <option value="N">None</option>
-                <option value="PC">Portcullis</option>
-                <option value="LB">Low Bar</option>
-                <option value="CDF">CDF</option>
-                <option value="M">Moat</option>
-                <option value="SP">Sally Port</option>
-                <option value="DB">Draw Bridge</option>
-                <option value="RT">Rough Terrain</option>
-                <option value="RW">Rock Wall</option>
-                <option value="RP">Ramparts</option>
-            </select>
+    <div class="container">
+        <h2><ins>Teleop</ins></h2>
+        <form class="form-horizontal" role="form">
+            <h3><i>High Goals</i></h3>
+            <div class="form-group">
+                <label class="control-label col-sm-2">Attempted</label>
+                <div class="col-sm-10">
+                    <input type="number" name="HiGAttempt" min="0" max="100" step="1" value="0">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2">Attained</label>
+                <div class="col-sm-4">
+                    <input type="number" name="HiGAttain" min="0" max="100" step="1" value="0">
+                </div>
+            </div>
+            <h3><i>Low Goals</i></h3>
+            <div class="form-group">
+                <label class="control-label col-sm-2">Attained</label>
+                <div class="col-sm-4">
+                    <input type="number" name="LoGAttain" min="0" max="100" step="1" value="0">
+                </div>
+            </div>
+            <h3><i>Number of Times Crossed</i></h3>
+            <div class="form-group">
+                <label class="control-label col-sm-2">Portcullis</label>
+                <div class="col-sm-4">
+                    <input type="number" name="PCCross" min="0" max="50" step="1" value="0">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2">Low Bar</label>
+                <div class="col-sm-4">
+                    <input type="number" name="LBCross" min="0" max="50" step="1" value="0">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2">CDF</label>
+                <div class="col-sm-4">
+                    <input type="number" name="CDFCross" min="0" max="50" step="1" value="0">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2">Moat</label>
+                <div class="col-sm-4">
+                    <input type="number" name="MoatCross" min="0" max="50" step="1" value="0">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2">Sally Port</label>
+                <div class="col-sm-4">
+                    <input type="number" name="SPCross" min="0" max="50" step="1" value="0">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2">Draw Bridge</label>
+                <div class="col-sm-4">
+                    <input type="number" name="DBCross" min="0" max="50" step="1" value="0">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2">Rough Terrain</label>
+                <div class="col-sm-4">
+                    <input type="number" name="RTCross" min="0" max="50" step="1" value="0">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2">Rock Wall</label>
+                <div class="col-sm-4">
+                    <input type="number" name="RWCross" min="0" max="50" step="1" value="0">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2">Ramparts</label>
+                <div class="col-sm-4">
+                    <input type="number" name="RPCross" min="0" max="50" step="1" value="0">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2">Scale Attempt</label>
+                <div class="col-sm-4">
+                    <input type="checkbox" name="scaleAttempt">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2">Scale Success</label>
+                <div class="col-sm-4">
+                    <input type="checkbox" name="scaleSuccess">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2"><i>What's Broken</i> </label>
+                <div class="col-sm-4">
+                    <input type="text" name="broken">
+                </div>
+            </div>
+        </form>
+        <div class="container" id="feedbackContainer">
+            <!-- Javascript will write feedback from save button here. -->
         </div>
-    </div>  
-      <h3><i>Auto Shots</i></h3>
-    <div class="form-group">
-      <label class="control-label col-sm-2">Attempt Type</label>
-      <div class="col-sm-4">          
-            <select name="autoShotAtp">
-                <option value="none">None</option>
-                <option value="Lo">Low</option>
-                <option value="Hi">High</option>
-            </select>
-      </div>
+        <div class="container">
+            <button type="button" onclick="saveAndRefresh('match');">Sumbit!</button>
+        </div>
+        <script>
+        $(document).ready(loadDB());
+        </script>
     </div>
-    <div class="form-group">
-      <label class="control-label col-sm-2">Success?</label>
-      <div class="col-sm-4">          
-          <input type="checkbox" name="autoShotSS">
-      </div>
-    </div>
-  </form>
-</div>
-
-
-    
-<div class="container">
-<h2><ins>Teleop</ins></h2>
-<form class="form-horizontal" role="form">
-<h3><i>High Goals</i></h3>
-    <div class="form-group">
-      <label class="control-label col-sm-2">Attempted</label>
-      <div class="col-sm-10">
-          <input type="number" name="HiGAttempt" min="0" max="100" step="1" value="0">
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="control-label col-sm-2">Attained</label>
-      <div class="col-sm-4">          
-          <input type="number" name="HiGAttain" min="0" max="100" step="1" value="0">
-      </div>
-    </div>
-    <h3><i>Low Goals</i></h3>
-    <div class="form-group">
-      <label class="control-label col-sm-2">Attained</label>
-      <div class="col-sm-4">          
-          <input type="number" name="LoGAttain" min="0" max="100" step="1" value="0">
-      </div>
-    </div>
-    <h3><i>Number of Times Crossed</i></h3>
-    <div class="form-group">
-      <label class="control-label col-sm-2">Portcullis</label>
-      <div class="col-sm-4">          
-          <input type="number" name="PCCross" min="0" max="50" step="1" value="0">
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="control-label col-sm-2">Low Bar</label>
-      <div class="col-sm-4">          
-          <input type="number" name="LBCross" min="0" max="50" step="1" value="0">
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="control-label col-sm-2">CDF</label>
-      <div class="col-sm-4">          
-          <input type="number" name="CDFCross" min="0" max="50" step="1" value="0">
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="control-label col-sm-2">Moat</label>
-      <div class="col-sm-4">          
-          <input type="number" name="MoatCross" min="0" max="50" step="1" value="0">
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="control-label col-sm-2">Sally Port</label>
-      <div class="col-sm-4">          
-          <input type="number" name="SPCross" min="0" max="50" step="1" value="0">
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="control-label col-sm-2">Draw Bridge</label>
-      <div class="col-sm-4">          
-          <input type="number" name="DBCross" min="0" max="50" step="1" value="0">
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="control-label col-sm-2">Rough Terrain</label>
-      <div class="col-sm-4">          
-          <input type="number" name="RTCross" min="0" max="50" step="1" value="0">
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="control-label col-sm-2">Rock Wall</label>
-      <div class="col-sm-4">          
-          <input type="number" name="RWCross" min="0" max="50" step="1" value="0">
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="control-label col-sm-2">Ramparts</label>
-      <div class="col-sm-4">          
-          <input type="number" name="RPCross" min="0" max="50" step="1" value="0">
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="control-label col-sm-2">Scale Attempt</label>
-      <div class="col-sm-4">          
-        <input type="checkbox" name="scaleAttempt">
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="control-label col-sm-2">Scale Success</label>
-      <div class="col-sm-4">          
-          <input type="checkbox" name="scaleSuccess">
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="control-label col-sm-2"><i>What's Broken</i> </label>
-      <div class="col-sm-4">          
-          <input type="text" name="broken">
-      </div>
-    </div>
-  </form>
-
-    
-        
-<div class="container">
-    <button type="button" onclick="saveAndRefresh('match');">Sumbit!</button>
-</div>
-            
-
-<script>
-    $(document).ready(loadDB());
-</script>
-
-    </div>
-    </body>
-
+</body>
 
 </html>

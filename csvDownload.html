@@ -23,17 +23,16 @@
         </div>
     </div>
     <div class="container">
-        <a href="#" onclick="testCsvDownload();">Download Database to CSV</a>
+        <a href="#" onclick="csvDownload();">Download Database to CSV</a>
     </div>
     <script>
-    function testCsvDownload() {
-        var db = new PouchDB('scouting');
+    function csvDownload() {
         var allDocs = db.allDocs({
             include_docs: true
         }).then(function(result) {
             //console.log(result.rows);
             var collection = new Array();
-            $.each(result.rows, function(key, value) {
+            $.each(result.rows, function(index, value) {
                collection.push(value.doc);
             });
             //console.log(collection);

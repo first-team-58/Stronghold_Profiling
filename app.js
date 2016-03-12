@@ -111,19 +111,22 @@ function save(formData) {
     /* formData: JSON object to put in pouchDB */
     /* purpose: saves JSON object in pouchDB, and logs JSON object to console */
     
-    db.put(formData);
-    
-/*    db.createIndex({
-        index: {fields:['formType']}
-    }).then(function () {
-        return db.find({
-            selector: {formType: {$eq:'match'}}
+    db.put(formData)
+        .then(function(response) {
+            var feedback = ' \
+            <div class="panel panel-success"> \
+                <div class="panel-heading">Form saved!</div> \
+            </div> \
+            ';
+            $('#feedbackContainer').append(feedback);
+        }).catch(function(err) {
+            var feedback = ' \
+            <div class="panel panel-danger"> \
+                <div class="panel-heading">An error occurred!</div> \
+            </div> \
+            ';
+            $('#feedbackContainer').append(feedback);
         });
-    }).then(function(result) {
-        console.log(result);
-    }).catch(function(err) {
-        console.log(err);
-    });*/
 }
 
 function saveCsvStringToDisk(csvString) {
@@ -618,7 +621,6 @@ function matchlist (){
 function saveAndRefresh (formType) {
     
     saveMatchForm(formType);
-    
 }
 
 function saveAlliances () {
