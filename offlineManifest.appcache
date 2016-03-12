@@ -1,9 +1,10 @@
 CACHE MANIFEST
-#version 2016-03-05 3:55:43 PM EST
+#version 2016-03-11 22:58 PM EST
 
 #local files
 ListOfMatches.html
 mainpage.html
+index.html
 opinionform.html
 robotPick.html
 boilerplate.html
@@ -22,3 +23,4 @@ http://code.jquery.com/jquery-2.2.0.min.js
 http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css
 http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js
 http://cdn.jsdelivr.net/pouchdb/5.2.0/pouchdb.min.js
+https://fonts.googleapis.com/css?family=Poiret+One

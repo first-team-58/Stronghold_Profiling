@@ -1,19 +1,25 @@
 @import url(https://fonts.googleapis.com/css?family=Poiret+One);
-body { background: #800000 !important;}
-        h1 {
-    color: #e60000 !important;     
+
+body {
+    background: #800000 !important;
 }
-    h1 {
+
+h1 {
+    color: #e60000 !important;
+}
+
+h1 {
     font-family: 'Poiret One', cursive;
 }
-        h2 {
+
+h2 {
     color: white;
 }
-        h3 { 
+
+h3 {
     color: burlywood
-}   
-        label {
+}
+
+label {
     color: white
-    
-    
 }
