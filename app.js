@@ -718,3 +718,11 @@ function addToValue( elementName ) {
     var currentValue = Number($('[name="' + elementName + '"]').val());
     $('[name="' + elementName + '"]').val(currentValue + 1);
 }
+
+function addQuantityButtonsToMatchForm () {
+    var names = ['HiGAttempt','HiGAttain','LoGAttain','PCCross','LBCross','RPCross','RWCross','RTCross','DBCross','SPCross','CDFCross','MoatCross'];
+    
+    for(var i=0;i<names.length;i++){
+        addQuantityButtons(names[i]);
+    }
+}
