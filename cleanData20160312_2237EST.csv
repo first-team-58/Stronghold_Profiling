@@ -1,0 +1,255 @@
+formType,teamnum,matchNum,autoReachD,autoShotSS,HiGAttempt,HiGAttain,LoGAttain,PCCross,LBCross,CDFCross,MoatCross,SPCross,DBCross,RTCross,RWCross,RPCross,scaleAttempt,scaleSuccess,broken,autoCrossD,autoShotAtp,matchnum,ballpick,drivetrain,aim,shooter,language,views,redAlliance,blueAlliance,_id,_rev
+match,5263,11,on,on,0,0,0,0,0,0,0,0,0,0,0,0,on,on,no show,N,none,,,,,,,,,,00860af1-2569-c7ae-a1e5-3f2cce41e6e4,1-3435d3db72d489f5fc9685c8a1772d89
+match,5459,,on,on,0,0,0,0,0,0,0,0,0,0,0,0,on,on,,N,none,,,,,,,,,,00e15b27-59f4-0680-b9d3-bf0d9110b72c,1-b5577da0a4546931fe9100d920a6ccb2
+match,3566,27,on,on,0,0,0,0,3,0,0,0,0,0,0,0,on,on,collector arm was getting stuck on grojnd,N,none,,,,,,,,,,013a9c19-2c4b-f52c-4449-10d19b6599a1,1-f8241c3ec3c2a154f5aecbfe64bdc294
+match,1234,,on,on,0,0,0,0,0,0,0,0,0,0,0,,on,on,,N,none,abcd,,,,,,,,,04e0e765-d709-d97b-5335-646d3709d764,1-73ef50bb0055645941ba7c74b735b958
+match,5752,21,YES,on,0,0,3,0,2,0,0,0,0,0,0,0,on,on,,LB,none,,,,,,,,,,04e4ce0d-6be6-8e19-0f87-e5fa8f2a3b3d,1-45eabfa160e437710c5698defbbf49f7
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,064785ea-e716-dee2-1efa-9c2d45029501,1-736255010c203553155e7ab2d269abcc
+match,1761,26,YES,on,0,0,0,0,3,0,0,0,0,0,0,0,on,on,,LB,none,,,,,,,,,,06670fd5-0d49-afb9-1b25-f83ea61b05e5,1-f5bc5b450d3399f2eb71ddfae0042be0
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,09866a73-c0ed-9ced-df9a-cc006138d881,1-b43715ebf73d2a0554a0053572a7aa0a
+pit,4474,,,,,,,,,,,,,,,,,,,,,,YES,tank,IR,wheel,,,,,0c3dc203-ad86-d415-5d96-d9b3a01c20c0,1-08624fe2a6572d05c34c8410a6c67568
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,0fae890a-6d48-4002-582a-30a748170c98,1-cd4ad98386a6d279e4061063ca3a010b
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,109c232f-29da-bca3-bd47-1ba3f9ef3bb9,1-19c38661b17939453f1cd83bf120e55c
+match,3566,8,YES,on,0,0,0,0,0,0,0,0,0,0,0,0,on,on,could not cross,N,none,,,,,,,,,,11681081-64c6-928b-0806-1205ad874455,1-fdf71b914843e47fb407d99f85d25570
+pit,5459,,,,,,,,,,,,,,,,,,,,,,YES,mecanum,DR,none,,,,,1169e49d-8d0d-264a-d2ce-dc87c93861d1,1-6646303a6b5fe2744e880a1e6f10f113
+match,4474,26,on,on,0,0,0,0,0,3,0,0,0,0,0,0,on,on,,N,none,,,,,,,,,,119856aa-89b8-665e-6a72-52200a8825b2,1-90b08fa9a0f44ebb1be2d0e1f340ae6c
+match,1965,45,on,on,0,0,1,0,2,0,0,0,0,0,0,0,on,on,,N,none,,,,,,,,,,139dace9-7388-c998-f24f-d836590b05cc,1-d06fee332ead4391ecd81cba835ccd12
+match,1289,7,YES,on,0,0,1,0,0,0,0,0,0,2,0,0,on,on,,N,none,,,,,,,,,,14370e05-95ba-81cc-a53d-2c548329af6b,1-970c267f51910a3a45a980ad751233e0
+match,133,50,YES,YES,4,3,0,0,1,1,0,0,0,0,0,0,on,on,,LB,Hi,,,,,,,,,,145b6f81-4d3b-36bf-3614-07709c424d55,1-bad1091884a640c1009659f1e7b59bdd
+match,1474,,on,on,0,0,0,0,0,0,0,0,0,0,0,,on,on,didnt move,N,none,50,,,,,,,,,1548c065-dcf3-144a-0ff8-fad1eb6bdd8b,1-af2383644f81220835ac6bfe1f1f1b07
+pit,5556,,,,,,,,,,,,,,,,,,,,,,on,west,DR,none,,,,,15e3507c-a207-3d36-ab17-23825dc1cac6,1-32c4022fd790b6511811625b6a20b42c
+match,4176,12,on,on,1,0,0,0,3,0,0,0,0,0,0,0,on,on,,N,none,,,,,,,,,,182b79a0-342c-14e7-4905-271e60e11220,1-0ed61499208a5e84c371987f2d2985a9
+pit,3930,,,,,,,,,,,,,,,,,,,,,,YES,tread,IR,wheel,,,,,18e2e512-9874-9a74-7b0b-cba85bb7346d,1-8faaa655f3542f7141155e43fdbc1a03
+match,501,4,on,on,0,0,0,0,0,0,2,0,0,0,2,0,on,on,,N,none,,,,,,,,,,191ccc24-7646-0d03-fc93-64aea17736cc,1-823b46f7c3d766b29c001804c1a0ef46
+match,4169,29,on,on,0,0,0,0,0,0,2,0,0,0,0,0,on,on,held the draw bridge down,N,none,,,,,,,,,,1b4b670c-6482-a0bb-1029-7f7b9c5e426e,1-f06a3e5f1e9fb4d35779b848bce2b9fb
+match,58,13,on,on,0,0,0,0,0,2,0,0,0,0,0,1,on,on,,N,none,,,,,,,,,,1b53b459-3bc2-422c-fe8b-4b20bc2b3d29,1-ace0012258331840a3b5c02d1c875430
+match,133,32,on,on,4,4,0,2,1,0,0,0,0,0,1,0,on,on,,LB,Hi,,,,,,,,,,1bbef5ef-4a5c-eb3a-9f4b-fb136a2fc7da,1-3f72e36c491e06927f1a3f20dd7ded36
+match,5969,1,on,on,0,0,0,0,0,0,0,0,0,0,0,0,on,on,got stuck,N,none,,,,,,,,,,1c4bb5a6-37e6-fcd8-7dfb-669a40132561,1-977a0e41f83f4681b12e81daa40fe889
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,1c589794-69ba-337c-4aa9-d4af8cc038f3,1-f1f60bea3fd5346ec340f9315c5340fb
+match,151,1,YES,on,0,0,0,0,2,0,0,0,0,3,0,3,on,on,,LB,none,,,,,,,,,,1e30413a-eb3a-00dd-0dad-2e9338ed50a6,1-69c2492ae7f4ea5af7de10d41a006b7b
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,1eb3bf78-c059-34e8-5693-7dee47d31f77,1-ea05a2afa6b4680d07d9c49e066d0984
+match,4311,22,YES,on,0,0,0,0,3,0,0,0,0,0,0,3,on,on,,LB,none,,,,,,,,,,1ee0957f-ff10-2200-e22c-4042e695e3b3,1-e0bc698a6ad57b3503626345df8ab904
+match,4474,29,on,on,0,0,0,0,0,0,0,0,3,0,3,0,on,on,,N,none,,,,,,,,,,22c51377-f0b3-6444-ef70-9db583a5da49,1-66b9e4b55e0ddff0a9ea88ac39cdc59d
+match,4929,11,YES,on,0,0,0,0,0,0,0,0,0,1,0,0,on,on,Suddenly got stuck in neutral zone at start of mstch,LB,none,,,,,,,,,,232f4d13-7894-f5b4-ebfe-631cbff6187c,1-3e67d1f3350bfd31cbeef7386a1a609f
+match,2084,9,YES,on,1,0,1,0,1,0,0,0,0,0,2,2,on,on,,N,none,,,,,,,,,,2338516a-8c7a-da61-b6aa-40604f3c74a7,1-5bd8f581c1ca08ee6d7160d9f1ddc39f
+match,1761,11,on,on,0,0,0,0,0,0,0,0,0,0,0,0,on,on,they didnt show up,N,none,,,,,,,,,,2385b247-e72d-725b-731c-cb6534d3117c,1-d8219d3f174486b4275392cbf316d6b8
+pit,3566,,,,,,,,,,,,,,,,,,,,,,YES,traction,DR,none,,,,,2450a52b-5d27-f723-96e9-9b9a90597a78,1-18599825bdee639e67deac1b5f3fe355
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,24ebbf0d-bd89-0232-99b2-b632896656f2,1-d0d9fafa06a6dce55cd4f468107ebc77
+match,319,20,on,on,1,0,0,0,1,2,0,0,0,0,0,0,on,on,,N,none,,,,,,,,,,2565fcb0-c9ee-7a91-70a9-b1f20691a074,1-441cb9dc7b36702a417db954beb2f2cf
+match,2084,21,YES,on,0,0,0,0,0,1,0,0,0,0,0,0,on,on,,RT,Lo,,,,,,,,,,25aeeaec-227f-2ae6-fd0b-cdc5c8f8d724,1-fde015544d7f4dd2c0ff5f79033aea27
+match,4929,7,YES,on,0,0,0,0,0,0,0,0,0,0,0,0,on,on,can't drive well,N,none,,,,,,,,,,25ed06a0-5641-0df2-a86d-f71f66005794,1-52388b39ed8108691d959302bbdd5bd5
+match,2876,38,on,on,0,0,0,0,0,0,0,0,1,2,0,2,on,on,,N,none,,,,,,,,,,26d82824-4f76-6c2f-9475-379d5a26d7ce,1-6eda97d07e9e14099d164bb6a56c6441
+match,4169,37,YES,on,0,0,0,0,0,0,2,0,0,2,0,0,on,on,,M,none,,,,,,,,,,279d044b-aece-cbed-8ece-58a1c01ff43b,1-3cb8c919ec4085030198eab021f482cd
+match,151,18,YES,on,0,0,0,0,1,1,0,1,0,0,0,0,on,on,,LB,none,,,,,,,,,,27dfb3f7-259b-6663-90be-7ea817893b70,1-a321fdcc5e8d2143cea4a6b44a8b5272
+match,5962,7,on,on,0,0,0,0,0,0,0,0,0,0,2,1,on,on,,N,none,,,,,,,,,,2801de74-8222-d49f-96cd-8c89c8944ddc,1-c2ae997e007117f17eb1c1b919abd6e8
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,285402fb-6e99-8224-15cb-9190f6dbe83f,1-d53e930c9244753db9c4b396644f66b1
+pit,151,,,,,,,,,,,,,,,,,,,,,,YES,tank,DR,none,,,,,296959f4-cd77-296f-bcf7-e8a20c15ff79,1-de5f9f2d3d424b7bff7ec3f3a5946815
+match,151,2,YES,on,0,0,0,0,0,2,0,0,0,0,2,0,on,on,,LB,none,,,,,,,,,,2bcf0415-5fad-7f6b-bfca-8602c0ce741b,1-236125a4cdb3fc05a23b1d32972a6cae
+match,6201,6,YES,on,0,0,0,0,0,0,0,0,0,0,0,0,on,on,got tangled up in the flaps of the low bar,LB,none,,,,,,,,,,2c2722c0-cc41-2519-0a1d-50aafca60cbc,1-75b5975f07424e6344e2d0e6950f3cdf
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,2d4a7aea-5cca-b7cf-24cf-d72be079a019,1-b39a15e7a336730d3da07f138717f3a8
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,2e051008-6bb4-f247-a014-a2b05d97e2db,1-157a2581839203de6840b329ab29b6bd
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,2e3338e4-ad8e-24d5-a47f-b274965be822,1-6c419d44007c7ff0f714690e3617d08b
+match,3930,9,YES,on,0,0,3,0,5,0,0,0,0,0,2,0,on,on,,RW,none,,,,,,,,,,2f84eaee-ca88-f712-f8a1-ff273388f1d4,1-31b0220f9c4f8e054048416878ff8277
+pit,5459,,,,,,,,,,,,,,,,,,,,,,on,mecanum,DR,wheel,,,,,2faf2259-d130-68b1-0e2d-83199f7c20b4,1-346d3a2f04fa2e0dee7a2fc0de356d90
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,30d68211-8610-4f24-3dd5-1ea9ee68afa0,1-ddbba3ca88397b870ce1355eb6195c09
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,31d67d84-c19b-f730-f6c8-01fcf0a11d1c,1-72e394bca894a0db171e115be20818fd
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,320d3b0f-00b7-3068-edf9-e09ea950ad23,1-00670b60a2de8bdc40707ab4d74609aa
+match,4905,13,on,on,0,0,2,0,3,2,2,0,0,0,1,0,on,on,,M,none,,,,,,,,,,330ac551-2a1b-5a74-0e96-12495705dae1,1-80e41b74c9a5e71850df641a89b2c8b6
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,337b52fd-c251-1e09-c0f6-47e824f4c9be,1-fc6a8a60a29e7a8ef16bc7d213683ae9
+match,3930,14,YES,on,0,0,2,2,3,0,0,0,0,0,0,0,on,on,good at low goals,RW,none,,,,,,,,,,350a0e2e-b18d-7a1c-427c-23ae3240b623,1-201fd75482121311fdf52a3f46b533ec
+match,151,18,YES,on,0,0,0,0,1,1,0,1,0,0,0,0,on,on,,LB,none,,,,,,,,,,36ce1c25-1f62-7cca-7e3b-8025db89daac,1-223fb714368562e460f6978e836efc77
+match,2713,12,on,YES,0,0,0,2,0,0,0,0,0,0,0,0,on,on,,N,none,,,,,,,,,,376d120a-cec2-9457-c5da-5a17aa4c3bd5,1-02249665837becafffbd7df8e16eef14
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,378a2118-22a1-b658-c0b9-af5c2fecd89b,1-4a21c084ae0d6a05c46d6003c325dd78
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,37fdb3b5-56d3-40d8-7097-023793f277ac,1-86d6779a0d0768010cf26f6162547ee6
+match,2084,44,YES,on,0,0,0,0,2,2,1,0,0,0,0,0,on,on,,RP,none,,,,,,,,,,384299a2-127d-248b-5c55-5d28787482d1,1-3cdbbf3357f78b702fe35839e2ffaaa8
+match,4905,47,on,on,0,0,3,0,0,0,0,0,0,0,1,1,on,on,,N,none,,,,,,,,,,39250c92-6274-f552-beb6-48169782f41a,1-819f988122e00a5428a5aff49c2f4197
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,3a0226a1-dbe9-79ae-e153-186c10ba3da8,1-500adec25758cf647485b7b53899bc09
+match,501,31,YES,on,0,0,3,0,3,0,0,1,0,0,2,0,on,on,,RW,none,,,,,,,,,,3b8a2222-b6c9-db86-6473-24366885c790,1-ad4f865470eb53956c695aaf2dc2ac95
+match,1699,34,YES,on,2,1,0,0,0,0,0,0,0,2,0,0,on,on,,RT,none,,,,,,,,,,3bab5790-d6a0-9127-7a6c-2f9522499510,1-54533ea04993b38efaeb19b6274d9a20
+match,4176,23,on,on,1,0,0,0,0,0,0,1,0,2,0,0,on,on,,N,none,,,,,,,,,,3bcfad52-35b0-a6e5-c662-9d9ddad360cf,1-452cce0d63fef33e00623f3cb800453b
+match,4929,42,YES,on,0,0,2,0,0,0,0,0,0,0,2,0,on,on,,LB,none,,,,,,,,,,3eccf1f4-c01e-0374-68b3-efdd9bc381c7,1-ae78363d9453ebcf2c0c69e863bae8dd
+match,151,9,YES,on,0,0,0,0,0,0,0,0,0,0,0,0,on,on,,N,none,,,,,,,,,,3fdf065f-e2cd-8177-34b5-95c85da7968d,1-0345b55cb52ed621bb416f9e50158a0a
+match,1058,20,on,on,0,0,0,0,0,0,0,0,0,0,0,0,YES,on,,N,none,,,,,,,,,,40d524e4-33b6-8373-36ec-db1e11816be5,1-178c8c606d9e436adbb9fd6f38eab75f
+match,4905,42,YES,on,0,0,0,0,0,2,0,0,1,0,1,2,on,on,,RP,none,,,,,,,,,,41398612-c76d-24c8-0639-091d223bf721,1-24107c74d58e917b4ea078ab3041c87e
+match,2876,30,YES,on,0,0,1,0,3,0,0,0,0,0,0,0,on,on,,RW,none,,,,,,,,,,4164a8c8-d6d2-7c22-33d3-e6ffa48330b0,1-17b637bcb0e58a64ae3073facd099943
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,42b2b844-1930-1576-1b1d-1dc07173fa61,1-289aa5f9e76ecbae6b89c4267e1b5395
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,43397169-fa43-d6a8-57c7-aad788b3316d,1-35b7f2328246c5710e97e80e5b3eb01c
+match,1474,,on,on,0,0,0,0,0,0,0,0,0,0,0,,on,on,didnt move,N,none,50,,,,,,,,,43b7f24f-1cc7-6663-1ff8-32042665e062,1-0612f92cb054ecaeba80b90931e471a0
+match,4905,6,on,on,0,0,0,0,1,2,0,0,2,2,0,0,on,on,,N,none,,,,,,,,,,44184a4f-8820-5739-586f-5c9a56bbce06,1-63bbdecb048b654982bda6d8ee649d0a
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,4676afd2-b5f8-6d52-e578-30ce43a5a05c,1-6af8a3fab31bdbd899672e523752ac28
+match,1073,5,YES,on,0,0,0,0,3,0,0,0,1,0,1,0,on,on,,N,none,,,,,,,,,,48b40d34-0078-b390-558a-9122dc6aed28,1-5ecfa8df524dc2f675f832bcdd9ff1b0
+match,151,38,on,on,0,0,0,0,0,0,0,0,0,0,0,0,on,on,no movement after auto,LB,none,,,,,,,,,,4a7c0584-8b36-96b8-395c-f6ffeb59ba31,1-f5bfbb5af480b59792d7c95e351ddc39
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,4a90964d-34cb-41de-5dcd-b780ded99052,1-98f2b9024b9c418bf053d12d7494366f
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,4aa2e78a-3124-b583-14bf-95062e70764b,1-1ea5820040a4206dfe1b0bf486419ee2
+match,319,43,on,on,0,0,0,0,0,0,0,0,0,1,0,0,on,on,,N,Hi,,,,,,,,,,4dd23fac-1eeb-a1b6-c19d-5833a1857b7f,1-404d9b878f93efc094708a027f588f46
+match,5752,17,YES,on,0,0,1,0,3,0,0,0,0,0,0,0,on,on,,LB,none,,,,,,,,,,4f06c0da-4a9c-23d7-adfe-c588e4b1f480,1-31c2b29aa0d9db9ec82c34b319a2ee73
+match,2423,21,YES,on,1,0,0,0,0,0,0,0,0,1,0,0,on,on,,N,none,,,,,,,,,,50ff6d05-153c-ce94-c16f-27b90b1aec19,1-0c41ba349062408202d5e758598f5daf
+pit,1474,,,,,,,,,,,,,,,,,,,,,,YES,west,DR,wheel,,,,,52da789b-9d07-5b66-bce3-5a0a3ce0c3e9,1-d376b9ae2dacc69c16f16edb56233e46
+match,1761,26,YES,on,0,0,0,0,3,0,0,0,0,0,0,0,on,on,,LB,none,,,,,,,,,,5403ffba-d508-ffca-5f67-6ea1a96db945,1-71c5e9afc7f1921ab9606c6a5957768a
+match,58,,YES,on,0,0,0,0,0,0,0,0,3,0,0,0,on,on,,N,none,,,,,,,,,,599b0369-c670-71a1-9145-00c0b96a078a,1-1ccacbbaef0a3833442c39ba07dea04c
+match,2876,6,YES,on,0,0,0,0,0,0,0,0,2,2,0,0,on,on,,RT,none,,,,,,,,,,5a689b95-2fff-c97a-840f-0fb9a4c73580,1-3b32bb122fd0d0c8606a1de5f50f96fb
+match,6201,26,YES,on,0,0,1,0,1,0,0,0,0,0,0,0,on,on,,LB,none,,,,,,,,,,5ba543fa-2aa2-0ab8-2b9d-000448ee1f17,1-5ce79d621f80df680533fbe8b5dcdf3c
+match,3930,27,on,on,0,0,0,0,0,2,0,0,0,0,3,0,on,on,,N,none,,,,,,,,,,5bb1de4b-1f73-3292-af63-7c731baa8149,1-7ed13a09aae1a2ed65fbabdbe0760215
+match,6201,37,on,on,0,0,1,0,0,0,0,0,0,0,1,0,on,on,,RT,none,,,,,,,,,,5cf91ca0-2654-77f8-671b-d09b20f7ed86,1-ba51b765dfcc485048a18e6077791ea3
+match,4474,10,on,on,0,0,0,1,0,0,0,0,0,0,1,1,on,on,,N,none,,,,,,,,,,5d090028-1e51-4879-c851-b11ab14b3da2,1-e3fed5bfa35d148c9ccd0f4d9f688382
+match,5459,19,on,on,,0,0,0,0,0,0,0,0,0,0,0,on,on,,N,none,,,,,,,,,,5d0bce68-e64d-04ad-5adf-dbed2a0df012,1-c54e4dfa7e90787d72d91055eabf7e24
+match,5969,45,on,on,0,0,0,0,0,0,0,0,0,0,0,0,on,on,,N,none,,,,,,,,,,5d492228-27e1-52bb-16bd-170b0ca74b65,1-31186dbdbce61232772bc00be1d5ed6f
+match,1058,8,YES,on,0,0,3,0,2,0,0,0,0,0,0,0,YES,YES,,LB,none,,,,,,,,,,6081b488-6033-4b30-11e5-8315392940e0,1-8b3aff6237d30621c8912acae6990cd4
+match,5263,25,YES,on,0,0,0,0,0,0,0,0,0,0,1,0,on,on,,LB,none,,,,,,,,,,6199e9e3-ac63-64e2-5489-e49fcd93c60f,1-5afc178c693d0fa4db64ce648b199b8a
+match,6161,6,on,on,0,0,0,0,0,0,0,1,0,0,1,0,on,on,stopped working halfway through,N,none,,,,,,,,,,633fb5a9-da55-bd49-cd05-330743640fd4,1-93a66e5681cdcebcfa63f7033072502e
+match,1289,32,YES,on,0,0,0,0,0,0,0,0,0,0,0,0,on,on,,N,none,,,,,,,,,,646d3394-bd39-f2ae-0ed2-0d009a14b02b,1-407991a38b9a036d6df9c5ee9a0f170a
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,662a8a5c-54b8-eac4-2f49-0f0cf6d537da,1-c54454fe39105c65f9190dd369e8515a
+match,5962,1,on,on,0,0,0,0,0,0,5,0,0,0,0,0,on,on,,N,none,,,,,,,,,,696df2e4-68e4-3793-7b83-95a17df82eaf,1-cd3f3394c89608d3072c6467ee53365d
+match,1474,,on,on,0,0,0,0,0,0,0,0,0,0,0,,on,on,didnt move,N,none,50,,,,,,,,,6a10fd15-c193-1500-8b73-98adb4c2cb59,1-05a00bd5e9576b23a146474ec827247a
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,6ab087f9-4965-46e6-9345-e323c90b2462,1-74f9f9f8809678c5ffa160ebf2f40226
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,6bfe880d-d7ee-6070-4ae0-8f5d99cab1e7,1-ac1d50e6e9b7afbe01fb410bc4c08732
+match,5459,,on,on,0,0,0,0,0,0,0,0,0,0,0,0,on,on,,N,none,,,,,,,,,,6d4ae8ea-ae55-19e5-b069-34b563f6e48c,1-3f6a9fd7ab0434811474eb2cfc0c3018
+match,1699,3,on,on,2,0,0,0,0,0,0,0,0,0,2,1,on,on,,N,none,,,,,,,,,,6f21be6a-defd-61d8-26ed-e3bef84fffb8,1-fd628827be41e8f84fff182ee5508c41
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,6f82b324-35b7-6391-8728-ec092832353f,1-382edd175f86ab267790343b6937ee09
+pit,2876,,,,,,,,,,,,,,,,,,,,,,YES,west,DR,none,,,,,6fc6175a-b000-6809-a475-3032f8ca3228,1-74128f64cab5d405c05c2ab7a8aa09f9
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,708a7d84-4a53-797c-2927-6fb2b2f5cb99,1-04d5449e3d806d35a9b183f1c8c4911a
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,728f3d4d-6ff8-8b72-298a-c43a7d8e8bd6,1-ad13cd68f9ee49d83b19d02f22a149fc
+match,5563,14,on,on,0,0,0,0,0,0,0,0,0,0,0,0,on,on,Did nothing.,N,none,,,,,,,,,,736a6701-4dee-8a96-f80f-fd3a93bd42bc,1-9e09a117e31e83b1360a1ea64710ff5b
+match,246,14,YES,on,0,0,0,0,0,0,2,0,0,0,1,0,on,on,,M,none,,,,,,,,,,742fc5b4-d41c-999e-7ea3-fd7fb236f424,1-d8929959d26c45673b98a41fe1f7be58
+pit,97,,,,,,,,,,,,,,,,,,,,,,YES,west,DR,none,,,,,748a7c27-d1a3-7d73-d22c-e075d0818d3c,1-d47a705e2a4f8b78d072099977b5ba5c
+match,5563,11,on,on,0,0,0,0,0,0,0,0,0,0,0,4,on,on,,N,none,,,,,,,,,,7550d7d9-681f-6bd8-e942-540f59c0f012,1-8f3397a53f954a98f19b22fcf9744c70
+pit,6161,,,,,,,,,,,,,,,,,,,,,,on,traction,DR,none,,,,,75e442c1-5168-074f-44a6-4b351ef7c63a,1-4172142bf0c8ec03e62a6cda11b78846
+match,4151,11,on,on,0,0,0,0,0,0,0,0,0,0,0,0,on,on,didn't move,N,none,,,,,,,,,,764ac246-3bce-f64a-aa9c-d042cc991092,1-480af2097c262b42f6ad0d21ddbc3c34
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,7683c0a6-f61e-b2f1-0802-3b96062d9a09,1-0c38a4072869fa528f61f5c23cda29d0
+pit,6201,,,,,,,,,,,,,,,,,,,,,,YES,west,DR,none,,,,,77b3e4f3-17d8-b82c-1fd1-6854814543bb,1-21668740e392857d108a875f56ed9c46
+match,6201,9,YES,on,0,0,1,0,1,0,0,0,1,0,0,1,on,on,,RP,none,,,,,,,,,,77f6c6c2-7804-589f-4d48-56699f5b971b,1-b2036d4f62521695da112f8872009f3f
+match,133,25,YES,on,3,1,0,0,1,0,0,0,0,0,1,2,on,on,,N,none,,,,,,,,,,78381933-1898-7443-5993-54bdc70c927c,1-c43a0b4e3dc5ef0d72919425a855a42a
+match,5459,23,on,on,0,0,0,0,0,0,0,0,0,2,0,0,on,on,,N,none,,,,,,,,,,78a136ec-49bc-c5c6-bb01-e9b4736230d1,1-4f87a7cbaa02f763125d1289a3112d70
+match,5556,46,YES,on,0,0,0,0,0,2,2,0,0,0,0,0,on,on,,M,none,,,,,,,,,,7986545d-c799-b311-a6c7-dbcc56c8d513,1-ef5132260204d6f6570b8638067ab83c
+match,4905,13,on,on,0,0,0,0,4,2,2,0,0,0,3,0,on,on,,N,none,,,,,,,,,,7991e11d-9b83-e7cf-1fba-d4e49de9e1e2,1-e9fc601286e38c4c70c9cce2e74ef03c
+match,3566,43,on,on,0,0,0,2,0,0,0,0,0,0,2,0,on,on,,N,none,,,,,,,,,,7a97f6c8-d491-56ff-56c1-e6147c183b52,1-79b5a32c8e457861e730411d21e1b5c5
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,7b022405-95ca-2655-4fa1-61c12144c37a,1-b67bdd11c23e5f84f3a9cf76a5a602f5
+pit,5962,,,,,,,,,,,,,,,,,,,,,,YES,tread,DR,wheel,,,,,7bf3c9b9-14ee-f0cf-0bb5-5209373e51b7,1-317641e6ec520eba7484ff0a7b5f7569
+match,1699,11,YES,on,1,1,0,0,0,0,0,0,0,4,3,2,on,on,"fast, good ay crossing defenses, takes time to aim and shoot",RP,none,,,,,,,,,,7c1d64d2-a92f-df21-9182-5da38d446dc8,1-d72278157197fd9901f536204f57ffcf
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,7ceeb4f1-6e55-60d5-d51d-b144547e49fd,1-7683752d3ded9f8d0ec1b0896d934bd3
+match,97,29,on,on,0,0,0,0,3,0,0,0,0,0,0,0,on,on,,N,none,,,,,,,,,,7cfb28fd-2ce1-6c43-b07c-d4d138b757c3,1-debd4cb56faf631bdecebfe76747403c
+match,1474,39,YES,on,0,0,1,0,0,0,1,0,0,0,1,0,on,on,,RW,none,,,,,,,,,,7dcaf08b-5a30-135c-0469-3e3e3f92fd35,1-1d52151e153ab24dce58c2b5f010eeee
+match,5556,8,YES,on,0,0,0,0,0,3,0,0,0,0,3,0,on,on,,N,none,,,,,,,,,,803e50e1-b892-1b20-b887-f98a099b17f7,1-331113245292cbd71ed77d23c4ce1354
+match,5969,39,on,on,0,0,0,0,2,0,2,0,0,0,0,0,on,on,,N,none,,,,,,,,,,8056c482-9a76-c5cf-525a-7200f5f2a6a9,1-c7f876130752f84f1e69bce7ef98ee43
+match,4311,35,YES,on,0,0,0,0,3,0,0,0,0,0,0,1,on,on,,RP,none,,,,,,,,,,80caca7d-5324-c92d-d635-c01efbd2d516,1-b2178ae7cd37473754f9f5a76979facf
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,82ac235f-1633-ceb8-af2a-e000a38e51e7,1-bf95dfbbb8f8e47b9bfb5604790f75b3
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,84206416-84c4-24b6-1044-d630068b4275,1-c80eca15e7cdae1d0a1d858de9284976
+match,1058,3,YES,on,0,0,1,0,0,2,0,0,0,0,2,0,YES,YES,,RW,none,,,,,,,,,,84e0ba43-5882-8acc-dc2d-a3c609457151,1-9d368707ece2d655ebae724cb57b02c6
+match,4761,14,on,on,0,0,1,0,0,0,0,0,0,0,0,1,on,on,,N,none,,,,,,,,,,86e6d2ab-b97a-fb6e-d291-9974e9086429,1-0c7ddcfdc05239660e6bab1912b1a2e4
+match,1289,44,on,on,0,0,0,0,0,0,1,0,0,0,2,0,on,on,,N,none,,,,,,,,,,882e478f-6d4d-fbfc-4f91-66ce826cc04c,1-06625e19a8674692d00fef972fcc16ea
+match,319,17,on,on,0,0,0,2,1,0,2,0,0,0,3,0,on,on,,N,none,,,,,,,,,,8956ba7a-e7cb-fcec-178c-cbbdc87e37c8,1-6e5f52197ad08de0361116e515f51df8
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,8a4039d7-c765-18fc-c290-7b94e18a8ad6,1-89e9ac7be824a48d5503bbd047dff848
+pit,1073,,,,,,,,,,,,,,,,,,,,,,YES,west,DR,canon,,,,,8f6145d8-11b1-a4a1-80fc-0c50111ffe00,1-e67d007a661fb1aa3315fd721fe91fe9
+match,58,13,YES,on,0,0,0,0,0,0,1,0,0,0,0,0,on,on,,N,none,,,,,,,,,,8fb2c6cd-57d6-b339-f731-e28250a93362,1-c580426e007387bf96b0bc371a1f3412
+match,58,20,YES,on,0,0,1,0,0,4,1,0,0,0,0,0,on,on,,CDF,none,,,,,,,,,,901e0540-9c7f-75ff-2c92-7129df8f25a2,1-02c7681839efc93b23377be2c5ead383
+match,5962,32,YES,on,0,0,0,0,0,0,0,0,0,0,2,3,on,on,,N,none,,,,,,,,,,92f087e7-c798-64d7-4d53-7425aae58f3f,1-74e7ba06651d983d4a0cd6bb88172149
+pit,319,,,,,,,,,,,,,,,,,,,,,,YES,tank,IR,wheel,,,,,930da5ee-afb3-e323-ba79-cee5fc80f72c,1-f246b46f001b205484de8d02b9959e5e
+match,3930,24,YES,on,0,0,0,0,1,0,0,0,0,1,0,0,on,on,,RP,none,,,,,,,,,,93a5aef4-4d76-3408-00bf-bd99d9f7f4af,1-d55669c6ebf83dbd76dee889804a5f2a
+match,6201,39,YES,on,0,0,2,0,4,0,0,0,0,0,0,0,on,on,,LB,none,,,,,,,,,,95f864cf-1434-0214-6227-d7549918938d,1-4adcb3f59060868082c39048c02b49d8
+match,3566,22,YES,on,,0,0,0,0,0,0,0,0,0,0,0,on,on,tried to go through the portcullis but got stuck,N,none,,,,,,,,,,96509acd-f688-c105-6af0-7e672643cb6a,1-fa6f0a1a77f218edb0c42fe7aff16c3b
+match,4929,34,YES,on,0,0,0,0,1,0,0,0,0,1,0,3,on,on,,RW,none,,,,,,,,,,965bc045-4bb2-68a5-d206-76d82df87704,1-8a994e301b9705f6f3efd3ea8922399f
+match,4909,12,on,on,2,0,0,0,0,0,0,0,0,0,3,0,on,on,,N,none,,,,,,,,,,9740b935-adfe-7e13-653a-3d9b5f4164e0,1-5fb56a689051c6844835ec8efe959f5e
+match,4761,37,on,on,2,0,0,0,0,2,1,0,0,0,0,0,on,on,,N,none,,,,,,,,,,9748f6b8-aeac-e293-7174-4c0fa5aee496,1-b243541b93c6573df35c1eaea48cace0
+pit,58,,,,,,,,,,,,,,,,,,,,,,on,tread,DR,cat,,,,,9752d47e-e96b-107d-05a2-62162f00f816,1-3da463aa56c4bb7617ec8d0d003690d8
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,98e23c81-ca33-5c3c-c916-fbacc4c945a2,1-8df32e47d0aef72f3e70671447fd96c6
+match,133,7,YES,YES,3,3,0,0,3,2,0,0,0,0,0,0,on,on,,LB,Hi,,,,,,,,,,9ac140dd-5f24-4d91-0428-c69716f7f77a,1-23d87fb6ed9a7eed5d4ea175c4bc999b
+match,2423,2,on,on,0,0,0,0,0,0,1,0,0,0,0,0,on,on,,N,none,,,,,,,,,,9af860d1-56bf-8c53-e4f3-8810d87ff7b7,1-c392153494133667eab962ada8d81459
+match,4169,7,on,on,0,0,0,0,3,0,0,0,,0,0,1,on,on,challenged the tower with 50 seconds left,N,none,,,,,,,,,,9d4e3c5f-5baf-1bd2-b3de-9110ebf2904e,1-a37045f848f227c182322bfb9b083771
+match,3930,24,YES,on,0,0,3,0,4,2,0,0,0,0,0,1,on,on,,RP,none,,,,,,,,,,a0849417-4be2-22c6-9a7a-3e44bfd24263,1-d6ef14f61fbfb4739d71653fa7053282
+match,3566,5,YES,on,0,0,0,0,0,0,0,0,0,0,0,0,on,on,got stuck on the rock wall,N,none,,,,,,,,,,a1aa5bd2-a3e8-36f3-6f7d-e4d40f5a73a0,1-869a4d891c0a6c6902b5f71440f70ec7
+match,1761,5,on,on,0,0,0,0,0,0,0,0,0,0,0,1,on,on,just stopped moving ,N,none,,,,,,,,,,a1cb712f-7fe7-1e65-f963-60872afe3ee4,1-6819d3724cded6b84769cd5258b3103b
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,a35ec5be-748c-60c8-644f-17b4158002db,1-e965f32e9b93378c4f1e4cdff004ddb5
+match,5263,5,on,on,0,0,0,0,0,0,0,0,0,0,0,0,on,on,NO SHOW,N,none,,,,,,,,,,a4071a0a-2396-5780-afc3-c0432a13826d,1-40122eed9b925db444851f8f4f088eb8
+match,133,18,YES,YES,4,6,0,0,3,0,3,0,0,0,0,0,YES,on,,LB,Hi,,,,,,,,,,a418960c-171b-75aa-2f07-882f62541d8f,1-e8d9f72bd5b412dbed0c1e094c390b62
+match,2713,41,on,on,0,0,0,1,1,0,0,0,0,0,1,0,on,on,,N,none,,,,,,,,,,a46e76ee-d417-edd0-0d74-90fcd50edb99,1-27d58f58fbc34d65e72a12e38facf989
+match,97,36,on,on,0,0,0,0,0,0,0,0,0,0,0,0,on,on,,N,none,,,,,,,,,,a48c3414-05dd-014a-cb69-1d78b186f3af,1-c215dae2fe82310981bef14b88d11983
+match,4311,3,YES,on,0,0,0,0,1,0,0,0,0,0,0,2,on,on,,RP,none,,,,,,,,,,a4f7e856-821b-0509-b63a-c4f5779d238b,1-f15d803492296a0795d63e167c4c9491
+match,319,28,on,on,0,0,4,0,7,0,0,0,0,0,0,0,on,on,,N,none,,,,,,,,,,a5ba9064-a67c-367d-bf97-a369f68b6c91,1-e623aa89abdc3453c1bec2cc25453d38
+match,1073,51,on,on,0,0,0,0,2,0,0,0,2,0,0,0,on,on,,N,none,,,,,,,,,,a6cd4978-39be-1132-b4f6-f800e14b4537,1-e541eb3fffc834cab3aa87676a43ab7d
+pit,246,,,,,,,,,,,,,,,,,,,,,,YES,west,DR,wheel,,,,,a805a005-f65b-212d-c04c-3bbc57c46837,1-6510a8eb479802545b3262c575c80d8f
+match,4761,28,YES,on,0,0,0,0,3,0,0,0,0,0,0,3,on,on,,LB,none,,,,,,,,,,a903a86d-5b55-aadc-aba8-e13158479676,1-2fbf1f1c940e81e85a64671393c20ea7
+pit,4474,,,,,,,,,,,,,,,,,,,,,,on,tank,DR,none,,,,,a98e93c3-ff04-fd48-e42b-9088f11d9e31,1-560689ee2c90285120d6ae524560689d
+match,5347,13,on,on,0,0,0,0,0,0,0,0,0,0,0,0,on,on,,N,none,,,,,,,,,,ac05262e-3632-5127-a3a0-985f7469d556,1-ddd637b036e91d9874c9e9aca4fc61d9
+match,4474,5,on,on,0,0,0,0,0,0,0,0,0,0,1,0,on,on,,N,none,,,,,,,,,,afd0a6f9-055c-a378-0f09-18d77a8509fb,1-11a93191df51f9d93f3559ac2ef7ed72
+match,4151,7,on,on,0,0,0,0,0,0,0,0,0,0,0,0,on,on,didn't move,N,none,,,,,,,,,,b095decd-976a-4f70-1500-570877b3fd7c,1-edbbe6d32310fe398f7d11d2bfe12022
+match,5263,43,on,on,0,0,0,0,0,0,0,0,0,0,4,1,on,on,,N,none,,,,,,,,,,b09d0594-0e2f-f3bb-e040-1e8dec483f57,1-c46f185e03ce68ac40aa3f3a613b0c95
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,b0e09e92-4f6e-89fd-253a-cf7cad4aacc9,1-d9c3b6f1a52a65763fb6eabac1563168
+match,1073,23,on,on,0,0,0,0,0,0,0,0,0,2,0,0,on,on,,N,none,,,,,,,,,,b11c7d33-05c0-8668-901f-1eb90d351132,1-29cd2185271c6301c003194237257a65
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,b2c7176c-14a9-76f8-8e2a-b481ac5cb9a6,1-0913ea45e2d5bb6ce667078ec11b3438
+match,3930,43,YES,on,0,0,2,0,0,2,2,1,0,0,0,0,on,on,,N,none,,,,,,,,,,b3f8c866-ba25-8503-1ae4-335d1c2ef84e,1-adf3d28b9415a19bf66fb6e66d7fa3c4
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,b41b76fa-4ee3-8ce0-2470-a6e50aebd27e,1-a8f2d6c42bc191c655ed4b2c30e47ad1
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,b649b014-aac3-81ea-21fe-543094158018,1-e4f08c4242a5d64a46ae8349e5df4b08
+match,4905,29,YES,on,0,0,0,0,0,0,0,0,0,0,0,2,on,on,,RW,none,,,,,,,,,,b7c5ee64-363e-a4c2-5ed2-4c7b64b7e1a7,1-c836d029d52ababb52491e5627bc997d
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,b80fdc7b-2516-7cd8-d9a3-350e6060ff21,1-c0493e6e75fdb1a1f62c60541ee40563
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,b8a27582-6984-ce00-8330-9c113812cbea,1-a0e9b97a145bd816b365e62cbeff4434
+match,1965,11,on,on,0,0,0,0,1,0,0,0,0,0,0,0,on,on,just defence,N,none,,,,,,,,,,b91e3155-e03c-bb5f-ee7e-be797531d575,1-b6961db8ff792fde26fc06d992bfcf08
+match,1058,38,YES,on,0,0,3,0,1,0,0,0,1,2,0,0,on,on,,RP,none,,,,,,,,,,b97a6c28-5e51-6de3-ab6f-643e0d6db25d,1-a95c4e07ad43270e36aa106d32067773
+match,5563,48,on,on,0,0,0,0,0,0,0,0,0,0,0,0,on,on,played d,N,none,,,,,,,,,,ba190129-8c80-c191-229a-1870c555e85d,1-e7da5ddbb57665ed3db35350e1c1a3bc
+match,1474,26,on,on,0,0,0,0,0,1,0,0,0,0,0,5,on,on,,N,none,,,,,,,,,,bde0d63c-92e2-dd40-c22c-ce7d46b6ca96,1-54dce7ed5893e435efa40aa124a386ac
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,bed408ce-5b9e-fa94-3d71-5a7659f4edbb,1-b760a97b812d74114a88ef75be7c2312
+match,4311,3,on,on,1,1,0,0,2,0,0,0,0,0,0,0,on,on,,RP,none,,,,,,,,,,bf230e9c-a7ef-46d9-5999-33224349e2db,1-cd9306ea9d51b6ca252eb7198c35f01e
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,bf550e14-8777-dd88-82d1-d2c4f7a7059c,1-3baeb8a854ab63f9e4d8d5cd1bbe766f
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,c05f428c-39a4-b257-d003-634bddbc4bb6,1-ef5ba46d233efca62f60aa56445737bf
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,c2cfcb8a-098f-ca74-3986-fbcb01a5c96f,1-ed99a91262b99acd85443181c43bbaf9
+match,3930,36,YES,on,0,0,2,0,2,0,0,1,0,0,1,2,on,on,,RW,none,,,,,,,,,,c38b0c02-5bab-49a1-0cbd-20f964f265bd,1-afc75c139688634ea6beafa74991d568
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,c5be8942-fbe0-f344-e519-50d95f96281c,1-54d74d1871e139d2aee317b8be482964
+match,2713,35,on,on,0,0,0,0,0,0,0,0,0,0,1,0,on,on,,N,none,,,,,,,,,,c6417f21-a0a8-184b-626f-afbe286fc1b5,1-cbe8851a0f1dd0bed74d0d32831f7005
+match,5752,3,YES,on,0,0,2,0,0,0,0,0,0,0,0,0,on,on,,N,none,,,,,,,,,,c7b80aad-8d18-8b44-2c87-15fade332dd9,1-bb8b420c27ce11882eac01009bdbebef
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,c8b591a6-205f-6b49-2c1e-2d733d2df2a6,1-8811af62dde637a1544367be6087f0cc
+match,2713,41,on,on,0,0,0,1,1,0,0,0,0,0,1,0,on,on,,N,none,,,,,,,,,,ca52e5f0-e8f9-157b-b682-5a684bbc4e66,1-339dc8986eaabefafd406e7564569588
+match,1289,22,YES,on,1,1,0,0,0,0,0,0,0,2,0,0,on,on,,N,none,,,,,,,,,,ca9ec775-6a04-7960-87a1-802eb2abf922,1-bfd16bdae47151429527514d63c437a6
+match,1965,6,on,on,0,0,1,0,0,0,0,0,0,0,3,0,on,on,,N,none,,,,,,,,,,cab2d7c9-bbb8-82aa-f6d8-e2b3e52de3f8,1-b7527b8a801c395f6ad5898aedd72632
+match,4929,19,YES,on,0,0,0,0,1,0,0,0,0,0,0,0,on,on,,LB,none,,,,,,,,,,cad8f226-f06d-a1d3-9951-53197d9b5544,1-b21187d153f0a940a3fdf804f3c7e93e
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,cb141275-c5d6-e339-c420-39ca3288497d,1-f11fae8350ad997ffc3cc99f09671d36
+match,2423,30,on,on,3,1,0,0,0,0,0,0,0,0,0,0,on,on,,LB,none,,,,,,,,,,ceb0c058-96a2-5d0c-ac7b-1ded3185a449,1-b30f055d004d88ed27748953f4a01100
+match,1965,35,on,on,0,0,0,0,0,0,0,0,0,0,1,0,on,on,,N,none,,,,,,,,,,cef97bb1-023d-7782-a21d-9a12510206ca,1-2b7dda18d2206c9a18b4bafe86ab4c9b
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,d18f5e38-470a-bcba-ea8b-6b44343d541f,1-91d40eb5e48661f09f69d2d96e89a996
+match,97,8,on,on,1,0,0,0,0,0,1,1,0,0,0,0,on,on,"At beginning of match they were stuck, auto and teleop.",N,none,,,,,,,,,,d2830be7-812c-a697-5407-afa07c4277df,1-dcb78afe28a2b4e19030d72091aff48c
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,d350016e-2102-ccfc-89c9-a14809b0f2a2,1-2af99342e2b5c13f4df87e1c399e4f95
+match,1289,36,YES,on,0,0,0,0,0,0,0,1,0,0,0,0,on,on,,N,none,,,,,,,,,,d37a80e7-fc35-d76e-306f-8736d5153281,1-cd81ba64c7a0be37989ae6ec8b4a97e1
+match,4909,3,on,on,2,0,0,0,0,0,0,0,0,0,2,1,on,on,,N,none,,,,,,,,,,d39716e1-00c1-ee1b-3490-76c56c1c427c,1-142d597c288400a1512f1535d3ef2093
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,d3b4c076-2390-5046-a8da-cfec7ad480b9,1-41c2d141758f1bfbbc52dedf0f9d71ed
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,d5f6d4b9-bd82-579c-72d6-46eafc7c1188,1-160517040056b7d1eb7a3414cc6669ec
+match,58,12,YES,on,0,0,0,2,2,0,0,0,0,0,0,1,on,on,,RP,none,,,,,,,,,,d67997d0-6f86-f255-d2f7-6f8cd3b1898b,1-6b4cc5381657d53d58ba49c7a5c93054
+match,2876,19,YES,on,0,0,0,0,1,0,1,0,0,1,0,0,on,on,,RT,none,,,,,,,,,,d71280fd-f385-076d-c225-98c335f99828,1-044d53db0253f45ecd604c5977df8b84
+match,1073,13,YES,on,0,0,0,0,0,0,1,0,0,0,0,0,on,on,,N,none,,,,,,,,,,d7a2a00b-efc8-4900-f5cc-a940eb4a69fa,1-23717e84e742d10b8a40a917f525a6ad
+match,5563,22,on,on,0,0,0,0,0,0,0,0,0,2,0,0,on,on,,N,none,,,,,,,,,,d86daea9-0461-b89d-c544-c60ecaec51eb,1-d2bab4e3b104165bc2184b00fb762b17
+match,246,11,on,on,0,0,0,0,0,0,0,0,0,0,0,0,on,on,they dodnt move,N,none,,,,,,,,,,da2c9468-7f1a-b932-cb41-c613fd474364,1-010eeea2d6a003bf5c6024ef36120ffe
+match,58,40,YES,on,0,0,1,0,0,0,0,0,0,0,2,1,on,on,,RP,none,,,,,,,,,,da846ead-1b84-7720-de2e-babd7daee9e6,1-d5c803ebd64305baf1d373f95f5f5584
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,da8efb00-4121-4ae9-64ca-be994119b2ae,1-22d30aceba25385af9eb9c1735b2a50f
+match,4761,41,YES,on,0,0,2,3,0,0,0,0,0,0,0,0,on,on,,LB,none,,,,,,,,,,dc4871ce-1715-1479-2536-b5c3667b9b19,1-6f6abda2fd1efcfee816c5d0c0765a41
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,dc6bae27-f9c2-0eae-9e60-ba3a21515523,1-56d1a7f1451ae5cea2dd9f20452ad82a
+match,1699,11,YES,on,0,0,0,0,0,0,0,1,0,0,0,0,on,on,,SP,none,,,,,,,,,,ddde067e-233c-0805-b9fa-78def1478a82,1-d83486b06e03a5da6760c889d372a65f
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,e014f804-c937-494e-10bc-c6ba9815282d,1-1137819b8e8c1588c5c26789cfd1b0da
+match,1058,33,YES,on,0,0,3,0,3,0,0,1,0,0,1,0,YES,on,,LB,none,,,,,,,,,,e0ce5620-fd15-19d8-2468-d9f9a1b87270,1-f29ace5bc5f9013a7b814db802010636
+match,4909,23,YES,on,1,1,0,0,0,0,3,0,0,0,0,3,on,on,,N,none,,,,,,,,,,e1596dd8-80cf-112a-ff7c-b4009e492ae3,1-60fbb8f3ef62caf8301cc63cae2fe0f1
+match,2713,18,on,on,0,0,0,0,0,0,0,0,0,0,0,1,on,on,,N,none,,,,,,,,,,e1b858f7-ae2b-025d-ba37-42213cb73bd7,1-f6614e70f29cbe1aac91183b57427c0b
+match,5752,8,on,on,0,0,0,0,2,0,0,1,0,0,0,0,on,on,,N,none,,,,,,,,,,e2e7f39d-02af-9d3c-7a61-cf79a8acb5be,1-37172a1e1a47faa43ada4a6013ecf381
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,e3338ae9-aad1-8770-5c2e-c7c9a839e893,1-90641dbf36de469f45baaa13f2c546c6
+match,97,42,on,on,0,0,0,0,0,0,0,0,1,0,0,0,on,on,Died,N,none,,,,,,,,,,e458bab0-2845-1edc-40dd-721e4c36b99f,1-a65179fae497db671f648e8cb0f5a246
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,e48b1c6d-5b61-7d0a-2244-fdf1444dc347,1-2d10d63cbf3609c3f52e08dcc01619a1
+match,1761,5,on,on,0,0,0,0,0,0,0,0,0,0,0,1,on,on,just stopped moving ,N,none,,,,,,,,,,e58df69d-fbcf-cd94-553e-6465873e2375,1-93dcb5f264b82a5798b651bd2c4e17bd
+match,3930,46,YES,on,0,2,0,0,0,0,0,0,0,0,2,0,on,on,,RW,none,,,,,,,,,,e65a8450-e824-6a43-d770-00f71dcbad1e,1-7a8f93d6860470a028df4d78b7c96462
+match,319,9,YES,on,0,0,1,2,1,0,0,0,0,1,0,1,on,on,,LB,Lo,,,,,,,,,,e6afbf98-79f9-707d-6adb-a23e227388d5,1-c56c8e2f63f0295532d95ba3723cd16b
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,e94c103e-1966-1605-a017-6be1f0848f07,1-6bb0ca58f5ece1f190980450f8e0593f
+match,5263,25,YES,on,0,0,0,0,0,0,0,0,0,0,1,0,on,on,,LB,none,,,,,,,,,,e958733d-7268-b864-b271-c548a6077748,1-6e7b6fad0c09760fea4ce8190a92abfb
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,eb29754c-ad3d-da87-9d80-8c7b91d99f38,1-902c927a2e789da7ced7b0321a770769
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,eb837b0c-a187-906c-95cb-3887121127b9,1-e139e851e7fa85e7359f36e61f72c371
+match,4905,13,on,on,0,0,2,0,3,2,2,0,0,0,1,0,on,on,,M,none,,,,,,,,,,eb9c4e51-1773-dd76-ccc6-a6bca246882e,1-6cb0ad80dee9e7702c64a53ba4cd4063
+pit,5969,,,,,,,,,,,,,,,,,,,,,,YES,tread,DR,none,,,,,ec40432a-768f-62f6-c6ff-f49940020799,1-3284b7e1b9ad01ebaf7a0ce11a172b3c
+match,4176,27,on,on,2,0,1,0,0,0,0,0,0,0,0,1,on,on,,N,none,,,,,,,,,,ef6480a7-7bb6-cb25-4862-8e34af92fa74,1-828fbf8c87ced9ab3cf7b3e459ed5efa
+match,133,25,YES,on,4,1,1,0,4,2,0,0,0,0,1,1,on,on,,LB,none,,,,,,,,,,effcf307-525b-af76-42f7-155e127bdb37,1-394c0b010b3aa3b9f79e0e23ad102889
+pit,133,,,,,,,,,,,,,,,,,,,,,,YES,west,IR,cat,,,,,f016fb6c-ea41-9694-38a7-a5ac48b27d3f,1-9a9c9edd0b774fc997819a1a58c28aaa
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,f06ea5fb-6a3a-5000-ab8a-275910e11bd2,1-f35022d970b3cf9421eb8e25dd900c48
+match,4474,40,on,on,0,0,0,0,0,2,0,0,0,0,1,0,on,on,,N,none,,,,,,,,,,f09b4107-fada-7b0e-87d3-ee0bfe35cbc3,1-d83b009d9e8191c53c88b08c9d77a1a6
+match,5459,9,on,on,0,0,0,0,0,0,0,0,0,0,0,1,on,on,,N,none,,,,,,,,,,f482c764-429f-d781-f4a1-97029cf53ded,1-b13cba124c9e9cbc4ee60eb4404e8f94
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,f74d650a-1e4c-4aeb-a3ae-1dead3e780cc,1-d66fc9d7f27affb71ead38685d15c9c4
+match,2423,12,YES,on,0,0,0,0,0,0,0,0,0,0,0,3,on,on,,N,none,,,,,,,,,,f8348814-024f-fa62-706c-097b8e1400bd,1-029896ad2c869f172a8b6033f0c09ab4
+match,5962,13,on,on,0,0,0,0,0,0,2,0,0,0,2,1,on,on,,N,none,,,,,,,,,,fa1d78ff-9146-2894-1968-94a3c7adac19,1-27a65ff277b54b52b1c70e4e5f0f5dee
+match,4176,17,on,on,0,0,1,0,1,0,0,0,0,0,0,0,on,on,,N,none,,,,,,,,,,fa38f4c8-57bd-2c7b-3585-dc45031256d6,1-5033fee379f5be3744c11840b2ad3ae8
+match,501,41,YES,on,0,0,2,0,1,0,0,0,0,0,3,0,on,on,"in auto, smashed into glass full speed and knocked over driver station",RW,none,,,,,,,,,,fae3e78b-c4bf-03c5-b2c7-3c8b36e95ec6,1-99190b27f837f09e8cda503db7b92102
+match,246,47,YES,on,0,0,0,0,0,1,0,2,0,0,1,0,on,on,,M,none,,,,,,,,,,fc3ab550-a3d8-3e0f-c65e-ed3d45a6a6da,1-d5c53e7e35e4d116c2046a0380746d17
+match,4169,3,on,on,0,0,0,0,0,0,1,0,0,0,2,0,on,on,,M,none,,,,,,,,,,fd735301-f322-b306-0513-7e559291c249,1-deb1cb4c0405c426f1c1b0e20f8ec5de
+match,4176,3,YES,on,2,0,1,0,0,0,0,0,0,0,0,0,on,on,,LB,none,,,,,,,,,,fe41f377-32ab-21a7-881c-247cfaba81f5,1-acda864aae20a388773373e49037acec
+match,4905,,on,on,0,0,1,0,0,2,0,1,0,0,2,,on,on,,RP,none,46,,,,,,,,,fe7c9de9-2157-297c-86b0-bd66e04cbdd9,1-02378e38224c9090d307009075417ead
+match,5347,13,on,on,0,0,0,0,0,0,0,0,0,0,0,0,on,on,,N,none,,,,,,,,,,fed78b57-9656-29e5-bb65-26082e894973,1-2de95490e5e16fd60b6eb3807d316a6d
