@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title>
+        ERASE DATABASE
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery-2.2.0.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="pouchdb.min.js"></script>
+    <script src="pouchdb.find.js"></script>
+    <link rel="stylesheet" type="text/css" href="gavinssheetofstyle.css">
+    <script src="api-thebluealliance.js"></script>
+    <script src="app.js"></script>
+    <script>
+    function eraseDatabase() {
+        var db = new PouchDB('scouting');
+        db.destroy().then(function(res) {
+            console.log(res);
+            $('#feedbackContainer').append('<p>Database Deleted Successfully!</p>');
+        }).catch(function(err) {
+            console.log(err);
+            $('#feedbackContainer').append('<p>Database was not deleted. See console for more info.</p>');
+        });
+    }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Erase Database</h1>
+        </div>
+    </div>
+    <div class="container">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <p>Only click this button if you're SURE you want to erase the entire Profiling Database on this device.</p>
+                <div id="feedbackContainer">
+                </div>
+                <p><a href="javascript:eraseDatabase();" class="btn btn-large btn-danger">Erase Database</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
