@@ -39,8 +39,6 @@
             <h1><b>Match Form!</b></h1>
         </div>
     </div>
-
-
     <div class="container">
         <h2><ins>Autonomous</ins></h2>
         <form class="form-horizontal" role="form">
@@ -50,8 +48,7 @@
                     <select class="form-control" name="teamnum" id="teamnums">
                     </select>
                 </div>
-            </div>    
-
+            </div>
             <h3><i>Defense</i></h3>
             <div class="form-group">
                 <label class="control-label col-sm-2">Reached Defense</label>
@@ -201,6 +198,11 @@
         <script>
         $(document).ready(loadDB());
         $(document).ready(addBotsToSelect('teamnums'));
+       /* $(function() {
+            $('input[type="number"]').each(function(index) {
+                addQuantityButtons($(this).name)
+            });
+        })*/
         </script>
     </div>
 </body>

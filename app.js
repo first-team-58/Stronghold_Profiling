@@ -694,5 +694,27 @@ function saveScores() {
     }).catch(function(err) {
         console.log(err);
     });
+}
 
+
+/************************
+    Layout/Templating
+************************/
+function addQuantityButtons( elementName ) {
+    var minusButton = '<a class="btn btn-danger" href="javascript:subtractFromValue(\'' + elementName + '\');">-</a>';
+    var plusButton = '<a class="btn btn-success" href="javascript:addToValue(\'' + elementName + '\');">+</a>';
+    $('[name="' + elementName + '"]').before(minusButton);
+    $('[name="' + elementName + '"]').after(plusButton);
+}
+
+function subtractFromValue( elementName ) {
+    /* TODO: Code to deduct 1 from the value of the given element. */
+    var currentValue = Number($('[name="' + elementName + '"]').val());
+    $('[name="' + elementName + '"]').val(currentValue - 1);
+}
+
+function addToValue( elementName ) {
+    /* TODO: Code to add 1 to the value of the given element. */
+    var currentValue = Number($('[name="' + elementName + '"]').val());
+    $('[name="' + elementName + '"]').val(currentValue + 1);
 }
