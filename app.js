@@ -623,7 +623,13 @@ function matchlist() {
 function saveAndRefresh(formType) {
 
     saveMatchForm(formType);
+   var matchnum = getParameterByName('matchnum');
+    var newmatch = parseInt(matchnum) + 1;
+    
+    $('#buttons').append('<a href="robotPick.html?matchnum='+newmatch.toString()+'" class="btn btn-default btn-lg" role=button>Next Match!</a>');
 }
+
+
 
 function saveAlliances() {
 
