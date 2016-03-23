@@ -42,13 +42,6 @@
     <div class="container">
         <h2><ins>Autonomous</ins></h2>
         <form class="form-horizontal" role="form">
-            <div class="form-group">
-                <label class="control-label col-sm-2">Team Number</label>
-                <div class="col-sm-2">
-                    <select class="form-control" name="teamnum" id="teamnums">
-                    </select>
-                </div>
-            </div>
             <h3><i>Defense</i></h3>
             <div class="form-group">
                 <label class="control-label col-sm-2">Reached Defense</label>
@@ -197,7 +190,6 @@
         </div>
         <script>
         $(document).ready(loadDB());
-        $(document).ready(addBotsToSelect('teamnums'));
         $(document).ready(addQuantityButtonsToMatchForm());
         $(document).ready(addHeader());    
        /* $(function() {

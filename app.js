@@ -284,16 +284,12 @@ function addBotsToSelect(id) {
 function pickRobots() {
     /* purpose: for use with robotPick.html. Creates list of team numbers for match sent in query string by collecting that match from pouchdb database */
 
-    function addRobotsToAllianceList(alliance, divid, match) {
+    function addRobotsToAllianceList(alliance, divid, match, color) {
         var i;
         for (i = 0; i < alliance.length; i++) {
-            $('#' + divid).append('<a href="matchform.html?matchnum=' + match + '&teamNum=' + alliance[i] + '" class="btn btn-large">' + alliance[i] + '</a>');
+            $('#' + divid).append('<a href="matchform.html?matchnum=' + match + '&teamNum=' + alliance[i] + '" class="btn btn-large '+color+'" role="button">' + alliance[i] + '</a>');
         }
     }
-
-
-    var match = getParameterByName("matchnum");
-
 
     // for when we get the pouchdb.find functionality working
 
@@ -305,6 +301,10 @@ function pickRobots() {
         };
 
         db.put(matchData);*/
+    
+    var match = getParameterByName('matchnum');
+    
+    $('#header').append('<h1>Match Number: '+match+'</h1>');
 
     db.createIndex({
         index: { fields: ['formType', 'matchnum'] }
@@ -319,8 +319,8 @@ function pickRobots() {
         var redList = allianceList.redAlliance;
         var blueList = allianceList.blueAlliance;
 
-        addRobotsToAllianceList(redList, "redAlliance", match);
-        addRobotsToAllianceList(blueList, "blueAlliance", match);
+        addRobotsToAllianceList(redList, "redAlliance", match,'btn-danger');
+        addRobotsToAllianceList(blueList, "blueAlliance", match,'btn-primary');
 
         // $("#blueAlliance").children(".btn").each().addClass("btn-primary");
         // $("#redAlliance").children(".btn").each().addClass("btn-danger");
@@ -345,12 +345,12 @@ function pickRobots() {
         addRobotsToAllianceList(redList, "redAlliance", match);
         addRobotsToAllianceList(blueList, "blueAlliance", match);*/
 
-    $("#blueAlliance").find("a").each(function() {
+/*    $("#blueAlliance").find("a").each(function() {
         $(this).addClass("btn-primary")
     });
     $("#redAlliance").find("a").each(function() {
         $(this).addClass("btn-danger")
-    });
+    });*/
 }
 
 function addAlliance(allianceColor) {
@@ -615,7 +615,7 @@ function matchlist() {
 
     for (var i = 1; i < 128; i++) {
         var match = i.toString();
-        $('#lofm').append('<a href="matchform.html?matchnum=' + match + '" role="button" class="col-xs-1 btn btn-danger btn-lg " style="height: 50px; margin: 3px;">' + match + '</a>');
+        $('#lofm').append('<a href="robotPick.html?matchnum=' + match + '" role="button" class="col-xs-1 btn btn-danger btn-lg " style="height: 50px; margin: 3px;">' + match + '</a>');
     }
 
 }
