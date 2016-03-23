@@ -726,3 +726,10 @@ function addQuantityButtonsToMatchForm () {
         addQuantityButtons(names[i]);
     }
 }
+
+function addHeader() {
+    var matchnum = getParameterByName('matchnum');
+    var teamnum = getParameterByName('teamNum');
+    
+    $('#banner').append('<h1>Match '+matchnum+' Team '+teamnum+'</h1>');
+}
