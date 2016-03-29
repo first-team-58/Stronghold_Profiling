@@ -444,6 +444,26 @@ function getRobotData(teamNumber, type) {
     });
 }
 
+function addChart(chartData, divid) {
+
+    console.log(chartData);
+
+    $.plot(divid, [ chartData ], {
+            series: {
+                bars: {
+                    show: true,
+                    barWidth: 0.6,
+                    align: "center"
+                }
+            },
+            xaxis: {
+                mode: "categories",
+                tickLength: 0
+            }
+    });
+
+}
+
 function addCountableDataToPage(teamNumber, type) {
 
 
@@ -456,6 +476,16 @@ function addCountableDataToPage(teamNumber, type) {
             //console.log(divid, result.docs.length);
         });
     }
+
+    function queryToChart(query, name) {
+        var result = db.find(query).then(function(result) {
+
+            chartData.push([name,result.docs.length]);
+            
+        });
+    }
+
+    var chartData = [];
 
     return db.createIndex({
         index: { fields: ['teamnum', 'formType', 'autoReachD', 'scaleAttempt', 'scaleSuccess', 'autoShotAtp', 'autoShotSS', 'autoCrossD'] }
@@ -508,6 +538,29 @@ function addCountableDataToPage(teamNumber, type) {
             queryAndAppend(queryString, divid);
 
         }
+    }).then(function(){
+
+        var querytocount = ['CDF', 'DB', 'RP', 'RW', 'RT','LB', 'M','PC','SP'];
+
+        var names = ['CDF','DrawBridge', 'Ramparts','RockWall','RoughTerrain','LowBar','Moat','Portcullis','SallyPort'];
+
+        for (var i = 0; i < querytocount.length; i++) {
+            var query = new Object();
+
+            var queryType = 'autoCrossD';
+
+            query['teamnum'] = { $eq: teamNumber };
+            query['formType'] = { $eq: type };
+            query[queryType] = { $eq: querytocount[i] };
+
+            var queryString = new Object();
+            queryString['selector'] = query;
+
+            var total = queryToChart(queryString, names[i]);
+        }
+
+    }).then(function(){
+        addChart(chartData,'#autoDefenses');
     });
 
 
@@ -534,10 +587,9 @@ function addCountableDataToPage(teamNumber, type) {
         */
 }
 
-function iterateOverAddables(allData) {
+function iterateOverAddables(allData, addables, displayType) {
 
-
-    var addables = ['HiGAttempt', 'HiGAttain', 'LoGAttain', 'LBCross', 'RPCross', 'RWCross', 'RTCross', 'DBCross', 'PCCross', 'CDFCross', 'MoatCross', 'SPCross'];
+    var chartData = [];
 
     for (var j = 0; j < addables.length; j++) {
         var property = addables[j];
@@ -549,9 +601,18 @@ function iterateOverAddables(allData) {
             sum += parseInt(allData[i][property]);
         }
 
-        $('#' + property).append('<label>' + sum + '</label>');
+        if (displayType == "numbers") {
+            $('#' + property).append('<label>' + sum + '</label>');
+        } else {
+          chartData.push([property,sum]);  
+        }
+
     }
 
+    if (displayType == "chart" ){
+        addChart(chartData,'#teleopDefenses');
+    }
+    
 }
 
 function addEachField(allData, fields) {
@@ -577,7 +638,10 @@ function displayRobotData() {
         //console.log(result);
         var allData = result.docs;
         //$('#auto').append(JSON.stringify(allData));
-        iterateOverAddables(allData);
+        var numsToDisplay = ['HiGAttempt', 'HiGAttain', 'LoGAttain'];
+        var forGraph = ['CDFCross', 'DBCross', 'LBCross', 'MoatCross', 'RPCross', 'RWCross', 'RTCross',  'PCCross',  'SPCross'];
+        iterateOverAddables(allData, numsToDisplay, "numbers");
+        iterateOverAddables(allData, forGraph, "chart");
     });
 
     getRobotData(teamNumber, 'pit').then(function(result) {

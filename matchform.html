@@ -39,7 +39,7 @@
             <h1><b>Match Form!</b></h1>
         </div>
     </div>
-    <div class="container">
+    <div class="row">
         <h2><ins>Autonomous</ins></h2>
         <form class="form-horizontal" role="form">
             <h3><i>Defense</i></h3>
@@ -85,7 +85,8 @@
             </div>
         </form>
     </div>
-    <div class="container">
+    <div class="row">
+        <div class="col-sm-6">
         <h2><ins>Teleop</ins></h2>
         <form class="form-horizontal" role="form">
             <h3><i>High Goals</i></h3>
@@ -108,6 +109,34 @@
                     <input type="number" name="LoGAttain" min="0" max="100" step="1" value="0">
                 </div>
             </div>
+              <div class="form-group">
+                     <label class="control-label col-sm-2">Reached Batter</label>
+                <div class="col-sm-4">
+                    <input type="checkbox" name="autoReachD">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2">Scale Attempt</label>
+                <div class="col-sm-4">
+                    <input type="checkbox" name="scaleAttempt">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2">Scale Success</label>
+                <div class="col-sm-4">
+                    <input type="checkbox" name="scaleSuccess">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2"><i>What's Broken</i> </label>
+                <div class="col-sm-4">
+                    <input type="text" name="broken">
+                </div>
+            </div>
+            </form>
+        </div>
+        <div class="col-sm-6">
+            <form class="form-horizontal" role="form">
             <h3><i>Number of Times Crossed</i></h3>
             <div class="form-group">
                 <label class="control-label col-sm-2">CDF</label>
@@ -163,25 +192,9 @@
                     <input type="number" name="SPCross" min="0" max="50" step="1" value="0">
                 </div>
             </div>
-            <div class="form-group">
-                <label class="control-label col-sm-2">Scale Attempt</label>
-                <div class="col-sm-4">
-                    <input type="checkbox" name="scaleAttempt">
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="control-label col-sm-2">Scale Success</label>
-                <div class="col-sm-4">
-                    <input type="checkbox" name="scaleSuccess">
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="control-label col-sm-2"><i>What's Broken</i> </label>
-                <div class="col-sm-4">
-                    <input type="text" name="broken">
-                </div>
-            </div>
         </form>
+        </div>
+    </div>
         <div class="container" id="feedbackContainer">
             <!-- Javascript will write feedback from save button here. -->
         </div>
