@@ -766,6 +766,52 @@ function saveScores() {
     });
 }
 
+function findBots(querytype,condition) {
+    db.createIndex({
+        index: { fields: ['formType', querytype] }
+    }).then(function() {
+        var result = db.find({
+            selector: { querytype: { condition }, formType: { $eq: type } },
+            fields: ['teamnum'],
+            sort: ['teamnum']
+        });
+        return result;
+    }).catch(function(err) {
+        return "There Was An Error";
+    });
+}
+
+function displayBotsOnCondition(querytype,condition,nullMessage) {
+    var results = findBots(querytype,condition);
+
+    var Bots = results.docs;
+
+    var whoCan = [];
+
+    for (var i=0; i<scaleBots.length; i++) {
+        var bot = Bots[i];
+
+        if (whoCan.includes(bot)) {
+            // do nothing
+        } else {
+            whoCan.append(bot);
+        }
+
+    }
+
+    for (var j=0; j<whoCan.length; j++ ) {
+        var bot = whoCan[j]
+        $('#robotButtons').append('<a href=robotStats?teamNum="'+bot+'">'+bot'</a>');
+    }
+
+    if (Bots.length == 0) {
+        $('#robotButtons').append('<p>No robots have '+nullMessage+' (yet)');
+    } else {
+        // do nothing
+    }
+
+}
+
 
 /************************
     Layout/Templating
