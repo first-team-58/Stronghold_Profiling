@@ -41,42 +41,42 @@ function saveYearMatchesToDatabase(year, db) {
     );
 }
 
-function saveEventMatchesToDatabase(event, db) {
-    /* event: An event object from The Blue Alliance API. */
-    /* db: a reference ot the PouchDB database. */
+// function saveEventMatchesToDatabase(event, db) {
+//     /* event: An event object from The Blue Alliance API. */
+//     /* db: a reference ot the PouchDB database. */
 
-    /* Purpose: Given an event, extract the list of matches and teams, and save them to the database. */
-    TBA.event.matches(event.key, function(matches_list) {
-        var i = 0;
-        for (i = 0; i < matches_list.length; i++) {
-            var match = new Object();
-            var docrec = new Object();
+//     /* Purpose: Given an event, extract the list of matches and teams, and save them to the database. */
+//     TBA.event.matches(event.key, function(matches_list) {
+//         var i = 0;
+//         for (i = 0; i < matches_list.length; i++) {
+//             var match = new Object();
+//             var docrec = new Object();
 
-            match._id = 'matches/' + matches_list[i].key;
-            match.redTeam = matches_list[i].alliances.red.teams;
-            match.blueTeam = matches_list[i].alliances.blue.teams;
+//             match._id = 'matches/' + matches_list[i].key;
+//             match.redTeam = matches_list[i].alliances.red.teams;
+//             match.blueTeam = matches_list[i].alliances.blue.teams;
 
-            /* If the doc already exists, we need to add the _rev to update the existing doc. */
-            db.get(match._id).then(function(doc) {
-                match._rev = doc._rev;
-                docrec = doc;
-            }).catch(function(err) {
-                if (err.status != 404) {
-                    /* Ignore 404 errors: we expect them, if the doc is new. */
-                    console.log(err);
-                }
-            });
+//              If the doc already exists, we need to add the _rev to update the existing doc. 
+//             db.get(match._id).then(function(doc) {
+//                 match._rev = doc._rev;
+//                 docrec = doc;
+//             }).catch(function(err) {
+//                 if (err.status != 404) {
+//                     /* Ignore 404 errors: we expect them, if the doc is new. */
+//                     console.log(err);
+//                 }
+//             });
 
-            db.put(match).then(function() {
-                // Success!
-            }).catch(function(err) {
-                console.log('\ndoc._rev: ' + docrec._rev);
-                console.log('match._rev: ' + match._rev);
-                console.log(err);
-            });
-        }
-    });
-}
+//             db.put(match).then(function() {
+//                 // Success!
+//             }).catch(function(err) {
+//                 console.log('\ndoc._rev: ' + docrec._rev);
+//                 console.log('match._rev: ' + match._rev);
+//                 console.log(err);
+//             });
+//         }
+//     });
+// }
 
 
 
@@ -287,7 +287,7 @@ function pickRobots() {
     function addRobotsToAllianceList(alliance, divid, match, color) {
         var i;
         for (i = 0; i < alliance.length; i++) {
-            $('#' + divid).append('<a href="matchform.html?matchnum=' + match + '&teamNum=' + alliance[i] + '" class="btn btn-large '+color+'" role="button">' + alliance[i] + '</a>');
+            $('#' + divid).append('<a href="matchform.html?matchnum=' + match + '&teamNum=' + alliance[i] + '" class="btn btn-large ' + color + '" role="button">' + alliance[i] + '</a>');
         }
     }
 
@@ -301,10 +301,10 @@ function pickRobots() {
         };
 
         db.put(matchData);*/
-    
+
     var match = getParameterByName('matchnum');
-    
-    $('#header').append('<h1>Match Number: '+match+'</h1>');
+
+    $('#header').append('<h1>Match Number: ' + match + '</h1>');
 
     db.createIndex({
         index: { fields: ['formType', 'matchnum'] }
@@ -319,8 +319,8 @@ function pickRobots() {
         var redList = allianceList.redAlliance;
         var blueList = allianceList.blueAlliance;
 
-        addRobotsToAllianceList(redList, "redAlliance", match,'btn-danger');
-        addRobotsToAllianceList(blueList, "blueAlliance", match,'btn-primary');
+        addRobotsToAllianceList(redList, "redAlliance", match, 'btn-danger');
+        addRobotsToAllianceList(blueList, "blueAlliance", match, 'btn-primary');
 
         // $("#blueAlliance").children(".btn").each().addClass("btn-primary");
         // $("#redAlliance").children(".btn").each().addClass("btn-danger");
@@ -345,12 +345,12 @@ function pickRobots() {
         addRobotsToAllianceList(redList, "redAlliance", match);
         addRobotsToAllianceList(blueList, "blueAlliance", match);*/
 
-/*    $("#blueAlliance").find("a").each(function() {
-        $(this).addClass("btn-primary")
-    });
-    $("#redAlliance").find("a").each(function() {
-        $(this).addClass("btn-danger")
-    });*/
+    /*    $("#blueAlliance").find("a").each(function() {
+            $(this).addClass("btn-primary")
+        });
+        $("#redAlliance").find("a").each(function() {
+            $(this).addClass("btn-danger")
+        });*/
 }
 
 function addAlliance(allianceColor) {
@@ -448,18 +448,18 @@ function addChart(chartData, divid) {
 
     console.log(chartData);
 
-    $.plot(divid, [ chartData ], {
-            series: {
-                bars: {
-                    show: true,
-                    barWidth: 0.6,
-                    align: "center"
-                }
-            },
-            xaxis: {
-                mode: "categories",
-                tickLength: 0
+    $.plot(divid, [chartData], {
+        series: {
+            bars: {
+                show: true,
+                barWidth: 0.6,
+                align: "center"
             }
+        },
+        xaxis: {
+            mode: "categories",
+            tickLength: 0
+        }
     });
 
 }
@@ -476,16 +476,6 @@ function addCountableDataToPage(teamNumber, type) {
             //console.log(divid, result.docs.length);
         });
     }
-
-    function queryToChart(query, name) {
-        var result = db.find(query).then(function(result) {
-
-            chartData.push([name,result.docs.length]);
-            
-        });
-    }
-
-    var chartData = [];
 
     return db.createIndex({
         index: { fields: ['teamnum', 'formType', 'autoReachD', 'scaleAttempt', 'scaleSuccess', 'autoShotAtp', 'autoShotSS', 'autoCrossD'] }
@@ -538,30 +528,9 @@ function addCountableDataToPage(teamNumber, type) {
             queryAndAppend(queryString, divid);
 
         }
-    }).then(function(){
-
-        var querytocount = ['CDF', 'DB', 'RP', 'RW', 'RT','LB', 'M','PC','SP'];
-
-        var names = ['CDF','DrawBridge', 'Ramparts','RockWall','RoughTerrain','LowBar','Moat','Portcullis','SallyPort'];
-
-        for (var i = 0; i < querytocount.length; i++) {
-            var query = new Object();
-
-            var queryType = 'autoCrossD';
-
-            query['teamnum'] = { $eq: teamNumber };
-            query['formType'] = { $eq: type };
-            query[queryType] = { $eq: querytocount[i] };
-
-            var queryString = new Object();
-            queryString['selector'] = query;
-
-            var total = queryToChart(queryString, names[i]);
-        }
-
-    }).then(function(){
-        addChart(chartData,'#autoDefenses');
     });
+
+
 
 
 
@@ -587,6 +556,82 @@ function addCountableDataToPage(teamNumber, type) {
         */
 }
 
+function addAutoDefenseChart(teamNumber) {
+
+    chartData = [];
+
+    // db.find({'selector':{}})
+
+    db.find({ selector: { teamnum: { $eq: teamNumber }, formType: { $eq: 'match' }, autoCrossD: { $eq: 'CDF' } } }).then(function(result) {
+        chartData.push(['CDF', result.docs.length]);
+    }).then(function() {
+        return db.find({ selector: { teamnum: { $eq: teamNumber }, formType: { $eq: 'match' }, autoCrossD: { $eq: 'DB' } } }).then(function(result) {
+            chartData.push(['Draw Bridge', result.docs.length]);
+        });
+    }).then(function() {
+        return db.find({ selector: { teamnum: { $eq: teamNumber }, formType: { $eq: 'match' }, autoCrossD: { $eq: 'RP' } } }).then(function(result) {
+            chartData.push(['Ramparts', result.docs.length]);
+        });
+    }).then(function() {
+        return db.find({ selector: { teamnum: { $eq: teamNumber }, formType: { $eq: 'match' }, autoCrossD: { $eq: 'RW' } } }).then(function(result) {
+            chartData.push(['Rock Wall', result.docs.length]);
+        });
+    }).then(function() {
+        return db.find({ selector: { teamnum: { $eq: teamNumber }, formType: { $eq: 'match' }, autoCrossD: { $eq: 'RT' } } }).then(function(result) {
+            chartData.push(['Rough Terrain', result.docs.length]);
+        });
+    }).then(function() {
+        return db.find({ selector: { teamnum: { $eq: teamNumber }, formType: { $eq: 'match' }, autoCrossD: { $eq: 'LB' } } }).then(function(result) {
+            chartData.push(['Low Bar', result.docs.length]);
+        });
+    }).then(function() {
+        return db.find({ selector: { teamnum: { $eq: teamNumber }, formType: { $eq: 'match' }, autoCrossD: { $eq: 'M' } } }).then(function(result) {
+            chartData.push(['Moat', result.docs.length]);
+        });
+    }).then(function() {
+        return db.find({ selector: { teamnum: { $eq: teamNumber }, formType: { $eq: 'match' }, autoCrossD: { $eq: 'PC' } } }).then(function(result) {
+            chartData.push(['Portcullis', result.docs.length]);
+        });
+    }).then(function() {
+        return db.find({ selector: { teamnum: { $eq: teamNumber }, formType: { $eq: 'match' }, autoCrossD: { $eq: 'SP' } } }).then(function(result) {
+            chartData.push(['Sally Port', result.docs.length]);
+        });
+    }).then(function() {
+        addChart(chartData, '#autoDefenses')
+    });
+
+    /*        var querytocount = ['CDF', 'DB', 'RP', 'RW', 'RT', 'LB', 'M', 'PC', 'SP'];
+
+            var names = ['CDF', 'DrawBridge', 'Ramparts', 'RockWall', 'RoughTerrain', 'LowBar', 'Moat', 'Portcullis', 'SallyPort'];
+
+            for (var i = 0; i < querytocount.length; i++) {
+                var query = new Object();
+
+                var queryType = 'autoCrossD';
+
+                query['teamnum'] = { $eq: teamNumber };
+                query['formType'] = { $eq: type };
+                query[queryType] = { $eq: querytocount[i] };
+
+                var queryString = new Object();
+                queryString['selector'] = query;
+
+                db.find(queryString).then( function(result) {
+
+                    var total = result.docs.length;  
+                    console.log(total);              
+                    chartData.push([names[i],total]);
+
+                });
+            }
+
+        }).then().then(function() {
+
+            addChart(chartData, '#autoDefenses');
+        });*/
+
+}
+
 function iterateOverAddables(allData, addables, displayType) {
 
     var chartData = [];
@@ -604,15 +649,15 @@ function iterateOverAddables(allData, addables, displayType) {
         if (displayType == "numbers") {
             $('#' + property).append('<label>' + sum + '</label>');
         } else {
-          chartData.push([property,sum]);  
+            chartData.push([property, sum]);
         }
 
     }
 
-    if (displayType == "chart" ){
-        addChart(chartData,'#teleopDefenses');
+    if (displayType == "chart") {
+        addChart(chartData, '#teleopDefenses');
     }
-    
+
 }
 
 function addEachField(allData, fields) {
@@ -627,11 +672,18 @@ function addEachField(allData, fields) {
 
 function displayRobotData() {
 
+    db.createIndex({
+        index: { fields: ['teamnum', 'formType', 'autoReachD', 'scaleAttempt', 'scaleSuccess', 'autoShotAtp', 'autoShotSS', 'autoCrossD'] }
+    });
+
+
     var teamNumber = $('#teamnums').val();
 
-    $('#PageTop > h1').text('Team ' + teamNumber );
+    $('#PageTop > h1').text('Team ' + teamNumber);
 
     addCountableDataToPage(teamNumber, 'match');
+
+    addAutoDefenseChart(teamNumber);
 
     getRobotData(teamNumber, 'match').then(function(result) {
         //console.log('2'); 
@@ -639,7 +691,7 @@ function displayRobotData() {
         var allData = result.docs;
         //$('#auto').append(JSON.stringify(allData));
         var numsToDisplay = ['HiGAttempt', 'HiGAttain', 'LoGAttain'];
-        var forGraph = ['CDFCross', 'DBCross', 'LBCross', 'MoatCross', 'RPCross', 'RWCross', 'RTCross',  'PCCross',  'SPCross'];
+        var forGraph = ['CDFCross', 'DBCross', 'LBCross', 'MoatCross', 'RPCross', 'RWCross', 'RTCross', 'PCCross', 'SPCross'];
         iterateOverAddables(allData, numsToDisplay, "numbers");
         iterateOverAddables(allData, forGraph, "chart");
     });
@@ -687,10 +739,10 @@ function matchlist() {
 function saveAndRefresh(formType) {
 
     saveMatchForm(formType);
-   var matchnum = getParameterByName('matchnum');
+    var matchnum = getParameterByName('matchnum');
     var newmatch = parseInt(matchnum) + 1;
-    
-    $('#buttons').append('<a href="robotPick.html?matchnum='+newmatch.toString()+'" class="btn btn-default btn-lg" role=button>Next Match!</a>');
+
+    $('#buttons').append('<a href="robotPick.html?matchnum=' + newmatch.toString() + '" class="btn btn-default btn-lg" role=button>Next Match!</a>');
 }
 
 
@@ -766,12 +818,24 @@ function saveScores() {
     });
 }
 
-function findBots(querytype,condition) {
+function findController ( queryType, queryParameters, nullMessage ) {
+    if (queryType == 'whoCan' ){
+        var field = queryParameters.field;
+        var condition = queryParameters.condition;
+        var arrayOfBots = findWhoCan(field, condition);
+        deduplicateAndPrint(arrayOfBots, nullMessage);
+    } else if ( false /* queryType == other query type */ ) {
+        /* do something similar to the above. */
+    }
+}
+
+function findWhoCan(field, condition) {
     db.createIndex({
-        index: { fields: ['formType', querytype] }
+        index: { fields: ['formType', field] }
     }).then(function() {
+        // build selector object here
         var result = db.find({
-            selector: { querytype: { condition }, formType: { $eq: type } },
+            selector: { field: { condition }, formType: { $eq: type } },
             fields: ['teamnum'],
             sort: ['teamnum']
         });
@@ -781,64 +845,93 @@ function findBots(querytype,condition) {
     });
 }
 
-function displayBotsOnCondition(querytype,condition,nullMessage) {
-    var results = findBots(querytype,condition);
+function deduplicateAndPrint(Bots, nullMessage) {
+
+    if (Bots.length == 0) {
+        $('#robotButtons').append('<p>No robots have ' + nullMessage + ' (yet)');
+    } else {
+        var who = [];
+
+        for (var i = 0; i < Bots.length; i++) {
+            var bot = Bots[i];
+
+            if (who.includes(bot)) {
+                // do nothing
+            } else {
+                who.append(bot.teamNum);
+            }
+        }
+
+        for (var j = 0; j < who.length; j++) {
+            var bot = who[j];
+            var strToAppend = '<a href=robotStats?teamNum="' + bot + '">' + bot '</a>';
+            console.log(strToAppend);
+            $('#robotButtons').append(strToAppend);
+        }
+    }
+
+}
+
+/*function displayBotsOnCondition(querytype, condition, nullMessage) {
+    var results = findBots(querytype, condition);
 
     var Bots = results.docs;
 
     var whoCan = [];
 
-    for (var i=0; i<scaleBots.length; i++) {
+    for (var i = 0; i < Bots.length; i++) {
         var bot = Bots[i];
 
         if (whoCan.includes(bot)) {
             // do nothing
         } else {
-            whoCan.append(bot);
+            whoCan.append(bot.teamNum);
         }
 
     }
 
-    for (var j=0; j<whoCan.length; j++ ) {
-        var bot = whoCan[j]
-        $('#robotButtons').append('<a href=robotStats?teamNum="'+bot+'">'+bot'</a>');
+    for (var j = 0; j < whoCan.length; j++) {
+        var bot = whoCan[j];
+        var strToAppend = '<a href=robotStats?teamNum="' + bot + '">' + bot '</a>';
+        console.log(strToAppend);
+        $('#robotButtons').append(strToAppend);
     }
 
     if (Bots.length == 0) {
-        $('#robotButtons').append('<p>No robots have '+nullMessage+' (yet)');
+        $('#robotButtons').append('<p>No robots have ' + nullMessage + ' (yet)');
     } else {
         // do nothing
     }
 
-}
+}*/
 
 
 /************************
     Layout/Templating
 ************************/
-function addQuantityButtons( elementName ) {
+function addQuantityButtons(elementName) {
     var minusButton = '<a class="btn btn-danger" href="javascript:subtractFromValue(\'' + elementName + '\');">-</a>';
     var plusButton = '<a class="btn btn-success" href="javascript:addToValue(\'' + elementName + '\');">+</a>';
     $('[name="' + elementName + '"]').before(minusButton);
     $('[name="' + elementName + '"]').after(plusButton);
 }
 
-function subtractFromValue( elementName ) {
+function subtractFromValue(elementName) {
     /* TODO: Code to deduct 1 from the value of the given element. */
     var currentValue = Number($('[name="' + elementName + '"]').val());
     $('[name="' + elementName + '"]').val(currentValue - 1);
 }
 
-function addToValue( elementName ) {
+function addToValue(elementName) {
     /* TODO: Code to add 1 to the value of the given element. */
     var currentValue = Number($('[name="' + elementName + '"]').val());
     $('[name="' + elementName + '"]').val(currentValue + 1);
 }
 
-function addQuantityButtonsToMatchForm () {
-    var names = ['HiGAttempt','HiGAttain','LoGAttain','PCCross','LBCross','RPCross','RWCross','RTCross','DBCross','SPCross','CDFCross','MoatCross'];
-    
-    for(var i=0;i<names.length;i++){
+function addQuantityButtonsToMatchForm() {
+    var names = ['HiGAttempt', 'HiGAttain', 'LoGAttain', 'PCCross', 'LBCross', 'RPCross', 'RWCross', 'RTCross', 'DBCross', 'SPCross', 'CDFCross', 'MoatCross'];
+
+    for (var i = 0; i < names.length; i++) {
         addQuantityButtons(names[i]);
     }
 }
@@ -846,6 +939,6 @@ function addQuantityButtonsToMatchForm () {
 function addHeader() {
     var matchnum = getParameterByName('matchnum');
     var teamnum = getParameterByName('teamNum');
-    
-    $('#banner').append('<h1>Match '+matchnum+' Team '+teamnum+'</h1>');
+
+    $('#banner').append('<h1>Match ' + matchnum + ' Team ' + teamnum + '</h1>');
 }
