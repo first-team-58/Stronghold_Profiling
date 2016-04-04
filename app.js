@@ -530,30 +530,6 @@ function addCountableDataToPage(teamNumber, type) {
         }
     });
 
-
-
-
-
-    /*        var result = db.find({
-                selector: {teamnum: {$eq:teamNumber}, formType: {$eq:type}, autoReachD: {$eq:'on'}}
-            }).then (function (result) {
-            console.log(result);
-            if (result.docs != null){
-                $('#autoReachDYES').append('<p>'+result.docs.length+'</p>');
-            } else {
-                $('#autoReachDYES').append('<p>0</p>');
-            }
-            console.log('3');
-            console.log(result);
-            });
-        }).then (function () {
-            var result = db.find({
-                selector: {teamnum: {$eq:teamNumber}, formType: {$eq:type}, scaleAttempt: {$eq:'on'}}
-            }).then (function (result){
-                
-            }); 
-        });
-        */
 }
 
 function addAutoDefenseChart(teamNumber) {
@@ -600,35 +576,6 @@ function addAutoDefenseChart(teamNumber) {
         addChart(chartData, '#autoDefenses')
     });
 
-    /*        var querytocount = ['CDF', 'DB', 'RP', 'RW', 'RT', 'LB', 'M', 'PC', 'SP'];
-
-            var names = ['CDF', 'DrawBridge', 'Ramparts', 'RockWall', 'RoughTerrain', 'LowBar', 'Moat', 'Portcullis', 'SallyPort'];
-
-            for (var i = 0; i < querytocount.length; i++) {
-                var query = new Object();
-
-                var queryType = 'autoCrossD';
-
-                query['teamnum'] = { $eq: teamNumber };
-                query['formType'] = { $eq: type };
-                query[queryType] = { $eq: querytocount[i] };
-
-                var queryString = new Object();
-                queryString['selector'] = query;
-
-                db.find(queryString).then( function(result) {
-
-                    var total = result.docs.length;  
-                    console.log(total);              
-                    chartData.push([names[i],total]);
-
-                });
-            }
-
-        }).then().then(function() {
-
-            addChart(chartData, '#autoDefenses');
-        });*/
 
 }
 
