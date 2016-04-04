@@ -636,6 +636,7 @@ function iterateOverAddables(allData, addables, displayType) {
 
     var chartData = [];
 
+
     for (var j = 0; j < addables.length; j++) {
         var property = addables[j];
         var sum = 0;
@@ -678,7 +679,6 @@ function displayRobotData() {
 
     if (getParameterByName('teamNum') != null) {
         var teamNumber = getParameterByName('teamNum');
-        console.log(teamNumber);
     } else {
         var teamNumber = $('#teamnums').val();
     }   
@@ -840,10 +840,10 @@ function findController ( queryType, queryParameters, nullMessage ) {
         var numTimes = queryParameters.numTimes;
         var arrayOfBots = findWhoCanNumTimes(field, condition, numTimes);
         arrayOfBots.then(function(result) {
-            deduplicateAndPrint(arrayOfBots, nullMessage);
+            deduplicateAndPrint(result, nullMessage);
         });
     } else if ( false /* queryType == other query type */ ) {
-        $('#robotButtons').append('<p>This Query Was Bad</p>');
+        $('#robotButtons').append('<label>This Query Was Bad</label>');
     }
 }
 
@@ -911,42 +911,52 @@ function findWhoCanNumTimes(field, condition, numTimes) {
         var query = new Object();
 
         query['formType'] = { $eq: 'match' };
-        query[field] = { $eq: condition };
+        query[field] = condition ;
 
         var queryString = new Object();
         queryString['selector'] = query;
-        queryString['fields'] = 'teamnum';
 
         var result = db.find(queryString);
         return result;
     }).then(function(result) {
-        console.log(result);
+        //console.log(result);
 
        if (result.docs.length == 0){
            return who;
        } else {
-           var whoCounts = findCounts(results.docs.length);
+            var everyone = [];
+
+           for (var i=0; i<result.docs.length; i++) {
+                var teamnum = result.docs[i]['teamnum'];
+                //console.log(teamnum);
+               everyone.push(teamnum);
+           }
+
+           var whoCounts = findCounts(everyone);
            
            var whoList = whoCounts[0];
+           //console.log(whoList);
            var count = whoCounts[1];
+           //console.log(count);
            
            for (var i=0; i<whoList.length;i++) {
+                console.log(count[i]);
                if (count[i]>=numTimes) {
                    who.push(whoList[i]);
                } else {
                    // do not push, not enough times
                }
            }
+           return who;
        }
     });
 
-    return who;
 }
 
 function deduplicateAndPrint(Bots, nullMessage) {
     console.log(Bots);
     if (Bots.length == 0) {
-        $('#robotButtons').append('<p>No robots have ' + nullMessage + ' (yet)');
+        $('#robotButtons').append('<label>No robots have ' + nullMessage + ' (yet)</label>');
     } else {
         var who = [];
 
