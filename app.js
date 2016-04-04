@@ -676,8 +676,11 @@ function displayRobotData() {
         index: { fields: ['teamnum', 'formType', 'autoReachD', 'scaleAttempt', 'scaleSuccess', 'autoShotAtp', 'autoShotSS', 'autoCrossD'] }
     });
 
-
-    var teamNumber = $('#teamnums').val();
+    if (getParameterByName('teamNum') != null) {
+        var teamNumber = getParameterByName('teamNum');
+    } else {
+        var teamNumber = $('#teamnums').val();
+    }   
 
     $('#PageTop > h1').text('Team ' + teamNumber);
 
@@ -824,24 +827,101 @@ function findController ( queryType, queryParameters, nullMessage ) {
         var condition = queryParameters.condition;
         var arrayOfBots = findWhoCan(field, condition);
         deduplicateAndPrint(arrayOfBots, nullMessage);
+    } else if ( queryType == 'whoCanNumTimes' ) {
+        var field = queryParameters.field;
+        var condition = queryParameters.condition;
+        var numTimes = queryParameters.numTimes;
+        var arrayOfBots = findWhoCanNumTimes(field, condition, numTimes);
+        deduplicateAndPrint(arrayOfBots, nullMessage);
     } else if ( false /* queryType == other query type */ ) {
         /* do something similar to the above. */
     }
 }
 
 function findWhoCan(field, condition) {
+    var who = [];
+    
     db.createIndex({
         index: { fields: ['formType', field] }
     }).then(function() {
-        // build selector object here
-        var result = db.find({
-            selector: { field: { condition }, formType: { $eq: type } },
-            fields: ['teamnum'],
-            sort: ['teamnum']
-        });
+        var query = new Object();
+
+        query['formType'] = { $eq: 'match' };
+        query[field] = { condition };
+
+        var queryString = new Object();
+        queryString['selector'] = query;
+        queryString['fields'] = 'teamnum';
+        queryString['sort'] = 'teamnum';
+        
+
+        var result = db.find(queryString);
         return result;
-    }).catch(function(err) {
-        return "There Was An Error";
+    }).then(function(result) {
+       if (result.docs.length == 0){
+           return who;
+       } else {
+           for (var i=0; i<results.docs.length; i++) {
+               who.push(results.docs.length['teamnum']);
+           }
+           return who;
+       }
+    });
+}
+
+function findCounts(arr) {
+    var a = [], b = [], prev;
+
+    arr.sort();
+    for ( var i = 0; i < arr.length; i++ ) {
+        if ( arr[i] !== prev ) {
+            a.push(arr[i]);
+            b.push(1);
+        } else {
+            b[b.length-1]++;
+        }
+        prev = arr[i];
+    }
+
+    return [a, b];
+}
+
+function findWhoCanNumTimes(field, condition, numTimes) {
+    var who = [];
+    
+    db.createIndex({
+        index: { fields: ['formType', field] }
+    }).then(function() {
+        var query = new Object();
+
+        query['formType'] = { $eq: 'match' };
+        query[field] = { $eq: condition };
+
+        var queryString = new Object();
+        queryString['selector'] = query;
+        queryString['fields'] = 'teamnum';
+        queryString['sort'] = 'teamnum';
+        
+
+        var result = db.find(queryString);
+        return result;
+    }).then(function(result) {
+       if (result.docs.length == 0){
+           return who;
+       } else {
+           var whoCounts = findCounts(results.docs.length);
+           
+           var whoList = whoCounts[0];
+           var count = whoCounts[1];
+           
+           for (var i=0; i<whoList.length;i++) {
+               if (count[i]>=numTimes) {
+                   who.push(whoList[i]);
+               } else {
+                   // do not push, not enough times
+               }
+           }
+       }
     });
 }
 
@@ -864,7 +944,7 @@ function deduplicateAndPrint(Bots, nullMessage) {
 
         for (var j = 0; j < who.length; j++) {
             var bot = who[j];
-            var strToAppend = '<a href=robotStats?teamNum="' + bot + '">' + bot '</a>';
+            var strToAppend = '<a href=robotStats?teamNum="' + bot + '">' + bot +'</a>';
             console.log(strToAppend);
             $('#robotButtons').append(strToAppend);
         }
