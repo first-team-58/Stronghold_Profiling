@@ -478,13 +478,13 @@ function addCountableDataToPage(teamNumber, type) {
     }
 
     return db.createIndex({
-        index: { fields: ['teamnum', 'formType', 'autoReachD', 'scaleAttempt', 'scaleSuccess', 'autoShotAtp', 'autoShotSS', 'autoCrossD'] }
+        index: { fields: ['teamnum', 'formType', 'autoReachD', 'scaleAttempt', 'scaleSuccess', 'autoShotAtp', 'autoShotSS'] }
     }).then(function() {
 
         //console.log('58');
 
-        var queryables = ['autoReachD', 'scaleAttempt', 'scaleSuccess', 'autoCrossD', 'autoCrossD', 'autoCrossD', 'autoCrossD', 'autoCrossD', 'autoCrossD', 'autoCrossD', 'autoCrossD', 'autoCrossD', 'autoShotAtp', 'autoShotAtp'];
-        var querytocount = ['YES', 'YES', 'YES', 'CDF', 'RP', 'RW', 'RT', 'DB', 'SP', 'PC', 'LB', 'M', 'Hi', 'Lo'];
+        var queryables = ['autoReachD', 'scaleAttempt', 'scaleSuccess', 'autoShotAtp', 'autoShotAtp'];
+        var querytocount = ['YES', 'YES', 'YES', 'Hi', 'Lo'];
 
         for (var i = 0; i < queryables.length; i++) {
             var query = new Object();
@@ -678,6 +678,7 @@ function displayRobotData() {
 
     if (getParameterByName('teamNum') != null) {
         var teamNumber = getParameterByName('teamNum');
+        console.log(teamNumber);
     } else {
         var teamNumber = $('#teamnums').val();
     }   
@@ -822,52 +823,67 @@ function saveScores() {
 }
 
 function findController ( queryType, queryParameters, nullMessage ) {
+    $('#robotButtons').empty();
+
     if (queryType == 'whoCan' ){
         var field = queryParameters.field;
+        console.log(field);
         var condition = queryParameters.condition;
+        console.log(condition);
         var arrayOfBots = findWhoCan(field, condition);
-        deduplicateAndPrint(arrayOfBots, nullMessage);
+        arrayOfBots.then(function(result) {
+            deduplicateAndPrint(result, nullMessage);
+        });
     } else if ( queryType == 'whoCanNumTimes' ) {
         var field = queryParameters.field;
         var condition = queryParameters.condition;
         var numTimes = queryParameters.numTimes;
         var arrayOfBots = findWhoCanNumTimes(field, condition, numTimes);
-        deduplicateAndPrint(arrayOfBots, nullMessage);
+        arrayOfBots.then(function(result) {
+            deduplicateAndPrint(arrayOfBots, nullMessage);
+        });
     } else if ( false /* queryType == other query type */ ) {
-        /* do something similar to the above. */
+        $('#robotButtons').append('<p>This Query Was Bad</p>');
     }
 }
 
 function findWhoCan(field, condition) {
     var who = [];
     
-    db.createIndex({
+    return db.createIndex({
         index: { fields: ['formType', field] }
     }).then(function() {
         var query = new Object();
 
         query['formType'] = { $eq: 'match' };
-        query[field] = { condition };
+        query[field] = condition;
 
         var queryString = new Object();
         queryString['selector'] = query;
-        queryString['fields'] = 'teamnum';
-        queryString['sort'] = 'teamnum';
+        //queryString['fields'] = 'teamnum';
+
+        console.log(queryString);
         
 
         var result = db.find(queryString);
         return result;
     }).then(function(result) {
+        console.log(result);
+
        if (result.docs.length == 0){
            return who;
        } else {
-           for (var i=0; i<results.docs.length; i++) {
-               who.push(results.docs.length['teamnum']);
+           for (var i=0; i<result.docs.length; i++) {
+                var teamnum = result.docs[i]['teamnum'];
+                //console.log(teamnum);
+               who.push(teamnum);
            }
+           //console.log(who);
            return who;
        }
     });
 }
+
 
 function findCounts(arr) {
     var a = [], b = [], prev;
@@ -889,7 +905,7 @@ function findCounts(arr) {
 function findWhoCanNumTimes(field, condition, numTimes) {
     var who = [];
     
-    db.createIndex({
+    return db.createIndex({
         index: { fields: ['formType', field] }
     }).then(function() {
         var query = new Object();
@@ -900,12 +916,12 @@ function findWhoCanNumTimes(field, condition, numTimes) {
         var queryString = new Object();
         queryString['selector'] = query;
         queryString['fields'] = 'teamnum';
-        queryString['sort'] = 'teamnum';
-        
 
         var result = db.find(queryString);
         return result;
     }).then(function(result) {
+        console.log(result);
+
        if (result.docs.length == 0){
            return who;
        } else {
@@ -923,10 +939,12 @@ function findWhoCanNumTimes(field, condition, numTimes) {
            }
        }
     });
+
+    return who;
 }
 
 function deduplicateAndPrint(Bots, nullMessage) {
-
+    console.log(Bots);
     if (Bots.length == 0) {
         $('#robotButtons').append('<p>No robots have ' + nullMessage + ' (yet)');
     } else {
@@ -938,14 +956,14 @@ function deduplicateAndPrint(Bots, nullMessage) {
             if (who.includes(bot)) {
                 // do nothing
             } else {
-                who.append(bot.teamNum);
+                who.push(bot);
             }
         }
 
         for (var j = 0; j < who.length; j++) {
             var bot = who[j];
-            var strToAppend = '<a href=robotStats?teamNum="' + bot + '">' + bot +'</a>';
-            console.log(strToAppend);
+            var strToAppend = '<a href="robotStats.html?teamNum=' + bot + '" class="btn btn-default btn-lg" role="button">' + bot +'</a>';
+            //console.log(strToAppend);
             $('#robotButtons').append(strToAppend);
         }
     }

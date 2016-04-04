@@ -63,33 +63,6 @@
             <div id='autoShotSSLo'>
                 <label>Successful Low Shots Auto: </label>
             </div>
-            <div id='autoCrossDLB'>
-                <label>Crossed Low Bar Auto: </label>
-            </div>
-            <div id='autoCrossDRP'>
-                <label>Crossed Ramparts Auto: </label>
-            </div>
-            <div id='autoCrossDRW'>
-                <label>Crossed Rock Wall Auto: </label>
-            </div>
-            <div id='autoCrossDCDF'>
-                <label>Crossed CDF Auto: </label>
-            </div>
-            <div id='autoCrossDM'>
-                <label>Crossed Moat Auto: </label>
-            </div>
-            <div id='autoCrossDRT'>
-                <label>Crossed Rough Terrain Auto: </label>
-            </div>
-            <div id='autoCrossDPC'>
-                <label>Crossed Portcullis Auto: </label>
-            </div>
-            <div id='autoCrossDSP'>
-                <label>Crossed Sally Port Auto: </label>
-            </div>
-            <div id='autoCrossDDB'>
-                <label>Crossed Draw Bridge Auto: </label>
-            </div>
             <div class="demo-container">
             <div id="autoDefenses" class="demo-placeholder"></div>
             </div>
@@ -161,7 +134,7 @@
     var teamNum = getParameterByName('teamNum');
     if (teamNum != null ){
         $('#robotSelection').hide();
-        displayRobotData(teamNum);
+        displayRobotData();
     } else {
         $(document).ready(addBotsToSelect('teamnums'));
     }
