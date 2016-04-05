@@ -21,8 +21,6 @@
             <h1> Match Info Form </h1>
         </div>
     </div>
-    <div class="container" id="feedbackContainer">
-    </div>
     <div class="container" id="form">
         <h2>What are you entering?</h2>
         <button class="btn btn-lg btn-primary" onclick="preMatch()">Match Assignments</button>
@@ -31,7 +29,7 @@
         <div class="row">
             <div class="col-sm-4" id="redAlliance">
                 <h3 class="text-danger">Red Alliance</h3>
-                <form class="form-horizontal" role="form">
+                <form class="form-horizontal" role="form" oninput="amountred.value=redpoints.value">
                     <div class="form-group" id="redBots">
                         <select name="redbot1" id='redbot1'>
 
@@ -47,7 +45,8 @@
                     </div>
                     <div class="form-group" id="redScores">
                         <label class="control-label col-sm-2">Score</label>
-                        <input type="range" name="redpoints" value="0" min="0" max="400" data-show-value="true" data-highlight="true">
+                        <input type="range" name="redpoints" id="redpoints" value="0" min="0" max="200" data-show-value="true" data-highlight="true">
+                        <label>Points: </label><output id="amountred">0</output>
                         <div class="checkbox">
                             <label>
                                 <input type="checkbox" name="redBreach">Breach</label>
@@ -57,13 +56,13 @@
                                 <input type="checkbox" name="redCapture">Capture</label>
                         </div>
                         <br>
-                        <button onclick="saveScores();" class='btn btn-primary btn-lg'>Submit Scores!</button>
+                        <a href='#' onclick="saveScores();" class='btn btn-primary btn-lg'>Submit Scores!</a>
                     </div>
                 </form>
             </div>
             <div class="col-sm-4" id="blueAlliance">
                 <h3 class="text-primary">Blue Alliance</h3>
-                <form class="form-horizontal" role="form">
+                <form class="form-horizontal" role="form"  oninput="amountblue.value=bluepoints.value">
                     <div class="form-group" id="blueBots">
                         <select name="bluebot1" id='bluebot1'>
 
@@ -77,7 +76,8 @@
                     </div>
                     <div class="form-group" id="blueScores">
                         <label class="control-label col-sm-2">Score</label>
-                        <input type="range" name="bluepoints" value="0" min="0" max="400" data-show-value="true" data-highlight="true">
+                        <input type="range" name="bluepoints" id="bluepoints" value="0" min="0" max="200" data-show-value="true" data-highlight="true"> 
+                        <label>Points: </label><output id="amountblue">0</output>
                         <div class="checkbox">
                             <label>
                                 <input type="checkbox" name="blueBreach">Breach</label>
@@ -90,6 +90,8 @@
                 </form>
             </div>
         </div>
+        <div class="container" id="feedbackContainer">
+    </div>
     </div>
     <script>
     $(document).ready(loadDB());
