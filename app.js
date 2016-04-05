@@ -737,6 +737,10 @@ function saveAlliances() {
 
     save(dataset);
 
+    var newmatch = parseInt(matchnum) + 1;
+
+    $('#feedbackContainer').append('<a href="matchinfoform.html?matchnum=' + newmatch.toString() + '" class="btn btn-default btn-lg" role=button>Next Match!</a>');
+
 }
 
 function saveScores() {
@@ -776,9 +780,25 @@ function saveScores() {
         return db.put(docNew, idToGet, doc.rev);
     }).then(function(response) {
         console.log(response);
+        var feedback = ' \
+            <div class="panel panel-success"> \
+                <div class="panel-heading">Form saved!</div> \
+            </div> \
+            ';
+        $('#feedbackContainer').append(feedback);
     }).catch(function(err) {
         console.log(err);
+        var feedback = ' \
+            <div class="panel panel-danger"> \
+                <div class="panel-heading">An error occurred!</div> \
+            </div> \
+            ';
+        $('#feedbackContainer').append(feedback);
     });
+
+    var newmatch = parseInt(matchnum) + 1;
+
+    $('#feedbackContainer').append('<a href="matchinfoform.html?matchnum=' + newmatch.toString() + '" class="btn btn-default btn-lg" role=button>Next Match!</a>');
 }
 
 function findController ( queryType, queryParameters, nullMessage ) {
