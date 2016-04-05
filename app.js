@@ -120,6 +120,7 @@ function save(formData) {
             ';
             $('#feedbackContainer').append(feedback);
         }).catch(function(err) {
+            console.log(err);
             var feedback = ' \
             <div class="panel panel-danger"> \
                 <div class="panel-heading">An error occurred!</div> \
@@ -731,6 +732,8 @@ function saveAlliances() {
 
     dataset['redAlliance'] = redAlliance;
     dataset['blueAlliance'] = blueAlliance;
+
+    console.log(dataset);
 
     save(dataset);
 
