@@ -310,7 +310,7 @@ function pickRobots() {
         index: { fields: ['formType', 'matchnum'] }
     }).then(function() {
         return db.find({
-            selector: { _id: { $eq: 'reading' + match } },
+            selector: { _id: { $eq: 'pineTree' + match } },
             fields: ['redAlliance', 'blueAlliance']
         });
     }).then(function(result) {
@@ -679,10 +679,19 @@ function displaybotlist() {
 }
 
 function matchlist() {
+    
+    var type = getParameterByName('type');
+    if (type == 'performance') {
+        var url = "robotPick.html";
+    } else if (type == 'alliances') {
+        var url = "matchinfoform.html";
+    } else {
+        var url = "mainpage.html";
+    }
 
     for (var i = 1; i < 128; i++) {
         var match = i.toString();
-        $('#lofm').append('<a href="robotPick.html?matchnum=' + match + '" role="button" class="col-xs-1 btn btn-danger btn-lg " style="height: 50px; margin: 3px;">' + match + '</a>');
+        $('#lofm').append('<a href="'+url+'?matchnum=' + match + '" role="button" class="col-xs-1 btn btn-danger btn-lg " style="height: 50px; margin: 3px;">' + match + '</a>');
     }
 
 }
@@ -714,7 +723,7 @@ function saveAlliances() {
 
     var matchnum = getParameterByName('matchnum');
 
-    dataset["_id"] = 'reading' + matchnum;
+    dataset["_id"] = 'pineTree' + matchnum;
 
     //dataset['formType'] = 'matchInfo';
 
@@ -753,7 +762,7 @@ function saveScores() {
 
     // creates id to get
     var matchnum = getParameterByName('matchnum');
-    var idToGet = 'reading' + matchnum;
+    var idToGet = 'pineTree' + matchnum;
 
     console.log(idToGet);
 
