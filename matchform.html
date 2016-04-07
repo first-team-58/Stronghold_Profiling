@@ -15,25 +15,7 @@
 </head>
 
 <body>
-    <!-- THIS IS THE NAVIGATION BAR -->
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="mainpage.html">Profiling App</a>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav">
-                    <li><a href="listofbots.html">Match</a></li>
-                    <li><a href="pitform.html">Pit</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+
     <div class="container">
         <div class="jumbotron" id="banner">
             <h1><b>Match Form!</b></h1>
@@ -206,7 +188,8 @@
         <script>
         $(document).ready(loadDB());
         $(document).ready(addQuantityButtonsToMatchForm());
-        $(document).ready(addHeader());    
+        $(document).ready(addHeader()); 
+        $(document).ready(addNavBar());   
        /* $(function() {
             $('input[type="number"]').each(function(index) {
                 addQuantityButtons($(this).name)

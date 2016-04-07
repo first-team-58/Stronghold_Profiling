@@ -15,45 +15,7 @@
 </head>
 
 <body>
-    <!-- THIS IS THE NAVIGATION BAR -->
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="mainpage.html">Profiling App</a>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Enter Data <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="ListOfMatches.html?type=performance">Robot Perf.</a></li>
-                <li><a href="ListOfMatches.html?type=alliances">Match Assignments</a></li>
-                <li><a href="pitform.html">Interview Pit Crew</a></li>
-                </ul>
-                    </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Display<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                  <li><a href="robotStats.html">Team Number Database</a></li>
-                  <li><a href="potentialQuerys.html">Query Database</a></li> 
-                </ul>
-                    </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Import/Export<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-              <li><a href="csvDownload.html">Download CSV</a></li>
-              <li><a href="csvUpload.html">Upload CSV</a></li> 
-                </ul>
-            </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+
     <!-- THIS IS THE TITLE-->
     <div class="panel panel-default col-xs-10 col-xs-offset-1">
         <div class="panel-body">
@@ -82,6 +44,11 @@
                 <a href="csvUpload.html" class="btn btn-default btn-lg col-sm-8 col-sm-offset-2" role="button">Upload CSV</a>
             </div>
         </div>
+    </div>
+    <script type="text/javascript"> 
+    $(document).ready(addNavBar());
+    </script>
+
 </body>
 
 </html>

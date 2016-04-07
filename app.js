@@ -1029,3 +1029,23 @@ function addHeader() {
 
     $('#banner').append('<h1>Match ' + matchnum + ' Team ' + teamnum + '</h1>');
 }
+
+function addNavBar() {
+    $('body').prepend('<nav class="navbar navbar-inverse" ><div class="container-fluid" id="navbar"></div></nav>');
+
+    var navbardiv = $('#navbar');
+
+    var part1 = '<div class="navbar-header"> <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> /<span class="icon-bar"></span> <span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="mainpage.html">Profiling App</a></div>';
+    navbardiv.append(part1);
+    navbardiv.append('<div class="collapse navbar-collapse" id="myNavbar"><ul class="nav navbar-nav" id="dropdowns"></ul></div>');
+
+    var dropdowns = $('#dropdowns');
+    var enterData = '<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Enter Data <span class="caret"></span></a><ul class="dropdown-menu"><li><a href="ListOfMatches.html?type=performance">Robot Perf.</a></li><li><a href="ListOfMatches.html?type=alliances">Match Assignments</a></li><li><a href="pitform.html">Interview Pit Crew</a></li></ul></li>';
+    var viewData = '<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Display<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="robotStats.html">Team Number Database</a></li><li><a href="potentialQuerys.html">Query Database</a></li> </ul></li>';
+    var transferData = '<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Import/Export<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="csvDownload.html">Download CSV</a></li><li><a href="csvUpload.html">Upload CSV</a></li> </ul></li>';
+
+    dropdowns.append(enterData);
+    dropdowns.append(viewData);
+    dropdowns.append(transferData);
+
+}
