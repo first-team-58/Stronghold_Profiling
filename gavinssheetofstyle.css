@@ -58,3 +58,11 @@ output {
 	font-size: 14px;
 	line-height: 1.2em;
 }
+
+.feedbackContainer {
+	color: black;
+}
+
+.feedbackPanel output {
+	color: black;
+}

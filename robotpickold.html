@@ -26,24 +26,25 @@
     </div>
     
     <div cass="container">
-        <form class="form-horizontal" role="form">
-            <div class="form-group" id='robotPickDiv'>
-                <label class="control-label col-sm-2">Team Number</label>
-                <div class="col-sm-2">
-                    <select class="form-control" name="teamnum" id="teamnums">
-                    </select>
-                </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="btn-group-vertical" id="redAlliance">
+                <h3>Red Alliance</h3>
             </div>
-            <a href='#' class="btn btn-lg btn-primary" onclick="addATag()" >This Robot</a>
-
-
-        </form>
+        </div>
+    
+        <div class="col-sm-4">
+            <div class="btn-group-vertical" id="blueAlliance">
+                <h3>Blue Alliance</h3>
+            </div>
+        </div>
+    </div>
     </div>
 
     <script>
     $(document).ready(loadDB());
+    $(document).ready(pickRobots());
     $(document).ready(addNavBar());
-    $(document).ready(addBotsToSelect('teamnums'));
     </script>
 
     
